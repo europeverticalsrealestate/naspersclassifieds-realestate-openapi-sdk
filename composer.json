@@ -1,0 +1,7 @@
+{
+    "name": "arobinski/otodom-openapi-sdk",
+    "type": "project",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    }
+}
