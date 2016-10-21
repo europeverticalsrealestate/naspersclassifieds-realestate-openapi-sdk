@@ -45,7 +45,7 @@ class Client
 
     /**
      * @param $resource
-     * @return stdClass
+     * @return array
      * @throws OpenApiException
      */
     public function getFrom($resource)
@@ -55,7 +55,32 @@ class Client
         } catch (RequestException $e) {
             throw new OpenApiException($e->getMessage(), $e->getCode(), $e);
         }
-        return json_decode($response->getBody()->getContents());
+        return json_decode($response->getBody()->getContents(), true);
+    }
+
+    /**
+     * @param string $resource
+     * @param string $class
+     * @return array
+     */
+    public function getFromAsObjects($resource, $class)
+    {
+        $factory = new ObjectFactory($class);
+        $results = $this->getFrom($resource)['results'];
+        return $factory->buildMany($results);
+    }
+
+    /**
+     * @param string $resource
+     * @param integer $id
+     * @param string $class
+     * @return array
+     */
+    public function getFromAsObject($resource, $id, $class)
+    {
+        $factory = new ObjectFactory($class);
+        $results = $this->getFrom($resource . '/' . $id);
+        return $factory->build($results);
     }
 
     /**

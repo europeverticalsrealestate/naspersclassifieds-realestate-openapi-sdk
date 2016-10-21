@@ -50,6 +50,6 @@ class OpenApi
 
     public function logOut()
     {
-        return $this->client->logOut();
+        $this->client->logOut();
     }
 }

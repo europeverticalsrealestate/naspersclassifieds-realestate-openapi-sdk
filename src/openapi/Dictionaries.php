@@ -2,7 +2,11 @@
 namespace naspersclassifieds\realestate\openapi;
 
 
+use naspersclassifieds\realestate\openapi\model\Category;
 use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
+use naspersclassifieds\realestate\openapi\model\City;
+use naspersclassifieds\realestate\openapi\model\Region;
+use naspersclassifieds\realestate\openapi\model\SubRegion;
 use stdClass;
 
 class Dictionaries
@@ -27,7 +31,8 @@ class Dictionaries
      */
     public function getCategories()
     {
-        return $this->client->getFrom('categories')->results;
+        return $this->client->getFromAsObjects('categories', Category::class);
+
     }
 
     /**
@@ -37,7 +42,7 @@ class Dictionaries
      */
     public function getCategory($id)
     {
-        return $this->client->getFrom('categories/' . (int)$id);
+        return $this->client->getFromAsObject('categories', $id , Category::class);
     }
 
     /**
@@ -46,17 +51,17 @@ class Dictionaries
      */
     public function getCities()
     {
-        return $this->client->getFrom('cities')->results;
+        return $this->client->getFromAsObjects('cities', City::class);
     }
 
     /**
      * @param integer $id city id
-     * @return stdClass
+     * @return City
      * @throws OpenApiException
      */
     public function getCity($id)
     {
-        return $this->client->getFrom('cities/' . (int)$id);
+        return $this->client->getFromAsObject('cities', $id , City::class);
     }
 
     /**
@@ -65,17 +70,17 @@ class Dictionaries
      */
     public function getRegions()
     {
-        return $this->client->getFrom('regions')->results;
+        return $this->client->getFromAsObjects('regions', Region::class);
     }
 
     /**
      * @param integer $id
-     * @return stdClass
+     * @return Region
      * @throws OpenApiException
      */
     public function getRegion($id)
     {
-        return $this->client->getFrom('regions/' . (int)$id);
+        return $this->client->getFromAsObject('regions', $id , Region::class);
     }
 
     /**
@@ -84,16 +89,16 @@ class Dictionaries
      */
     public function getSubRegions()
     {
-        return $this->client->getFrom('subregions')->results;
+        return $this->client->getFromAsObjects('subregions', SubRegion::class);
     }
 
     /**
      * @param integer $id
-     * @return stdClass
+     * @return SubRegion
      * @throws OpenApiException
      */
     public function getSubRegion($id)
     {
-        return $this->client->getFrom('subregions/' . (int)$id);
+        return $this->client->getFromAsObject('subregions', $id , SubRegion::class);
     }
 }

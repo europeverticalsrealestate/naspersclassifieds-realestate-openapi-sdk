@@ -5,14 +5,14 @@
 
 require 'init.php';
 
-$client = createClient();
+$api = new naspersclassifieds\realestate\openapi\OpenApi(OPENAPI_URL);
 
 //no need to log in in this case - information about categories is available without logging in
 
 //get data about all root (!) categories
-$response = $client->get('categories');
-print_r($response->getBody()->getContents());
+$response = $api->getDictionaries()->getCategories();
+print_r($response);
 
 //get information about a single category
-$response = $client->get('categories/101');
-print_r($response->getBody()->getContents());
+$response = $api->getDictionaries()->getCategory(101);
+print_r($response);

@@ -17,7 +17,7 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
 
         $this->assertEquals(3, count($categories));
         $this->assertRequest('categories');
-        $this->assertEquals("Wynajem", $categories[1]->names->pl);
+        $this->assertEquals("Wynajem", $categories[1]->names['pl']);
     }
 
     public function testShouldRetrieveOneCategory(){
@@ -27,8 +27,8 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $category = $this->openApi->getDictionaries()->getCategory(101);
 
         $this->assertRequest('categories/101');
-        $this->assertEquals("Mieszkania", $category->names->pl);
-        $this->assertEquals("cena", $category->parameters[0]->labels->pl);
+        $this->assertEquals("Mieszkania", $category->names['pl']);
+        $this->assertEquals("cena", $category->parameters[0]['labels']['pl']);
     }
 
     public function testShouldNotRetrieveNonExistingCategory(){
@@ -74,7 +74,7 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertEquals(16, count($regions));
 
         $this->assertRequest('regions');
-        $this->assertEquals("kujawsko-pomorskie", $regions[1]->name->pl);
+        $this->assertEquals("kujawsko-pomorskie", $regions[1]->name['pl']);
     }
 
     public function testShouldRetrieveOneRegion(){
@@ -84,7 +84,7 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $region = $this->openApi->getDictionaries()->getRegion(1);
 
         $this->assertRequest('regions/1');
-        $this->assertEquals("dolnośląskie", $region->name->pl);
+        $this->assertEquals("dolnośląskie", $region->name['pl']);
     }
 
     public function testShouldRetrieveSubregions(){
@@ -96,7 +96,7 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertEquals(380, count($subregions));
 
         $this->assertRequest('subregions');
-        $this->assertEquals("bartoszycki", $subregions[2]->name->pl);
+        $this->assertEquals("bartoszycki", $subregions[2]->name['pl']);
     }
 
     public function testShouldRetrieveOneSubrregion(){
@@ -106,6 +106,6 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $subregion = $this->openApi->getDictionaries()->getSubregion(1);
 
         $this->assertRequest('subregions/1');
-        $this->assertEquals("chodzieski", $subregion->name->pl);
+        $this->assertEquals("chodzieski", $subregion->name['pl']);
     }
 }
