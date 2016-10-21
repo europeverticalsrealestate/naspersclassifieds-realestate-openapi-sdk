@@ -1,0 +1,2664 @@
+{
+    "results": [
+        {
+            "id": 62,
+            "region_id": 2,
+            "name": {
+                "pl": "aleksandrowski"
+            }
+        },
+        {
+            "id": 245,
+            "region_id": 10,
+            "name": {
+                "pl": "augustowski"
+            }
+        },
+        {
+            "id": 331,
+            "region_id": 14,
+            "name": {
+                "pl": "bartoszycki"
+            }
+        },
+        {
+            "id": 122,
+            "region_id": 5,
+            "name": {
+                "pl": "bełchatowski"
+            }
+        },
+        {
+            "id": 281,
+            "region_id": 12,
+            "name": {
+                "pl": "będziński"
+            }
+        },
+        {
+            "id": 390,
+            "region_id": 3,
+            "name": {
+                "pl": "bialski"
+            }
+        },
+        {
+            "id": 394,
+            "region_id": 3,
+            "name": {
+                "pl": "Biała Podlaska"
+            }
+        },
+        {
+            "id": 167,
+            "region_id": 7,
+            "name": {
+                "pl": "białobrzeski"
+            }
+        },
+        {
+            "id": 351,
+            "region_id": 16,
+            "name": {
+                "pl": "białogardzki"
+            }
+        },
+        {
+            "id": 431,
+            "region_id": 10,
+            "name": {
+                "pl": "białostocki"
+            }
+        },
+        {
+            "id": 434,
+            "region_id": 10,
+            "name": {
+                "pl": "Białystok"
+            }
+        },
+        {
+            "id": 441,
+            "region_id": 12,
+            "name": {
+                "pl": "bielski"
+            }
+        },
+        {
+            "id": 247,
+            "region_id": 10,
+            "name": {
+                "pl": "bielski"
+            }
+        },
+        {
+            "id": 445,
+            "region_id": 12,
+            "name": {
+                "pl": "Bielsko-Biała"
+            }
+        },
+        {
+            "id": 376,
+            "region_id": 12,
+            "name": {
+                "pl": "bieruńsko-lędziński"
+            }
+        },
+        {
+            "id": 221,
+            "region_id": 9,
+            "name": {
+                "pl": "bieszczadzki"
+            }
+        },
+        {
+            "id": 86,
+            "region_id": 3,
+            "name": {
+                "pl": "biłgorajski"
+            }
+        },
+        {
+            "id": 145,
+            "region_id": 6,
+            "name": {
+                "pl": "bocheński"
+            }
+        },
+        {
+            "id": 32,
+            "region_id": 1,
+            "name": {
+                "pl": "bolesławiecki"
+            }
+        },
+        {
+            "id": 332,
+            "region_id": 14,
+            "name": {
+                "pl": "braniewski"
+            }
+        },
+        {
+            "id": 63,
+            "region_id": 2,
+            "name": {
+                "pl": "brodnicki"
+            }
+        },
+        {
+            "id": 146,
+            "region_id": 6,
+            "name": {
+                "pl": "brzeski"
+            }
+        },
+        {
+            "id": 209,
+            "region_id": 8,
+            "name": {
+                "pl": "brzeski"
+            }
+        },
+        {
+            "id": 404,
+            "region_id": 5,
+            "name": {
+                "pl": "brzeziński"
+            }
+        },
+        {
+            "id": 222,
+            "region_id": 9,
+            "name": {
+                "pl": "brzozowski"
+            }
+        },
+        {
+            "id": 317,
+            "region_id": 13,
+            "name": {
+                "pl": "buski"
+            }
+        },
+        {
+            "id": 382,
+            "region_id": 2,
+            "name": {
+                "pl": "bydgoski"
+            }
+        },
+        {
+            "id": 386,
+            "region_id": 2,
+            "name": {
+                "pl": "Bydgoszcz"
+            }
+        },
+        {
+            "id": 299,
+            "region_id": 12,
+            "name": {
+                "pl": "Bytom"
+            }
+        },
+        {
+            "id": 262,
+            "region_id": 11,
+            "name": {
+                "pl": "bytowski"
+            }
+        },
+        {
+            "id": 395,
+            "region_id": 3,
+            "name": {
+                "pl": "Chełm"
+            }
+        },
+        {
+            "id": 65,
+            "region_id": 2,
+            "name": {
+                "pl": "chełmiński"
+            }
+        },
+        {
+            "id": 391,
+            "region_id": 3,
+            "name": {
+                "pl": "chełmski"
+            }
+        },
+        {
+            "id": 1,
+            "region_id": 15,
+            "name": {
+                "pl": "chodzieski"
+            }
+        },
+        {
+            "id": 263,
+            "region_id": 11,
+            "name": {
+                "pl": "chojnicki"
+            }
+        },
+        {
+            "id": 300,
+            "region_id": 12,
+            "name": {
+                "pl": "Chorzów"
+            }
+        },
+        {
+            "id": 352,
+            "region_id": 16,
+            "name": {
+                "pl": "choszczeński"
+            }
+        },
+        {
+            "id": 147,
+            "region_id": 6,
+            "name": {
+                "pl": "chrzanowski"
+            }
+        },
+        {
+            "id": 168,
+            "region_id": 7,
+            "name": {
+                "pl": "ciechanowski"
+            }
+        },
+        {
+            "id": 283,
+            "region_id": 12,
+            "name": {
+                "pl": "cieszyński"
+            }
+        },
+        {
+            "id": 2,
+            "region_id": 15,
+            "name": {
+                "pl": "czarnkowsko-trzcianecki"
+            }
+        },
+        {
+            "id": 446,
+            "region_id": 12,
+            "name": {
+                "pl": "Częstochowa"
+            }
+        },
+        {
+            "id": 442,
+            "region_id": 12,
+            "name": {
+                "pl": "częstochowski"
+            }
+        },
+        {
+            "id": 264,
+            "region_id": 11,
+            "name": {
+                "pl": "człuchowski"
+            }
+        },
+        {
+            "id": 302,
+            "region_id": 12,
+            "name": {
+                "pl": "Dąbrowa Górnicza"
+            }
+        },
+        {
+            "id": 148,
+            "region_id": 6,
+            "name": {
+                "pl": "dąbrowski"
+            }
+        },
+        {
+            "id": 223,
+            "region_id": 9,
+            "name": {
+                "pl": "dębicki"
+            }
+        },
+        {
+            "id": 353,
+            "region_id": 16,
+            "name": {
+                "pl": "drawski"
+            }
+        },
+        {
+            "id": 333,
+            "region_id": 14,
+            "name": {
+                "pl": "działdowski"
+            }
+        },
+        {
+            "id": 33,
+            "region_id": 1,
+            "name": {
+                "pl": "dzierżoniowski"
+            }
+        },
+        {
+            "id": 453,
+            "region_id": 14,
+            "name": {
+                "pl": "Elbląg"
+            }
+        },
+        {
+            "id": 451,
+            "region_id": 14,
+            "name": {
+                "pl": "elbląski"
+            }
+        },
+        {
+            "id": 335,
+            "region_id": 14,
+            "name": {
+                "pl": "ełcki"
+            }
+        },
+        {
+            "id": 169,
+            "region_id": 7,
+            "name": {
+                "pl": "garwoliński"
+            }
+        },
+        {
+            "id": 439,
+            "region_id": 11,
+            "name": {
+                "pl": "Gdańsk"
+            }
+        },
+        {
+            "id": 437,
+            "region_id": 11,
+            "name": {
+                "pl": "gdański"
+            }
+        },
+        {
+            "id": 278,
+            "region_id": 11,
+            "name": {
+                "pl": "Gdynia"
+            }
+        },
+        {
+            "id": 336,
+            "region_id": 14,
+            "name": {
+                "pl": "giżycki"
+            }
+        },
+        {
+            "id": 447,
+            "region_id": 12,
+            "name": {
+                "pl": "Gliwice"
+            }
+        },
+        {
+            "id": 443,
+            "region_id": 12,
+            "name": {
+                "pl": "gliwicki"
+            }
+        },
+        {
+            "id": 34,
+            "region_id": 1,
+            "name": {
+                "pl": "głogowski"
+            }
+        },
+        {
+            "id": 210,
+            "region_id": 8,
+            "name": {
+                "pl": "głubczycki"
+            }
+        },
+        {
+            "id": 3,
+            "region_id": 15,
+            "name": {
+                "pl": "gnieźnieński"
+            }
+        },
+        {
+            "id": 354,
+            "region_id": 16,
+            "name": {
+                "pl": "goleniowski"
+            }
+        },
+        {
+            "id": 66,
+            "region_id": 2,
+            "name": {
+                "pl": "golubsko-dobrzyński"
+            }
+        },
+        {
+            "id": 375,
+            "region_id": 14,
+            "name": {
+                "pl": "gołdapski"
+            }
+        },
+        {
+            "id": 149,
+            "region_id": 6,
+            "name": {
+                "pl": "gorlicki"
+            }
+        },
+        {
+            "id": 398,
+            "region_id": 4,
+            "name": {
+                "pl": "gorzowski"
+            }
+        },
+        {
+            "id": 400,
+            "region_id": 4,
+            "name": {
+                "pl": "Gorzów Wielkopolski"
+            }
+        },
+        {
+            "id": 170,
+            "region_id": 7,
+            "name": {
+                "pl": "gostyniński"
+            }
+        },
+        {
+            "id": 4,
+            "region_id": 15,
+            "name": {
+                "pl": "gostyński"
+            }
+        },
+        {
+            "id": 35,
+            "region_id": 1,
+            "name": {
+                "pl": "górowski"
+            }
+        },
+        {
+            "id": 248,
+            "region_id": 10,
+            "name": {
+                "pl": "grajewski"
+            }
+        },
+        {
+            "id": 5,
+            "region_id": 15,
+            "name": {
+                "pl": "grodziski"
+            }
+        },
+        {
+            "id": 171,
+            "region_id": 7,
+            "name": {
+                "pl": "grodziski"
+            }
+        },
+        {
+            "id": 172,
+            "region_id": 7,
+            "name": {
+                "pl": "grójecki"
+            }
+        },
+        {
+            "id": 387,
+            "region_id": 2,
+            "name": {
+                "pl": "Grudziądz"
+            }
+        },
+        {
+            "id": 383,
+            "region_id": 2,
+            "name": {
+                "pl": "grudziądzki"
+            }
+        },
+        {
+            "id": 355,
+            "region_id": 16,
+            "name": {
+                "pl": "gryficki"
+            }
+        },
+        {
+            "id": 356,
+            "region_id": 16,
+            "name": {
+                "pl": "gryfiński"
+            }
+        },
+        {
+            "id": 249,
+            "region_id": 10,
+            "name": {
+                "pl": "hajnowski"
+            }
+        },
+        {
+            "id": 88,
+            "region_id": 3,
+            "name": {
+                "pl": "hrubieszowski"
+            }
+        },
+        {
+            "id": 337,
+            "region_id": 14,
+            "name": {
+                "pl": "iławski"
+            }
+        },
+        {
+            "id": 68,
+            "region_id": 2,
+            "name": {
+                "pl": "inowrocławski"
+            }
+        },
+        {
+            "id": 89,
+            "region_id": 3,
+            "name": {
+                "pl": "janowski"
+            }
+        },
+        {
+            "id": 6,
+            "region_id": 15,
+            "name": {
+                "pl": "jarociński"
+            }
+        },
+        {
+            "id": 224,
+            "region_id": 9,
+            "name": {
+                "pl": "jarosławski"
+            }
+        },
+        {
+            "id": 225,
+            "region_id": 9,
+            "name": {
+                "pl": "jasielski"
+            }
+        },
+        {
+            "id": 304,
+            "region_id": 12,
+            "name": {
+                "pl": "Jastrzębie-Zdrój"
+            }
+        },
+        {
+            "id": 36,
+            "region_id": 1,
+            "name": {
+                "pl": "jaworski"
+            }
+        },
+        {
+            "id": 305,
+            "region_id": 12,
+            "name": {
+                "pl": "Jaworzno"
+            }
+        },
+        {
+            "id": 58,
+            "region_id": 1,
+            "name": {
+                "pl": "Jelenia Góra"
+            }
+        },
+        {
+            "id": 37,
+            "region_id": 1,
+            "name": {
+                "pl": "jeleniogórski"
+            }
+        },
+        {
+            "id": 318,
+            "region_id": 13,
+            "name": {
+                "pl": "jędrzejowski"
+            }
+        },
+        {
+            "id": 455,
+            "region_id": 15,
+            "name": {
+                "pl": "kaliski"
+            }
+        },
+        {
+            "id": 459,
+            "region_id": 15,
+            "name": {
+                "pl": "Kalisz"
+            }
+        },
+        {
+            "id": 38,
+            "region_id": 1,
+            "name": {
+                "pl": "kamiennogórski"
+            }
+        },
+        {
+            "id": 357,
+            "region_id": 16,
+            "name": {
+                "pl": "kamieński"
+            }
+        },
+        {
+            "id": 266,
+            "region_id": 11,
+            "name": {
+                "pl": "kartuski"
+            }
+        },
+        {
+            "id": 306,
+            "region_id": 12,
+            "name": {
+                "pl": "Katowice"
+            }
+        },
+        {
+            "id": 319,
+            "region_id": 13,
+            "name": {
+                "pl": "kazimierski"
+            }
+        },
+        {
+            "id": 211,
+            "region_id": 8,
+            "name": {
+                "pl": "kędzierzyńsko-kozielski"
+            }
+        },
+        {
+            "id": 8,
+            "region_id": 15,
+            "name": {
+                "pl": "kępiński"
+            }
+        },
+        {
+            "id": 338,
+            "region_id": 14,
+            "name": {
+                "pl": "kętrzyński"
+            }
+        },
+        {
+            "id": 450,
+            "region_id": 13,
+            "name": {
+                "pl": "Kielce"
+            }
+        },
+        {
+            "id": 449,
+            "region_id": 13,
+            "name": {
+                "pl": "kielecki"
+            }
+        },
+        {
+            "id": 212,
+            "region_id": 8,
+            "name": {
+                "pl": "kluczborski"
+            }
+        },
+        {
+            "id": 286,
+            "region_id": 12,
+            "name": {
+                "pl": "kłobucki"
+            }
+        },
+        {
+            "id": 39,
+            "region_id": 1,
+            "name": {
+                "pl": "kłodzki"
+            }
+        },
+        {
+            "id": 226,
+            "region_id": 9,
+            "name": {
+                "pl": "kolbuszowski"
+            }
+        },
+        {
+            "id": 250,
+            "region_id": 10,
+            "name": {
+                "pl": "kolneński"
+            }
+        },
+        {
+            "id": 9,
+            "region_id": 15,
+            "name": {
+                "pl": "kolski"
+            }
+        },
+        {
+            "id": 358,
+            "region_id": 16,
+            "name": {
+                "pl": "kołobrzeski"
+            }
+        },
+        {
+            "id": 321,
+            "region_id": 13,
+            "name": {
+                "pl": "konecki"
+            }
+        },
+        {
+            "id": 460,
+            "region_id": 15,
+            "name": {
+                "pl": "Konin"
+            }
+        },
+        {
+            "id": 456,
+            "region_id": 15,
+            "name": {
+                "pl": "koniński"
+            }
+        },
+        {
+            "id": 464,
+            "region_id": 16,
+            "name": {
+                "pl": "Koszalin"
+            }
+        },
+        {
+            "id": 463,
+            "region_id": 16,
+            "name": {
+                "pl": "koszaliński"
+            }
+        },
+        {
+            "id": 11,
+            "region_id": 15,
+            "name": {
+                "pl": "kościański"
+            }
+        },
+        {
+            "id": 267,
+            "region_id": 11,
+            "name": {
+                "pl": "kościerski"
+            }
+        },
+        {
+            "id": 173,
+            "region_id": 7,
+            "name": {
+                "pl": "kozienicki"
+            }
+        },
+        {
+            "id": 407,
+            "region_id": 6,
+            "name": {
+                "pl": "krakowski"
+            }
+        },
+        {
+            "id": 410,
+            "region_id": 6,
+            "name": {
+                "pl": "Kraków"
+            }
+        },
+        {
+            "id": 213,
+            "region_id": 8,
+            "name": {
+                "pl": "krapkowicki"
+            }
+        },
+        {
+            "id": 90,
+            "region_id": 3,
+            "name": {
+                "pl": "krasnostawski"
+            }
+        },
+        {
+            "id": 91,
+            "region_id": 3,
+            "name": {
+                "pl": "kraśnicki"
+            }
+        },
+        {
+            "id": 427,
+            "region_id": 9,
+            "name": {
+                "pl": "Krosno"
+            }
+        },
+        {
+            "id": 110,
+            "region_id": 4,
+            "name": {
+                "pl": "krośnieński"
+            }
+        },
+        {
+            "id": 423,
+            "region_id": 9,
+            "name": {
+                "pl": "krośnieński"
+            }
+        },
+        {
+            "id": 12,
+            "region_id": 15,
+            "name": {
+                "pl": "krotoszyński"
+            }
+        },
+        {
+            "id": 123,
+            "region_id": 5,
+            "name": {
+                "pl": "kutnowski"
+            }
+        },
+        {
+            "id": 268,
+            "region_id": 11,
+            "name": {
+                "pl": "kwidzyński"
+            }
+        },
+        {
+            "id": 174,
+            "region_id": 7,
+            "name": {
+                "pl": "legionowski"
+            }
+        },
+        {
+            "id": 380,
+            "region_id": 1,
+            "name": {
+                "pl": "Legnica"
+            }
+        },
+        {
+            "id": 378,
+            "region_id": 1,
+            "name": {
+                "pl": "legnicki"
+            }
+        },
+        {
+            "id": 372,
+            "region_id": 9,
+            "name": {
+                "pl": "leski"
+            }
+        },
+        {
+            "id": 457,
+            "region_id": 15,
+            "name": {
+                "pl": "leszczyński"
+            }
+        },
+        {
+            "id": 461,
+            "region_id": 15,
+            "name": {
+                "pl": "Leszno"
+            }
+        },
+        {
+            "id": 228,
+            "region_id": 9,
+            "name": {
+                "pl": "leżajski"
+            }
+        },
+        {
+            "id": 269,
+            "region_id": 11,
+            "name": {
+                "pl": "lęborski"
+            }
+        },
+        {
+            "id": 339,
+            "region_id": 14,
+            "name": {
+                "pl": "lidzbarski"
+            }
+        },
+        {
+            "id": 151,
+            "region_id": 6,
+            "name": {
+                "pl": "limanowski"
+            }
+        },
+        {
+            "id": 69,
+            "region_id": 2,
+            "name": {
+                "pl": "lipnowski"
+            }
+        },
+        {
+            "id": 175,
+            "region_id": 7,
+            "name": {
+                "pl": "lipski"
+            }
+        },
+        {
+            "id": 229,
+            "region_id": 9,
+            "name": {
+                "pl": "lubaczowski"
+            }
+        },
+        {
+            "id": 41,
+            "region_id": 1,
+            "name": {
+                "pl": "lubański"
+            }
+        },
+        {
+            "id": 92,
+            "region_id": 3,
+            "name": {
+                "pl": "lubartowski"
+            }
+        },
+        {
+            "id": 392,
+            "region_id": 3,
+            "name": {
+                "pl": "lubelski"
+            }
+        },
+        {
+            "id": 42,
+            "region_id": 1,
+            "name": {
+                "pl": "lubiński"
+            }
+        },
+        {
+            "id": 396,
+            "region_id": 3,
+            "name": {
+                "pl": "Lublin"
+            }
+        },
+        {
+            "id": 287,
+            "region_id": 12,
+            "name": {
+                "pl": "lubliniecki"
+            }
+        },
+        {
+            "id": 43,
+            "region_id": 1,
+            "name": {
+                "pl": "lwówecki"
+            }
+        },
+        {
+            "id": 230,
+            "region_id": 9,
+            "name": {
+                "pl": "łańcucki"
+            }
+        },
+        {
+            "id": 124,
+            "region_id": 5,
+            "name": {
+                "pl": "łaski"
+            }
+        },
+        {
+            "id": 125,
+            "region_id": 5,
+            "name": {
+                "pl": "łęczycki"
+            }
+        },
+        {
+            "id": 94,
+            "region_id": 3,
+            "name": {
+                "pl": "łęczyński"
+            }
+        },
+        {
+            "id": 374,
+            "region_id": 16,
+            "name": {
+                "pl": "łobeski"
+            }
+        },
+        {
+            "id": 435,
+            "region_id": 10,
+            "name": {
+                "pl": "Łomża"
+            }
+        },
+        {
+            "id": 432,
+            "region_id": 10,
+            "name": {
+                "pl": "łomżyński"
+            }
+        },
+        {
+            "id": 176,
+            "region_id": 7,
+            "name": {
+                "pl": "łosicki"
+            }
+        },
+        {
+            "id": 126,
+            "region_id": 5,
+            "name": {
+                "pl": "łowicki"
+            }
+        },
+        {
+            "id": 142,
+            "region_id": 5,
+            "name": {
+                "pl": "łódzki wschodni"
+            }
+        },
+        {
+            "id": 127,
+            "region_id": 5,
+            "name": {
+                "pl": "Łódź"
+            }
+        },
+        {
+            "id": 95,
+            "region_id": 3,
+            "name": {
+                "pl": "łukowski"
+            }
+        },
+        {
+            "id": 177,
+            "region_id": 7,
+            "name": {
+                "pl": "makowski"
+            }
+        },
+        {
+            "id": 270,
+            "region_id": 11,
+            "name": {
+                "pl": "malborski"
+            }
+        },
+        {
+            "id": 152,
+            "region_id": 6,
+            "name": {
+                "pl": "miechowski"
+            }
+        },
+        {
+            "id": 231,
+            "region_id": 9,
+            "name": {
+                "pl": "mielecki"
+            }
+        },
+        {
+            "id": 14,
+            "region_id": 15,
+            "name": {
+                "pl": "międzychodzki"
+            }
+        },
+        {
+            "id": 111,
+            "region_id": 4,
+            "name": {
+                "pl": "międzyrzecki"
+            }
+        },
+        {
+            "id": 288,
+            "region_id": 12,
+            "name": {
+                "pl": "mikołowski"
+            }
+        },
+        {
+            "id": 44,
+            "region_id": 1,
+            "name": {
+                "pl": "milicki"
+            }
+        },
+        {
+            "id": 178,
+            "region_id": 7,
+            "name": {
+                "pl": "miński"
+            }
+        },
+        {
+            "id": 179,
+            "region_id": 7,
+            "name": {
+                "pl": "mławski"
+            }
+        },
+        {
+            "id": 70,
+            "region_id": 2,
+            "name": {
+                "pl": "mogileński"
+            }
+        },
+        {
+            "id": 252,
+            "region_id": 10,
+            "name": {
+                "pl": "moniecki"
+            }
+        },
+        {
+            "id": 340,
+            "region_id": 14,
+            "name": {
+                "pl": "mrągowski"
+            }
+        },
+        {
+            "id": 307,
+            "region_id": 12,
+            "name": {
+                "pl": "Mysłowice"
+            }
+        },
+        {
+            "id": 289,
+            "region_id": 12,
+            "name": {
+                "pl": "myszkowski"
+            }
+        },
+        {
+            "id": 153,
+            "region_id": 6,
+            "name": {
+                "pl": "myślenicki"
+            }
+        },
+        {
+            "id": 360,
+            "region_id": 16,
+            "name": {
+                "pl": "myśliborski"
+            }
+        },
+        {
+            "id": 71,
+            "region_id": 2,
+            "name": {
+                "pl": "nakielski"
+            }
+        },
+        {
+            "id": 214,
+            "region_id": 8,
+            "name": {
+                "pl": "namysłowski"
+            }
+        },
+        {
+            "id": 341,
+            "region_id": 14,
+            "name": {
+                "pl": "nidzicki"
+            }
+        },
+        {
+            "id": 232,
+            "region_id": 9,
+            "name": {
+                "pl": "niżański"
+            }
+        },
+        {
+            "id": 271,
+            "region_id": 11,
+            "name": {
+                "pl": "nowodworski"
+            }
+        },
+        {
+            "id": 180,
+            "region_id": 7,
+            "name": {
+                "pl": "nowodworski"
+            }
+        },
+        {
+            "id": 342,
+            "region_id": 14,
+            "name": {
+                "pl": "nowomiejski"
+            }
+        },
+        {
+            "id": 408,
+            "region_id": 6,
+            "name": {
+                "pl": "nowosądecki"
+            }
+        },
+        {
+            "id": 112,
+            "region_id": 4,
+            "name": {
+                "pl": "nowosolski"
+            }
+        },
+        {
+            "id": 155,
+            "region_id": 6,
+            "name": {
+                "pl": "nowotarski"
+            }
+        },
+        {
+            "id": 15,
+            "region_id": 15,
+            "name": {
+                "pl": "nowotomyski"
+            }
+        },
+        {
+            "id": 411,
+            "region_id": 6,
+            "name": {
+                "pl": "Nowy Sącz"
+            }
+        },
+        {
+            "id": 215,
+            "region_id": 8,
+            "name": {
+                "pl": "nyski"
+            }
+        },
+        {
+            "id": 16,
+            "region_id": 15,
+            "name": {
+                "pl": "obornicki"
+            }
+        },
+        {
+            "id": 343,
+            "region_id": 14,
+            "name": {
+                "pl": "olecki"
+            }
+        },
+        {
+            "id": 216,
+            "region_id": 8,
+            "name": {
+                "pl": "oleski"
+            }
+        },
+        {
+            "id": 45,
+            "region_id": 1,
+            "name": {
+                "pl": "oleśnicki"
+            }
+        },
+        {
+            "id": 156,
+            "region_id": 6,
+            "name": {
+                "pl": "olkuski"
+            }
+        },
+        {
+            "id": 454,
+            "region_id": 14,
+            "name": {
+                "pl": "Olsztyn"
+            }
+        },
+        {
+            "id": 452,
+            "region_id": 14,
+            "name": {
+                "pl": "olsztyński"
+            }
+        },
+        {
+            "id": 46,
+            "region_id": 1,
+            "name": {
+                "pl": "oławski"
+            }
+        },
+        {
+            "id": 322,
+            "region_id": 13,
+            "name": {
+                "pl": "opatowski"
+            }
+        },
+        {
+            "id": 128,
+            "region_id": 5,
+            "name": {
+                "pl": "opoczyński"
+            }
+        },
+        {
+            "id": 422,
+            "region_id": 8,
+            "name": {
+                "pl": "Opole"
+            }
+        },
+        {
+            "id": 96,
+            "region_id": 3,
+            "name": {
+                "pl": "opolski"
+            }
+        },
+        {
+            "id": 421,
+            "region_id": 8,
+            "name": {
+                "pl": "opolski"
+            }
+        },
+        {
+            "id": 413,
+            "region_id": 7,
+            "name": {
+                "pl": "ostrołęcki"
+            }
+        },
+        {
+            "id": 417,
+            "region_id": 7,
+            "name": {
+                "pl": "Ostrołęka"
+            }
+        },
+        {
+            "id": 323,
+            "region_id": 13,
+            "name": {
+                "pl": "ostrowiecki"
+            }
+        },
+        {
+            "id": 17,
+            "region_id": 15,
+            "name": {
+                "pl": "ostrowski"
+            }
+        },
+        {
+            "id": 182,
+            "region_id": 7,
+            "name": {
+                "pl": "ostrowski"
+            }
+        },
+        {
+            "id": 346,
+            "region_id": 14,
+            "name": {
+                "pl": "ostródzki"
+            }
+        },
+        {
+            "id": 18,
+            "region_id": 15,
+            "name": {
+                "pl": "ostrzeszowski"
+            }
+        },
+        {
+            "id": 157,
+            "region_id": 6,
+            "name": {
+                "pl": "oświęcimski"
+            }
+        },
+        {
+            "id": 183,
+            "region_id": 7,
+            "name": {
+                "pl": "otwocki"
+            }
+        },
+        {
+            "id": 129,
+            "region_id": 5,
+            "name": {
+                "pl": "pabianicki"
+            }
+        },
+        {
+            "id": 130,
+            "region_id": 5,
+            "name": {
+                "pl": "pajęczański"
+            }
+        },
+        {
+            "id": 97,
+            "region_id": 3,
+            "name": {
+                "pl": "parczewski"
+            }
+        },
+        {
+            "id": 184,
+            "region_id": 7,
+            "name": {
+                "pl": "piaseczyński"
+            }
+        },
+        {
+            "id": 308,
+            "region_id": 12,
+            "name": {
+                "pl": "Piekary Śląskie"
+            }
+        },
+        {
+            "id": 19,
+            "region_id": 15,
+            "name": {
+                "pl": "pilski"
+            }
+        },
+        {
+            "id": 324,
+            "region_id": 13,
+            "name": {
+                "pl": "pińczowski"
+            }
+        },
+        {
+            "id": 402,
+            "region_id": 5,
+            "name": {
+                "pl": "piotrkowski"
+            }
+        },
+        {
+            "id": 405,
+            "region_id": 5,
+            "name": {
+                "pl": "Piotrków Trybunalski"
+            }
+        },
+        {
+            "id": 347,
+            "region_id": 14,
+            "name": {
+                "pl": "piski"
+            }
+        },
+        {
+            "id": 20,
+            "region_id": 15,
+            "name": {
+                "pl": "pleszewski"
+            }
+        },
+        {
+            "id": 418,
+            "region_id": 7,
+            "name": {
+                "pl": "Płock"
+            }
+        },
+        {
+            "id": 414,
+            "region_id": 7,
+            "name": {
+                "pl": "płocki"
+            }
+        },
+        {
+            "id": 186,
+            "region_id": 7,
+            "name": {
+                "pl": "płoński"
+            }
+        },
+        {
+            "id": 132,
+            "region_id": 5,
+            "name": {
+                "pl": "poddębicki"
+            }
+        },
+        {
+            "id": 361,
+            "region_id": 16,
+            "name": {
+                "pl": "policki"
+            }
+        },
+        {
+            "id": 47,
+            "region_id": 1,
+            "name": {
+                "pl": "polkowicki"
+            }
+        },
+        {
+            "id": 462,
+            "region_id": 15,
+            "name": {
+                "pl": "Poznań"
+            }
+        },
+        {
+            "id": 458,
+            "region_id": 15,
+            "name": {
+                "pl": "poznański"
+            }
+        },
+        {
+            "id": 158,
+            "region_id": 6,
+            "name": {
+                "pl": "proszowicki"
+            }
+        },
+        {
+            "id": 218,
+            "region_id": 8,
+            "name": {
+                "pl": "prudnicki"
+            }
+        },
+        {
+            "id": 187,
+            "region_id": 7,
+            "name": {
+                "pl": "pruszkowski"
+            }
+        },
+        {
+            "id": 188,
+            "region_id": 7,
+            "name": {
+                "pl": "przasnyski"
+            }
+        },
+        {
+            "id": 424,
+            "region_id": 9,
+            "name": {
+                "pl": "przemyski"
+            }
+        },
+        {
+            "id": 428,
+            "region_id": 9,
+            "name": {
+                "pl": "Przemyśl"
+            }
+        },
+        {
+            "id": 234,
+            "region_id": 9,
+            "name": {
+                "pl": "przeworski"
+            }
+        },
+        {
+            "id": 189,
+            "region_id": 7,
+            "name": {
+                "pl": "przysuski"
+            }
+        },
+        {
+            "id": 290,
+            "region_id": 12,
+            "name": {
+                "pl": "pszczyński"
+            }
+        },
+        {
+            "id": 272,
+            "region_id": 11,
+            "name": {
+                "pl": "pucki"
+            }
+        },
+        {
+            "id": 98,
+            "region_id": 3,
+            "name": {
+                "pl": "puławski"
+            }
+        },
+        {
+            "id": 190,
+            "region_id": 7,
+            "name": {
+                "pl": "pułtuski"
+            }
+        },
+        {
+            "id": 362,
+            "region_id": 16,
+            "name": {
+                "pl": "pyrzycki"
+            }
+        },
+        {
+            "id": 291,
+            "region_id": 12,
+            "name": {
+                "pl": "raciborski"
+            }
+        },
+        {
+            "id": 419,
+            "region_id": 7,
+            "name": {
+                "pl": "Radom"
+            }
+        },
+        {
+            "id": 415,
+            "region_id": 7,
+            "name": {
+                "pl": "radomski"
+            }
+        },
+        {
+            "id": 133,
+            "region_id": 5,
+            "name": {
+                "pl": "radomszczański"
+            }
+        },
+        {
+            "id": 72,
+            "region_id": 2,
+            "name": {
+                "pl": "radziejowski"
+            }
+        },
+        {
+            "id": 99,
+            "region_id": 3,
+            "name": {
+                "pl": "radzyński"
+            }
+        },
+        {
+            "id": 22,
+            "region_id": 15,
+            "name": {
+                "pl": "rawicki"
+            }
+        },
+        {
+            "id": 134,
+            "region_id": 5,
+            "name": {
+                "pl": "rawski"
+            }
+        },
+        {
+            "id": 235,
+            "region_id": 9,
+            "name": {
+                "pl": "ropczycko-sędziszowski"
+            }
+        },
+        {
+            "id": 309,
+            "region_id": 12,
+            "name": {
+                "pl": "Ruda Śląska"
+            }
+        },
+        {
+            "id": 444,
+            "region_id": 12,
+            "name": {
+                "pl": "rybnicki"
+            }
+        },
+        {
+            "id": 448,
+            "region_id": 12,
+            "name": {
+                "pl": "Rybnik"
+            }
+        },
+        {
+            "id": 100,
+            "region_id": 3,
+            "name": {
+                "pl": "rycki"
+            }
+        },
+        {
+            "id": 73,
+            "region_id": 2,
+            "name": {
+                "pl": "rypiński"
+            }
+        },
+        {
+            "id": 425,
+            "region_id": 9,
+            "name": {
+                "pl": "rzeszowski"
+            }
+        },
+        {
+            "id": 429,
+            "region_id": 9,
+            "name": {
+                "pl": "Rzeszów"
+            }
+        },
+        {
+            "id": 325,
+            "region_id": 13,
+            "name": {
+                "pl": "sandomierski"
+            }
+        },
+        {
+            "id": 237,
+            "region_id": 9,
+            "name": {
+                "pl": "sanocki"
+            }
+        },
+        {
+            "id": 253,
+            "region_id": 10,
+            "name": {
+                "pl": "sejneński"
+            }
+        },
+        {
+            "id": 74,
+            "region_id": 2,
+            "name": {
+                "pl": "sępoleński"
+            }
+        },
+        {
+            "id": 420,
+            "region_id": 7,
+            "name": {
+                "pl": "Siedlce"
+            }
+        },
+        {
+            "id": 416,
+            "region_id": 7,
+            "name": {
+                "pl": "siedlecki"
+            }
+        },
+        {
+            "id": 311,
+            "region_id": 12,
+            "name": {
+                "pl": "Siemianowice Śląskie"
+            }
+        },
+        {
+            "id": 254,
+            "region_id": 10,
+            "name": {
+                "pl": "siemiatycki"
+            }
+        },
+        {
+            "id": 135,
+            "region_id": 5,
+            "name": {
+                "pl": "sieradzki"
+            }
+        },
+        {
+            "id": 193,
+            "region_id": 7,
+            "name": {
+                "pl": "sierpecki"
+            }
+        },
+        {
+            "id": 326,
+            "region_id": 13,
+            "name": {
+                "pl": "skarżyski"
+            }
+        },
+        {
+            "id": 406,
+            "region_id": 5,
+            "name": {
+                "pl": "Skierniewice"
+            }
+        },
+        {
+            "id": 403,
+            "region_id": 5,
+            "name": {
+                "pl": "skierniewicki"
+            }
+        },
+        {
+            "id": 363,
+            "region_id": 16,
+            "name": {
+                "pl": "sławieński"
+            }
+        },
+        {
+            "id": 113,
+            "region_id": 4,
+            "name": {
+                "pl": "słubicki"
+            }
+        },
+        {
+            "id": 23,
+            "region_id": 15,
+            "name": {
+                "pl": "słupecki"
+            }
+        },
+        {
+            "id": 440,
+            "region_id": 11,
+            "name": {
+                "pl": "Słupsk"
+            }
+        },
+        {
+            "id": 438,
+            "region_id": 11,
+            "name": {
+                "pl": "słupski"
+            }
+        },
+        {
+            "id": 194,
+            "region_id": 7,
+            "name": {
+                "pl": "sochaczewski"
+            }
+        },
+        {
+            "id": 195,
+            "region_id": 7,
+            "name": {
+                "pl": "sokołowski"
+            }
+        },
+        {
+            "id": 255,
+            "region_id": 10,
+            "name": {
+                "pl": "sokólski"
+            }
+        },
+        {
+            "id": 280,
+            "region_id": 11,
+            "name": {
+                "pl": "Sopot"
+            }
+        },
+        {
+            "id": 312,
+            "region_id": 12,
+            "name": {
+                "pl": "Sosnowiec"
+            }
+        },
+        {
+            "id": 238,
+            "region_id": 9,
+            "name": {
+                "pl": "stalowowolski"
+            }
+        },
+        {
+            "id": 327,
+            "region_id": 13,
+            "name": {
+                "pl": "starachowicki"
+            }
+        },
+        {
+            "id": 364,
+            "region_id": 16,
+            "name": {
+                "pl": "stargardzki"
+            }
+        },
+        {
+            "id": 274,
+            "region_id": 11,
+            "name": {
+                "pl": "starogardzki"
+            }
+        },
+        {
+            "id": 328,
+            "region_id": 13,
+            "name": {
+                "pl": "staszowski"
+            }
+        },
+        {
+            "id": 219,
+            "region_id": 8,
+            "name": {
+                "pl": "strzelecki"
+            }
+        },
+        {
+            "id": 114,
+            "region_id": 4,
+            "name": {
+                "pl": "strzelecko-drezdenecki"
+            }
+        },
+        {
+            "id": 48,
+            "region_id": 1,
+            "name": {
+                "pl": "strzeliński"
+            }
+        },
+        {
+            "id": 239,
+            "region_id": 9,
+            "name": {
+                "pl": "strzyżowski"
+            }
+        },
+        {
+            "id": 115,
+            "region_id": 4,
+            "name": {
+                "pl": "sulęciński"
+            }
+        },
+        {
+            "id": 159,
+            "region_id": 6,
+            "name": {
+                "pl": "suski"
+            }
+        },
+        {
+            "id": 433,
+            "region_id": 10,
+            "name": {
+                "pl": "suwalski"
+            }
+        },
+        {
+            "id": 436,
+            "region_id": 10,
+            "name": {
+                "pl": "Suwałki"
+            }
+        },
+        {
+            "id": 24,
+            "region_id": 15,
+            "name": {
+                "pl": "szamotulski"
+            }
+        },
+        {
+            "id": 371,
+            "region_id": 16,
+            "name": {
+                "pl": "Szczecin"
+            }
+        },
+        {
+            "id": 365,
+            "region_id": 16,
+            "name": {
+                "pl": "szczecinecki"
+            }
+        },
+        {
+            "id": 348,
+            "region_id": 14,
+            "name": {
+                "pl": "szczycieński"
+            }
+        },
+        {
+            "id": 373,
+            "region_id": 11,
+            "name": {
+                "pl": "sztumski"
+            }
+        },
+        {
+            "id": 196,
+            "region_id": 7,
+            "name": {
+                "pl": "szydłowiecki"
+            }
+        },
+        {
+            "id": 25,
+            "region_id": 15,
+            "name": {
+                "pl": "średzki"
+            }
+        },
+        {
+            "id": 49,
+            "region_id": 1,
+            "name": {
+                "pl": "średzki"
+            }
+        },
+        {
+            "id": 26,
+            "region_id": 15,
+            "name": {
+                "pl": "śremski"
+            }
+        },
+        {
+            "id": 50,
+            "region_id": 1,
+            "name": {
+                "pl": "świdnicki"
+            }
+        },
+        {
+            "id": 101,
+            "region_id": 3,
+            "name": {
+                "pl": "świdnicki"
+            }
+        },
+        {
+            "id": 366,
+            "region_id": 16,
+            "name": {
+                "pl": "świdwiński"
+            }
+        },
+        {
+            "id": 116,
+            "region_id": 4,
+            "name": {
+                "pl": "świebodziński"
+            }
+        },
+        {
+            "id": 75,
+            "region_id": 2,
+            "name": {
+                "pl": "świecki"
+            }
+        },
+        {
+            "id": 313,
+            "region_id": 12,
+            "name": {
+                "pl": "Świętochłowice"
+            }
+        },
+        {
+            "id": 370,
+            "region_id": 16,
+            "name": {
+                "pl": "Świnoujście"
+            }
+        },
+        {
+            "id": 430,
+            "region_id": 9,
+            "name": {
+                "pl": "Tarnobrzeg"
+            }
+        },
+        {
+            "id": 426,
+            "region_id": 9,
+            "name": {
+                "pl": "tarnobrzeski"
+            }
+        },
+        {
+            "id": 293,
+            "region_id": 12,
+            "name": {
+                "pl": "tarnogórski"
+            }
+        },
+        {
+            "id": 409,
+            "region_id": 6,
+            "name": {
+                "pl": "tarnowski"
+            }
+        },
+        {
+            "id": 412,
+            "region_id": 6,
+            "name": {
+                "pl": "Tarnów"
+            }
+        },
+        {
+            "id": 161,
+            "region_id": 6,
+            "name": {
+                "pl": "tatrzański"
+            }
+        },
+        {
+            "id": 275,
+            "region_id": 11,
+            "name": {
+                "pl": "tczewski"
+            }
+        },
+        {
+            "id": 102,
+            "region_id": 3,
+            "name": {
+                "pl": "tomaszowski"
+            }
+        },
+        {
+            "id": 137,
+            "region_id": 5,
+            "name": {
+                "pl": "tomaszowski"
+            }
+        },
+        {
+            "id": 388,
+            "region_id": 2,
+            "name": {
+                "pl": "Toruń"
+            }
+        },
+        {
+            "id": 384,
+            "region_id": 2,
+            "name": {
+                "pl": "toruński"
+            }
+        },
+        {
+            "id": 51,
+            "region_id": 1,
+            "name": {
+                "pl": "trzebnicki"
+            }
+        },
+        {
+            "id": 77,
+            "region_id": 2,
+            "name": {
+                "pl": "tucholski"
+            }
+        },
+        {
+            "id": 27,
+            "region_id": 15,
+            "name": {
+                "pl": "turecki"
+            }
+        },
+        {
+            "id": 294,
+            "region_id": 12,
+            "name": {
+                "pl": "Tychy"
+            }
+        },
+        {
+            "id": 162,
+            "region_id": 6,
+            "name": {
+                "pl": "wadowicki"
+            }
+        },
+        {
+            "id": 465,
+            "region_id": 1,
+            "name": {
+                "pl": "Wałbrzych"
+            }
+        },
+        {
+            "id": 52,
+            "region_id": 1,
+            "name": {
+                "pl": "wałbrzyski"
+            }
+        },
+        {
+            "id": 367,
+            "region_id": 16,
+            "name": {
+                "pl": "wałecki"
+            }
+        },
+        {
+            "id": 197,
+            "region_id": 7,
+            "name": {
+                "pl": "Warszawa"
+            }
+        },
+        {
+            "id": 198,
+            "region_id": 7,
+            "name": {
+                "pl": "warszawski zachodni"
+            }
+        },
+        {
+            "id": 78,
+            "region_id": 2,
+            "name": {
+                "pl": "wąbrzeski"
+            }
+        },
+        {
+            "id": 28,
+            "region_id": 15,
+            "name": {
+                "pl": "wągrowiecki"
+            }
+        },
+        {
+            "id": 276,
+            "region_id": 11,
+            "name": {
+                "pl": "wejherowski"
+            }
+        },
+        {
+            "id": 344,
+            "region_id": 14,
+            "name": {
+                "pl": "węgorzewski"
+            }
+        },
+        {
+            "id": 199,
+            "region_id": 7,
+            "name": {
+                "pl": "węgrowski"
+            }
+        },
+        {
+            "id": 163,
+            "region_id": 6,
+            "name": {
+                "pl": "wielicki"
+            }
+        },
+        {
+            "id": 138,
+            "region_id": 5,
+            "name": {
+                "pl": "wieluński"
+            }
+        },
+        {
+            "id": 139,
+            "region_id": 5,
+            "name": {
+                "pl": "wieruszowski"
+            }
+        },
+        {
+            "id": 389,
+            "region_id": 2,
+            "name": {
+                "pl": "Włocławek"
+            }
+        },
+        {
+            "id": 385,
+            "region_id": 2,
+            "name": {
+                "pl": "włocławski"
+            }
+        },
+        {
+            "id": 103,
+            "region_id": 3,
+            "name": {
+                "pl": "włodawski"
+            }
+        },
+        {
+            "id": 329,
+            "region_id": 13,
+            "name": {
+                "pl": "włoszczowski"
+            }
+        },
+        {
+            "id": 295,
+            "region_id": 12,
+            "name": {
+                "pl": "wodzisławski"
+            }
+        },
+        {
+            "id": 29,
+            "region_id": 15,
+            "name": {
+                "pl": "wolsztyński"
+            }
+        },
+        {
+            "id": 200,
+            "region_id": 7,
+            "name": {
+                "pl": "wołomiński"
+            }
+        },
+        {
+            "id": 53,
+            "region_id": 1,
+            "name": {
+                "pl": "wołowski"
+            }
+        },
+        {
+            "id": 381,
+            "region_id": 1,
+            "name": {
+                "pl": "Wrocław"
+            }
+        },
+        {
+            "id": 379,
+            "region_id": 1,
+            "name": {
+                "pl": "wrocławski"
+            }
+        },
+        {
+            "id": 30,
+            "region_id": 15,
+            "name": {
+                "pl": "wrzesiński"
+            }
+        },
+        {
+            "id": 377,
+            "region_id": 4,
+            "name": {
+                "pl": "wschowski"
+            }
+        },
+        {
+            "id": 257,
+            "region_id": 10,
+            "name": {
+                "pl": "wysokomazowiecki"
+            }
+        },
+        {
+            "id": 201,
+            "region_id": 7,
+            "name": {
+                "pl": "wyszkowski"
+            }
+        },
+        {
+            "id": 315,
+            "region_id": 12,
+            "name": {
+                "pl": "Zabrze"
+            }
+        },
+        {
+            "id": 258,
+            "region_id": 10,
+            "name": {
+                "pl": "zambrowski"
+            }
+        },
+        {
+            "id": 393,
+            "region_id": 3,
+            "name": {
+                "pl": "zamojski"
+            }
+        },
+        {
+            "id": 397,
+            "region_id": 3,
+            "name": {
+                "pl": "Zamość"
+            }
+        },
+        {
+            "id": 296,
+            "region_id": 12,
+            "name": {
+                "pl": "zawierciański"
+            }
+        },
+        {
+            "id": 55,
+            "region_id": 1,
+            "name": {
+                "pl": "ząbkowicki"
+            }
+        },
+        {
+            "id": 140,
+            "region_id": 5,
+            "name": {
+                "pl": "zduńskowolski"
+            }
+        },
+        {
+            "id": 141,
+            "region_id": 5,
+            "name": {
+                "pl": "zgierski"
+            }
+        },
+        {
+            "id": 56,
+            "region_id": 1,
+            "name": {
+                "pl": "zgorzelecki"
+            }
+        },
+        {
+            "id": 401,
+            "region_id": 4,
+            "name": {
+                "pl": "Zielona Góra"
+            }
+        },
+        {
+            "id": 399,
+            "region_id": 4,
+            "name": {
+                "pl": "zielonogórski"
+            }
+        },
+        {
+            "id": 57,
+            "region_id": 1,
+            "name": {
+                "pl": "złotoryjski"
+            }
+        },
+        {
+            "id": 31,
+            "region_id": 15,
+            "name": {
+                "pl": "złotowski"
+            }
+        },
+        {
+            "id": 202,
+            "region_id": 7,
+            "name": {
+                "pl": "zwoleński"
+            }
+        },
+        {
+            "id": 118,
+            "region_id": 4,
+            "name": {
+                "pl": "żagański"
+            }
+        },
+        {
+            "id": 119,
+            "region_id": 4,
+            "name": {
+                "pl": "żarski"
+            }
+        },
+        {
+            "id": 80,
+            "region_id": 2,
+            "name": {
+                "pl": "żniński"
+            }
+        },
+        {
+            "id": 316,
+            "region_id": 12,
+            "name": {
+                "pl": "Żory"
+            }
+        },
+        {
+            "id": 203,
+            "region_id": 7,
+            "name": {
+                "pl": "żuromiński"
+            }
+        },
+        {
+            "id": 204,
+            "region_id": 7,
+            "name": {
+                "pl": "żyrardowski"
+            }
+        },
+        {
+            "id": 297,
+            "region_id": 12,
+            "name": {
+                "pl": "żywiecki"
+            }
+        }
+    ]
+}

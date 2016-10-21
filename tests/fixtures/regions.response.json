@@ -1,0 +1,100 @@
+{
+    "results": [
+        {
+            "id": 1,
+            "name": {
+                "pl": "dolnośląskie"
+            }
+        },
+        {
+            "id": 2,
+            "name": {
+                "pl": "kujawsko-pomorskie"
+            }
+        },
+        {
+            "id": 3,
+            "name": {
+                "pl": "lubelskie"
+            }
+        },
+        {
+            "id": 4,
+            "name": {
+                "pl": "lubuskie"
+            }
+        },
+        {
+            "id": 5,
+            "name": {
+                "pl": "łódzkie"
+            }
+        },
+        {
+            "id": 6,
+            "name": {
+                "pl": "małopolskie"
+            }
+        },
+        {
+            "id": 7,
+            "name": {
+                "pl": "mazowieckie"
+            }
+        },
+        {
+            "id": 8,
+            "name": {
+                "pl": "opolskie"
+            }
+        },
+        {
+            "id": 9,
+            "name": {
+                "pl": "podkarpackie"
+            }
+        },
+        {
+            "id": 10,
+            "name": {
+                "pl": "podlaskie"
+            }
+        },
+        {
+            "id": 11,
+            "name": {
+                "pl": "pomorskie"
+            }
+        },
+        {
+            "id": 12,
+            "name": {
+                "pl": "śląskie"
+            }
+        },
+        {
+            "id": 13,
+            "name": {
+                "pl": "świętokrzyskie"
+            }
+        },
+        {
+            "id": 14,
+            "name": {
+                "pl": "warmińsko-mazurskie"
+            }
+        },
+        {
+            "id": 15,
+            "name": {
+                "pl": "wielkopolskie"
+            }
+        },
+        {
+            "id": 16,
+            "name": {
+                "pl": "zachodniopomorskie"
+            }
+        }
+    ]
+}
