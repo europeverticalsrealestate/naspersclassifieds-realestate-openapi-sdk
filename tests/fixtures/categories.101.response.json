@@ -1,0 +1,491 @@
+{
+    "id": 101,
+    "names": {
+        "pl": "Mieszkania"
+    },
+    "parent_id": 1,
+    "code": "mieszkanie",
+    "path_url": "sprzedaz\/mieszkanie",
+    "depth": 2,
+    "parameters": [
+        {
+            "code": "price",
+            "type": "price",
+            "labels": {
+                "pl": "cena"
+            },
+            "required": true,
+            "purpose": "both",
+            "options": {
+                "price": {
+                    "pl": "cena"
+                }
+            }
+        },
+        {
+            "code": "m",
+            "type": "input",
+            "labels": {
+                "pl": "powierzchnia"
+            },
+            "required": true,
+            "purpose": "both",
+            "options": null
+        },
+        {
+            "code": "price_per_m",
+            "type": "input",
+            "labels": {
+                "pl": "cena za m<sup>2<\/sup>"
+            },
+            "required": false,
+            "purpose": "both",
+            "options": null
+        },
+        {
+            "code": "rooms_num",
+            "type": "select",
+            "labels": {
+                "pl": "liczba pokoi"
+            },
+            "required": true,
+            "purpose": "both",
+            "options": {
+                "1": {
+                    "pl": "1"
+                },
+                "2": {
+                    "pl": "2"
+                },
+                "3": {
+                    "pl": "3"
+                },
+                "4": {
+                    "pl": "4"
+                },
+                "5": {
+                    "pl": "5"
+                },
+                "6": {
+                    "pl": "6"
+                },
+                "7": {
+                    "pl": "7"
+                },
+                "8": {
+                    "pl": "8"
+                },
+                "9": {
+                    "pl": "9"
+                },
+                "10": {
+                    "pl": "10"
+                },
+                "more": {
+                    "pl": "więcej niż 10"
+                }
+            }
+        },
+        {
+            "code": "market",
+            "type": "select",
+            "labels": {
+                "pl": "rynek"
+            },
+            "required": true,
+            "purpose": "both",
+            "options": {
+                "primary": {
+                    "pl": "pierwotny"
+                },
+                "secondary": {
+                    "pl": "wtórny"
+                }
+            }
+        },
+        {
+            "code": "building_type",
+            "type": "select",
+            "labels": {
+                "pl": "rodzaj zabudowy"
+            },
+            "required": false,
+            "purpose": "both",
+            "options": {
+                "block": {
+                    "pl": "blok"
+                },
+                "tenement": {
+                    "pl": "kamienica"
+                },
+                "house": {
+                    "pl": "dom wolnostojący"
+                },
+                "infill": {
+                    "pl": "plomba"
+                },
+                "ribbon": {
+                    "pl": "szeregowiec"
+                },
+                "apartment": {
+                    "pl": "apartamentowiec"
+                },
+                "loft": {
+                    "pl": "loft"
+                }
+            }
+        },
+        {
+            "code": "floor_no",
+            "type": "select",
+            "labels": {
+                "pl": "piętro"
+            },
+            "required": false,
+            "purpose": "both",
+            "options": {
+                "cellar": {
+                    "pl": "suterena"
+                },
+                "ground_floor": {
+                    "pl": "parter"
+                },
+                "floor_1": {
+                    "pl": "1"
+                },
+                "floor_2": {
+                    "pl": "2"
+                },
+                "floor_3": {
+                    "pl": "3"
+                },
+                "floor_4": {
+                    "pl": "4"
+                },
+                "floor_5": {
+                    "pl": "5"
+                },
+                "floor_6": {
+                    "pl": "6"
+                },
+                "floor_7": {
+                    "pl": "7"
+                },
+                "floor_8": {
+                    "pl": "8"
+                },
+                "floor_9": {
+                    "pl": "9"
+                },
+                "floor_10": {
+                    "pl": "10"
+                },
+                "floor_higher_10": {
+                    "pl": "> 10"
+                },
+                "garret": {
+                    "pl": "poddasze"
+                }
+            }
+        },
+        {
+            "code": "building_floors_num",
+            "type": "input",
+            "labels": {
+                "pl": "liczba pięter"
+            },
+            "required": false,
+            "purpose": "both",
+            "options": null
+        },
+        {
+            "code": "building_material",
+            "type": "select",
+            "labels": {
+                "pl": "materiał budynku"
+            },
+            "required": false,
+            "purpose": "both",
+            "options": {
+                "brick": {
+                    "pl": "cegła"
+                },
+                "wood": {
+                    "pl": "drewno"
+                },
+                "breezeblock": {
+                    "pl": "pustak"
+                },
+                "hydroton": {
+                    "pl": "keramzyt"
+                },
+                "concrete_plate": {
+                    "pl": "wielka płyta"
+                },
+                "concrete": {
+                    "pl": "beton"
+                },
+                "silikat": {
+                    "pl": "silikat"
+                },
+                "cellular_concrete": {
+                    "pl": "beton komórkowy"
+                },
+                "reinforced_concrete": {
+                    "pl": "żelbet"
+                },
+                "other": {
+                    "pl": "inne"
+                }
+            }
+        },
+        {
+            "code": "windows_type",
+            "type": "select",
+            "labels": {
+                "pl": "okna"
+            },
+            "required": false,
+            "purpose": "add",
+            "options": {
+                "plastic": {
+                    "pl": "plastikowe"
+                },
+                "wooden": {
+                    "pl": "drewniane"
+                },
+                "aluminium": {
+                    "pl": "aluminiowe"
+                }
+            }
+        },
+        {
+            "code": "heating",
+            "type": "select",
+            "labels": {
+                "pl": "ogrzewanie"
+            },
+            "required": false,
+            "purpose": "add",
+            "options": {
+                "urban": {
+                    "pl": "miejskie"
+                },
+                "gas": {
+                    "pl": "gazowe"
+                },
+                "tiled_stove": {
+                    "pl": "piece kaflowe"
+                },
+                "electrical": {
+                    "pl": "elektryczne"
+                },
+                "boiler_room": {
+                    "pl": "kotłownia"
+                },
+                "other": {
+                    "pl": "inne"
+                }
+            }
+        },
+        {
+            "code": "build_year",
+            "type": "input",
+            "labels": {
+                "pl": "rok budowy"
+            },
+            "required": false,
+            "purpose": "both",
+            "options": null
+        },
+        {
+            "code": "construction_status",
+            "type": "select",
+            "labels": {
+                "pl": "stan wykończenia"
+            },
+            "required": false,
+            "purpose": "add",
+            "options": {
+                "ready_to_use": {
+                    "pl": "do zamieszkania"
+                },
+                "to_completion": {
+                    "pl": "do wykończenia"
+                },
+                "to_renovation": {
+                    "pl": "do remontu"
+                }
+            }
+        },
+        {
+            "code": "rent",
+            "type": "price",
+            "labels": {
+                "pl": "czynsz"
+            },
+            "required": false,
+            "purpose": "add",
+            "options": {
+                "price": {
+                    "pl": "czynsz"
+                }
+            }
+        },
+        {
+            "code": "building_ownership",
+            "type": "select",
+            "labels": {
+                "pl": "forma własności"
+            },
+            "required": false,
+            "purpose": "add",
+            "options": {
+                "co_operative_ownership": {
+                    "pl": "spółdzielcze własnościowe"
+                },
+                "co_operative_ownership_with_a_land_and_mortgage_registe": {
+                    "pl": "spółdzielcze wł. z KW"
+                },
+                "full_ownership": {
+                    "pl": "pełna własność"
+                },
+                "share": {
+                    "pl": "udział"
+                }
+            }
+        },
+        {
+            "code": "free_from",
+            "type": "date",
+            "labels": {
+                "pl": "dostępne od"
+            },
+            "required": false,
+            "purpose": "add",
+            "options": null
+        },
+        {
+            "code": "media_types",
+            "type": "checkboxes",
+            "labels": {
+                "pl": "media"
+            },
+            "required": false,
+            "purpose": "add",
+            "options": {
+                "internet": {
+                    "pl": "internet"
+                },
+                "cable-television": {
+                    "pl": "telewizja kablowa"
+                },
+                "phone": {
+                    "pl": "telefon"
+                }
+            }
+        },
+        {
+            "code": "security_types",
+            "type": "checkboxes",
+            "labels": {
+                "pl": "zabezpieczenia"
+            },
+            "required": false,
+            "purpose": "add",
+            "options": {
+                "roller_shutters": {
+                    "pl": "rolety antywłamaniowe"
+                },
+                "anti_burglary_door": {
+                    "pl": "drzwi \/ okna antywłamaniowe"
+                },
+                "entryphone": {
+                    "pl": "domofon \/ wideofon"
+                },
+                "monitoring": {
+                    "pl": "monitoring \/ ochrona"
+                },
+                "alarm": {
+                    "pl": "system alarmowy"
+                },
+                "closed_area": {
+                    "pl": "teren zamknięty"
+                }
+            }
+        },
+        {
+            "code": "equipment_types",
+            "type": "checkboxes",
+            "labels": {
+                "pl": "wyposażenie"
+            },
+            "required": false,
+            "purpose": "add",
+            "options": {
+                "furniture": {
+                    "pl": "meble"
+                },
+                "washing_machine": {
+                    "pl": "pralka"
+                },
+                "dishwasher": {
+                    "pl": "zmywarka"
+                },
+                "fridge": {
+                    "pl": "lodówka"
+                },
+                "stove": {
+                    "pl": "kuchenka"
+                },
+                "oven": {
+                    "pl": "piekarnik"
+                },
+                "tv": {
+                    "pl": "telewizor"
+                }
+            }
+        },
+        {
+            "code": "extras_types",
+            "type": "checkboxes",
+            "labels": {
+                "pl": "informacje dodatkowe"
+            },
+            "required": false,
+            "purpose": "both",
+            "options": {
+                "balcony": {
+                    "pl": "balkon"
+                },
+                "usable_room": {
+                    "pl": "pom. użytkowe"
+                },
+                "garage": {
+                    "pl": "garaż\/miejsce parkingowe"
+                },
+                "basement": {
+                    "pl": "piwnica"
+                },
+                "garden": {
+                    "pl": "ogródek"
+                },
+                "terrace": {
+                    "pl": "taras"
+                },
+                "lift": {
+                    "pl": "winda"
+                },
+                "two_storey": {
+                    "pl": "dwupoziomowe"
+                },
+                "separate_kitchen": {
+                    "pl": "oddzielna kuchnia"
+                },
+                "air_conditioning": {
+                    "pl": "klimatyzacja"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+<phpunit bootstrap="./phpunit-bootstrap.php">
+    <testsuites>
+        <testsuite name="Verticals RE OpenApi SDK">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

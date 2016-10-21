@@ -1,0 +1,287 @@
+{
+    "results": [
+        {
+            "id": 1,
+            "names": {
+                "pl": "Sprzedaż"
+            },
+            "code": "sprzedaz",
+            "children": [
+                101,
+                201,
+                401,
+                501,
+                601,
+                701
+            ],
+            "path_url": "sprzedaz",
+            "depth": 1,
+            "parameters": [
+                {
+                    "code": "price",
+                    "type": "price",
+                    "labels": {
+                        "pl": "cena"
+                    },
+                    "required": true,
+                    "purpose": "search",
+                    "options": {
+                        "price": {
+                            "pl": "cena"
+                        }
+                    }
+                },
+                {
+                    "code": "m",
+                    "type": "input",
+                    "labels": {
+                        "pl": "powierzchnia"
+                    },
+                    "required": true,
+                    "purpose": "search",
+                    "options": null
+                },
+                {
+                    "code": "price_per_m",
+                    "type": "input",
+                    "labels": {
+                        "pl": "cena za m<sup>2<\/sup>"
+                    },
+                    "required": false,
+                    "purpose": "search",
+                    "options": null
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "names": {
+                "pl": "Wynajem"
+            },
+            "code": "wynajem",
+            "children": [
+                102,
+                202,
+                302,
+                402,
+                502,
+                602,
+                702
+            ],
+            "path_url": "wynajem",
+            "depth": 1,
+            "parameters": [
+                {
+                    "code": "price",
+                    "type": "price",
+                    "labels": {
+                        "pl": "cena"
+                    },
+                    "required": true,
+                    "purpose": "search",
+                    "options": {
+                        "price": {
+                            "pl": "cena"
+                        }
+                    }
+                },
+                {
+                    "code": "m",
+                    "type": "input",
+                    "labels": {
+                        "pl": "powierzchnia"
+                    },
+                    "required": true,
+                    "purpose": "search",
+                    "options": null
+                },
+                {
+                    "code": "price_per_m",
+                    "type": "input",
+                    "labels": {
+                        "pl": "cena za m<sup>2<\/sup>"
+                    },
+                    "required": false,
+                    "purpose": "search",
+                    "options": null
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "names": {
+                "pl": "Inwestycje"
+            },
+            "code": "inwestycje",
+            "path_url": "inwestycje",
+            "depth": 1,
+            "parameters": [
+                {
+                    "code": "area_from",
+                    "type": "input",
+                    "labels": {
+                        "pl": "metraż od"
+                    },
+                    "required": true,
+                    "purpose": "add",
+                    "options": null
+                },
+                {
+                    "code": "area_to",
+                    "type": "input",
+                    "labels": {
+                        "pl": "metraż do"
+                    },
+                    "required": true,
+                    "purpose": "add",
+                    "options": null
+                },
+                {
+                    "code": "extras_types",
+                    "type": "checkboxes",
+                    "labels": {
+                        "pl": "informacje dodatkowe"
+                    },
+                    "required": false,
+                    "purpose": "add",
+                    "options": {
+                        "garage": {
+                            "pl": "garaż"
+                        },
+                        "elevator": {
+                            "pl": "winda"
+                        },
+                        "pool": {
+                            "pl": "basen"
+                        },
+                        "cellar": {
+                            "pl": "piwnica"
+                        },
+                        "garden": {
+                            "pl": "ogródek"
+                        },
+                        "security": {
+                            "pl": "ochrona"
+                        },
+                        "closed_area": {
+                            "pl": "teren zamknięty"
+                        },
+                        "terraces": {
+                            "pl": "tarasy"
+                        }
+                    }
+                },
+                {
+                    "code": "price_per_m_from",
+                    "type": "input",
+                    "labels": {
+                        "pl": "cena za m² od"
+                    },
+                    "required": true,
+                    "purpose": "add",
+                    "options": null
+                },
+                {
+                    "code": "price_from",
+                    "type": "input",
+                    "labels": {
+                        "pl": "najtańszy lokal"
+                    },
+                    "required": false,
+                    "purpose": "add",
+                    "options": null
+                },
+                {
+                    "code": "price_to",
+                    "type": "input",
+                    "labels": {
+                        "pl": "najdroższy lokal"
+                    },
+                    "required": false,
+                    "purpose": "add",
+                    "options": null
+                },
+                {
+                    "code": "floors_num",
+                    "type": "input",
+                    "labels": {
+                        "pl": "liczba kondygnacji"
+                    },
+                    "required": false,
+                    "purpose": "add",
+                    "options": null
+                },
+                {
+                    "code": "begin_date",
+                    "type": "date",
+                    "labels": {
+                        "pl": "data rozpoczęcia"
+                    },
+                    "required": false,
+                    "purpose": "add",
+                    "options": null
+                },
+                {
+                    "code": "finish_date",
+                    "type": "date",
+                    "labels": {
+                        "pl": "data planowanego zakończenia"
+                    },
+                    "required": false,
+                    "purpose": "add",
+                    "options": null
+                },
+                {
+                    "code": "web",
+                    "type": "input",
+                    "labels": {
+                        "pl": "strona www inwestycji"
+                    },
+                    "required": false,
+                    "purpose": "add",
+                    "options": null
+                },
+                {
+                    "code": "state",
+                    "type": "select",
+                    "labels": {
+                        "pl": "stan inwestycji"
+                    },
+                    "required": true,
+                    "purpose": "both",
+                    "options": {
+                        "ready": {
+                            "pl": "ukończona"
+                        },
+                        "in_building": {
+                            "pl": "w budowie"
+                        },
+                        "not_started": {
+                            "pl": "nierozpoczęta"
+                        }
+                    }
+                },
+                {
+                    "code": "offered_estates_type",
+                    "type": "select",
+                    "labels": {
+                        "pl": "typ oferowanych nieruchomości"
+                    },
+                    "required": true,
+                    "purpose": "add",
+                    "options": {
+                        "flats": {
+                            "pl": "mieszkania"
+                        },
+                        "houses": {
+                            "pl": "domy"
+                        },
+                        "commercial_properties": {
+                            "pl": "lokale użytkowe"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

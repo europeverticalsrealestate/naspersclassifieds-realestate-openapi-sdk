@@ -1,0 +1,12 @@
+{
+    "id": 1,
+    "text": "Poznań, wielkopolskie",
+    "lon": 16.93352,
+    "lat": 52.40827,
+    "radius": 7.5,
+    "zoom": 13,
+    "name": "Poznań",
+    "url": "poznan",
+    "districts_city_id": 1,
+    "region_id": 15
+}
