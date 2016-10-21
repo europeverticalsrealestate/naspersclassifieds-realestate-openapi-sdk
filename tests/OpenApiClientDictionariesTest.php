@@ -2,16 +2,15 @@
 namespace naspersclassifieds\realestate\openapi\tests;
 
 
-use GuzzleHttp\Psr7\Response;
 use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
-use naspersclassifieds\realestate\openapi\tests\utils\Fixtures;
 
 class OpenApiClientDictionariesTest extends OpenApiTestCase
 {
 
-    public function testShouldRetrieveRootCategories(){
+    public function testShouldRetrieveRootCategories()
+    {
 
-        $this->client->addResponse(new Response(200, [], Fixtures::load('categories.response.json')));
+        $this->addResponse(200, 'categories.response.json');
 
         $categories = $this->openApi->getDictionaries()->getCategories();
 
@@ -20,9 +19,10 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertEquals("Wynajem", $categories[1]->names['pl']);
     }
 
-    public function testShouldRetrieveOneCategory(){
+    public function testShouldRetrieveOneCategory()
+    {
 
-        $this->client->addResponse(new Response(200, [], Fixtures::load('categories.101.response.json')));
+        $this->addResponse(200, 'categories.101.response.json');
 
         $category = $this->openApi->getDictionaries()->getCategory(101);
 
@@ -31,9 +31,10 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertEquals("cena", $category->parameters[0]['labels']['pl']);
     }
 
-    public function testShouldNotRetrieveNonExistingCategory(){
+    public function testShouldNotRetrieveNonExistingCategory()
+    {
 
-        $this->client->addResponse(new Response(404, []));
+        $this->addResponse(404);
 
         try {
             $this->openApi->getDictionaries()->getCategory(999);
@@ -44,9 +45,10 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertRequest('categories/999');
     }
 
-    public function testShouldRetrieveCities(){
+    public function testShouldRetrieveCities()
+    {
 
-        $this->client->addResponse(new Response(200, [], Fixtures::load('cities.response.json')));
+        $this->addResponse(200, 'cities.response.json');
 
         $cities = $this->openApi->getDictionaries()->getCities();
 
@@ -55,9 +57,10 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertEquals("Poznań", $cities[1]->name);
     }
 
-    public function testShouldRetrieveOneCity(){
+    public function testShouldRetrieveOneCity()
+    {
 
-        $this->client->addResponse(new Response(200, [], Fixtures::load('cities.1.response.json')));
+        $this->addResponse(200, 'cities.1.response.json');
 
         $city = $this->openApi->getDictionaries()->getCity(1);
 
@@ -65,9 +68,10 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertEquals("Poznań", $city->name);
     }
 
-    public function testShouldRetrieveRegions(){
+    public function testShouldRetrieveRegions()
+    {
 
-        $this->client->addResponse(new Response(200, [], Fixtures::load('regions.response.json')));
+        $this->addResponse(200, 'regions.response.json');
 
         $regions = $this->openApi->getDictionaries()->getRegions();
 
@@ -77,9 +81,10 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertEquals("kujawsko-pomorskie", $regions[1]->name['pl']);
     }
 
-    public function testShouldRetrieveOneRegion(){
+    public function testShouldRetrieveOneRegion()
+    {
 
-        $this->client->addResponse(new Response(200, [], Fixtures::load('regions.1.response.json')));
+        $this->addResponse(200, 'regions.1.response.json');
 
         $region = $this->openApi->getDictionaries()->getRegion(1);
 
@@ -87,9 +92,10 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertEquals("dolnośląskie", $region->name['pl']);
     }
 
-    public function testShouldRetrieveSubregions(){
+    public function testShouldRetrieveSubregions()
+    {
 
-        $this->client->addResponse(new Response(200, [], Fixtures::load('subregions.response.json')));
+        $this->addResponse(200, 'subregions.response.json');
 
         $subregions = $this->openApi->getDictionaries()->getSubRegions();
 
@@ -99,11 +105,12 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertEquals("bartoszycki", $subregions[2]->name['pl']);
     }
 
-    public function testShouldRetrieveOneSubrregion(){
+    public function testShouldRetrieveOneSubrregion()
+    {
 
-        $this->client->addResponse(new Response(200, [], Fixtures::load('subregions.1.response.json')));
+        $this->addResponse(200, 'subregions.1.response.json');
 
-        $subregion = $this->openApi->getDictionaries()->getSubregion(1);
+        $subregion = $this->openApi->getDictionaries()->getSubRegion(1);
 
         $this->assertRequest('subregions/1');
         $this->assertEquals("chodzieski", $subregion->name['pl']);

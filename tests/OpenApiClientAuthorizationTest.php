@@ -2,16 +2,15 @@
 namespace naspersclassifieds\realestate\openapi\tests;
 
 
-use GuzzleHttp\Psr7\Response;
 use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
 use naspersclassifieds\realestate\openapi\tests\utils\Constants;
-use naspersclassifieds\realestate\openapi\tests\utils\Fixtures;
 
 class OpenApiClientAuthorizationTest extends OpenApiTestCase
 {
-    public function testShouldLoginSuccessfulWithValidCredentials(){
+    public function testShouldLoginSuccessfulWithValidCredentials()
+    {
 
-        $this->client->addResponse(new Response(200, [], Fixtures::load('token.response.json')));
+        $this->addResponse(200, 'token.response.json');
 
         $this->openApi->logIn(
             Constants::AUTH_KEY,
@@ -31,9 +30,10 @@ class OpenApiClientAuthorizationTest extends OpenApiTestCase
     }
 
 
-    public function testShouldNotLoginWithWrongClientCredentials(){
+    public function testShouldNotLoginWithWrongClientCredentials()
+    {
 
-        $this->client->addResponse(new Response(403, [], Fixtures::load('token.invalid.client.response.json')));
+        $this->addResponse(403, 'token.invalid.client.response.json');
 
         try {
             $this->openApi->logIn(
@@ -51,9 +51,10 @@ class OpenApiClientAuthorizationTest extends OpenApiTestCase
         $this->assertFalse($this->openApi->isLoggedIn());
     }
 
-    public function testShouldNotLoginWithWrongUserCredentials(){
+    public function testShouldNotLoginWithWrongUserCredentials()
+    {
 
-        $this->client->addResponse(new Response(400, [], Fixtures::load('token.invalid.grant.response.json')));
+        $this->addResponse(400, 'token.invalid.grant.response.json');
 
         try {
             $this->openApi->logIn(
@@ -71,9 +72,10 @@ class OpenApiClientAuthorizationTest extends OpenApiTestCase
         $this->assertFalse($this->openApi->isLoggedIn());
     }
 
-    public function testShouldLogOut(){
+    public function testShouldLogOut()
+    {
 
-        $this->client->addResponse(new Response(200, [], Fixtures::load('token.response.json')));
+        $this->addResponse(200, 'token.response.json');
 
         $this->openApi->logIn(
             Constants::AUTH_KEY,

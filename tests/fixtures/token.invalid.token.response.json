@@ -1,0 +1,5 @@
+{
+    "error": "invalid_token",
+    "error_description": "Token is invalid and/or expired",
+    "error_human_title": "Invalid token."
+}

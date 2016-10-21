@@ -2,6 +2,7 @@
 namespace naspersclassifieds\realestate\openapi\tests;
 
 
+use GuzzleHttp\Psr7\Response;
 use naspersclassifieds\realestate\openapi\OpenApi;
 use naspersclassifieds\realestate\openapi\tests\utils\Constants;
 use naspersclassifieds\realestate\openapi\tests\utils\HttpClientMocker;
@@ -27,6 +28,16 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param integer $code
+     * @param string|null $fixtureFile
+     */
+    protected function addResponse($code, $fixtureFile = null)
+    {
+        $body = $fixtureFile ? $this->loadFixture($fixtureFile) : null;
+        $this->client->addResponse(new Response($code, [], $body));
+    }
+
+    /**
      * @param string $target
      * @param string $method optional, GET by default
      * @param array $headers
@@ -43,6 +54,14 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
         if (!empty($params)) {
             $this->assertEquals(http_build_query($params), $lastRequest->getBody()->getContents());
         }
+    }
 
+    /**
+     * @param string $name
+     * @return string
+     */
+    private static function loadFixture($name)
+    {
+        return file_get_contents(dirname(__FILE__) . '/fixtures/' . $name);
     }
 }

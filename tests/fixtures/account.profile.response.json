@@ -1,0 +1,10 @@
+{
+    "id": 1,
+    "email": "test@dummy.address",
+    "created_at": "2016-10-12 13:18:38",
+    "last_login_at": "2016-10-21 13:47:10",
+    "default_phone": "342 034 149",
+    "default_map_address": "Shannon County",
+    "default_person": "Adrian Morales",
+    "default_city_id": "24416"
+}

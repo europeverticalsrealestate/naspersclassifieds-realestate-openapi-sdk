@@ -76,14 +76,15 @@ function generateRandomName() {
 function displayAgentsList($agentsList) {
     if (empty($agentsList)) {
         echo "No agents found.\n";
-    } else {
-        echo sprintf('%-10s | %-15s | %s', 'ID', 'Phone', 'Name') . "\n";
-        echo str_repeat('-', 75) . "\n";
-        foreach ($agentsList as $agent) {
-            $phone = isset($agent['phone']) ? $agent['phone'] : '';
-            $name = isset($agent['name']) ? $agent['name'] : '';
-            echo sprintf('%10d | %-15s | %s', $agent['id'], $phone, $name) . "\n";
-        }
+        return;
+    }
+
+    echo sprintf('%-10s | %-15s | %s', 'ID', 'Phone', 'Name') . "\n";
+    echo str_repeat('-', 75) . "\n";
+    foreach ($agentsList as $agent) {
+        $phone = isset($agent['phone']) ? $agent['phone'] : '';
+        $name = isset($agent['name']) ? $agent['name'] : '';
+        echo sprintf('%10d | %-15s | %s', $agent['id'], $phone, $name) . "\n";
     }
 }
 

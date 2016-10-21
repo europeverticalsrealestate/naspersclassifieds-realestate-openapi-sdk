@@ -50,12 +50,16 @@ class Client
      */
     public function getFrom($resource)
     {
+        if ($this->isLoggedIn()){
+            $resource .= '?access_token=' . $this->accessToken;
+        }
+
         try {
             $response = $this->client->get(Uri::resolve($this->baseUri, $resource), $this->options);
+            return json_decode($response->getBody()->getContents(), true);
         } catch (RequestException $e) {
-            throw new OpenApiException($e->getMessage(), $e->getCode(), $e);
+            $this->throwOpenApiException($e);
         }
-        return json_decode($response->getBody()->getContents(), true);
     }
 
     /**
@@ -109,16 +113,7 @@ class Client
             $body = json_decode($response->getBody()->getContents());
             $this->accessToken = $body->access_token;
         } catch (RequestException $e) {
-            if ($e->hasResponse()){
-                $body = json_decode($e->getResponse()->getBody()->getContents());
-                $message = isset($body->error_description)
-                    ? $body->error_description
-                    : (isset($body->error) ? $body->error : $e->getMessage());
-            } else {
-                $message = $e->getMessage();
-            }
-
-            throw new OpenApiException($message, $e->getCode(), $e);
+            $this->throwOpenApiException($e);
         }
     }
 
@@ -130,5 +125,23 @@ class Client
     public function logOut()
     {
         $this->accessToken = null;
+    }
+
+    /**
+     * @param $e
+     * @throws OpenApiException
+     */
+    protected function throwOpenApiException(RequestException $e)
+    {
+        $message = $e->getMessage();
+        if ($e->hasResponse()) {
+            $body = @json_decode($e->getResponse()->getBody()->getContents());
+            if (isset($body->error_description)) {
+                $message = $body->error_description;
+            } elseif (isset($body->error)) {
+                $message = $body->error;
+            }
+        }
+        throw new OpenApiException($message, $e->getCode(), $e);
     }
 }

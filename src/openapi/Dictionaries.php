@@ -32,7 +32,6 @@ class Dictionaries
     public function getCategories()
     {
         return $this->client->getFromAsObjects('categories', Category::class);
-
     }
 
     /**
