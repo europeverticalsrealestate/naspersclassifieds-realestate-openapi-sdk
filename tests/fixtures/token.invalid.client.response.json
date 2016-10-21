@@ -1,0 +1,5 @@
+{
+    "error": "invalid_client",
+    "error_description": "Cannot identify and/or authenticate the client.",
+    "error_human_title": "Cannot identify and/or authenticate the client."
+}

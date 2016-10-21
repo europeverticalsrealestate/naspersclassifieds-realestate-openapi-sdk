@@ -13,27 +13,36 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
     /**
      * @var HttpClientMocker
      */
-    protected $mocker;
+    protected $client;
 
     /**
      * @var OpenApi
      */
-    protected $openApiClient;
+    protected $openApi;
 
     protected function setUp()
     {
-        $this->mocker = new HttpClientMocker();
-        $this->openApiClient = new OpenApi(Constants::API_URL, $this->mocker->getClient());
+        $this->client = new HttpClientMocker();
+        $this->openApi = new OpenApi(Constants::API_URL, $this->client->getClient());
     }
 
     /**
      * @param string $target
      * @param string $method optional, GET by default
+     * @param array $headers
+     * @param array $params
      */
-    protected function assertRequest($target, $method = 'GET')
+    protected function assertRequest($target, $method = 'GET', $headers = [], $params = [])
     {
-        $lastRequest = $this->mocker->getLastRequest();
+        $lastRequest = $this->client->getLastRequest();
         $this->assertEquals(Constants::API_URL . $target, (string)$lastRequest->getUri());
         $this->assertEquals($method, (string)$lastRequest->getMethod());
+        foreach ($headers as $name => $value) {
+            $this->assertEquals($value, current($lastRequest->getHeader($name)));
+        }
+        if (!empty($params)) {
+            $this->assertEquals(http_build_query($params), $lastRequest->getBody()->getContents());
+        }
+
     }
 }

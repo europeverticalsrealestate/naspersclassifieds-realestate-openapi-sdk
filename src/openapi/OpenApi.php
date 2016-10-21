@@ -31,4 +31,25 @@ class OpenApi
     {
         return $this->dictionaries;
     }
+
+    /**
+     * @param string $key OpenApi key
+     * @param string $secret OpenApi secret
+     * @param string $login user login (e-mail)
+     * @param string $password user password
+     */
+    public function logIn($key, $secret, $login, $password)
+    {
+        $this->client->logIn($key, $secret, $login, $password);
+    }
+
+    public function isLoggedIn()
+    {
+        return $this->client->isLoggedIn();
+    }
+
+    public function logOut()
+    {
+        return $this->client->logOut();
+    }
 }

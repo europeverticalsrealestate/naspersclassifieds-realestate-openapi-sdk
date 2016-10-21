@@ -1,15 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jaroslaw.wieczorek
- * Date: 2016-10-21
- * Time: 10:24
- */
-
 namespace naspersclassifieds\realestate\openapi;
 
 
-use GuzzleHttp\Exception\RequestException;
+use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
 use stdClass;
 
 class Dictionaries
@@ -30,7 +23,7 @@ class Dictionaries
 
     /**
      * @return array
-     * @throws RequestException
+     * @throws OpenApiException
      */
     public function getCategories()
     {
@@ -40,7 +33,7 @@ class Dictionaries
     /**
      * @param integer $id category id
      * @return stdClass
-     * @throws RequestException
+     * @throws OpenApiException
      */
     public function getCategory($id)
     {
@@ -49,7 +42,7 @@ class Dictionaries
 
     /**
      * @return array
-     * @throws RequestException
+     * @throws OpenApiException
      */
     public function getCities()
     {
@@ -59,7 +52,7 @@ class Dictionaries
     /**
      * @param integer $id city id
      * @return stdClass
-     * @throws RequestException
+     * @throws OpenApiException
      */
     public function getCity($id)
     {
@@ -68,7 +61,7 @@ class Dictionaries
 
     /**
      * @return array
-     * @throws RequestException
+     * @throws OpenApiException
      */
     public function getRegions()
     {
@@ -78,7 +71,7 @@ class Dictionaries
     /**
      * @param integer $id
      * @return stdClass
-     * @throws RequestException
+     * @throws OpenApiException
      */
     public function getRegion($id)
     {
@@ -87,7 +80,7 @@ class Dictionaries
 
     /**
      * @return array
-     * @throws RequestException
+     * @throws OpenApiException
      */
     public function getSubRegions()
     {
@@ -97,7 +90,7 @@ class Dictionaries
     /**
      * @param integer $id
      * @return stdClass
-     * @throws RequestException
+     * @throws OpenApiException
      */
     public function getSubRegion($id)
     {

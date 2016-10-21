@@ -1,0 +1,5 @@
+{
+    "error": "invalid_grant",
+    "error_description": "Invalid login or password",
+    "error_human_title": "nieprawidłowy login lub hasło"
+}
