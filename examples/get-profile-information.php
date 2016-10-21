@@ -3,7 +3,6 @@
  * Example script that reads logged-in user information from Real Estate Verticals Open API.
  */
 
-require 'vendor/autoload.php';
 require 'init.php';
 
 echo "Logging in...\n";

@@ -3,7 +3,6 @@
  * Example script that reads ads that belong to currently logged-in user via Real Estate Verticals Open API.
  */
 
-require 'vendor/autoload.php';
 require 'init.php';
 
 echo "Logging in...\n";

@@ -1,4 +1,5 @@
 <?php
+require '../vendor/autoload.php';
 require 'config.php';
 
 function createClient() {
@@ -11,7 +12,7 @@ function createClient() {
     return $client;
 }
 
-function logIn($client) {
+function logIn(GuzzleHttp\Client $client) {
     $response = $client->request(
         'POST',
         'oauth/token',

@@ -3,7 +3,6 @@
  * Example script that reads regions information from Real Estate Verticals Open API.
  */
 
-require 'vendor/autoload.php';
 require 'init.php';
 
 $client = createClient();

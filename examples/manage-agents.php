@@ -7,7 +7,6 @@
  * on the ad page.
  */
 
-require 'vendor/autoload.php';
 require 'init.php';
 
 echo "Logging in...\n";

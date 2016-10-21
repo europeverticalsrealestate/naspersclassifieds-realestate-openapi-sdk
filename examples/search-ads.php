@@ -3,7 +3,6 @@
  * Example script that searches for ads in the whole site.
  */
 
-require 'vendor/autoload.php';
 require 'init.php';
 
 echo "Logging in...\n";
