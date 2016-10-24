@@ -5,21 +5,19 @@
 
 require 'init.php';
 
-$client = createClient();
+$api = new naspersclassifieds\realestate\openapi\OpenApi(OPENAPI_URL);
 
 //no need to log in in this case - this information is available without logging in
 
 echo "Listing all regions...\n";
 
 //get data about all regions
-$response = $client->get('regions');
-$decodedResponse = json_decode($response->getBody()->getContents(), true);
-$regions = $decodedResponse['results'];
+$regions = $api->getDictionaries()->getRegions();
 echo count($regions) . " regions found:\n";
 foreach ($regions as $region) {
-    echo "- ID: {$region['id']}, name: {$region['name']['pl']}\n";
+    echo "- ID: {$region->id}, name: {$region->name['pl']}\n";
 }
 
 echo "Reading information about a single region...\n";
-$response = $client->get('regions/1');
-print_r($response->getBody()->getContents());
+$region = $api->getDictionaries()->getRegion(1);
+print_r($region);

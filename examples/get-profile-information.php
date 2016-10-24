@@ -5,12 +5,12 @@
 
 require 'init.php';
 
+$api = new naspersclassifieds\realestate\openapi\OpenApi(OPENAPI_URL);
+
 echo "Logging in...\n";
-$client = createClient();
-$accessToken = logIn($client);
+$api->logIn(OPENAPI_KEY, OPENAPI_SECRET, OTODOM_USER, OTODOM_PASSWORD);
 echo "Logged in.\n";
 
 echo "Reading profile information...\n";
-$response = $client->request('GET', "account/profile?access_token=$accessToken");
-$body = json_decode($response->getBody()->getContents(), true);
-print_r($body);
+$profile = $api->getAccount()->getProfile();
+print_r($profile);

@@ -20,7 +20,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->addResponse(200, 'account.profile.response.json');
         $profile = $this->openApi->getAccount()->getProfile();
 
-        $this->assertRequest('account/profile?access_token=' . Constants::AUTH_TOKEN);
+        $this->assertAuthorizedRequest('account/profile');
         $this->assertEquals(Constants::USER_LOGIN, $profile['email']);
     }
 

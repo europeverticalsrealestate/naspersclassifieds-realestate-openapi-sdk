@@ -58,6 +58,18 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param string $target
+     * @param string $method optional, GET by default
+     * @param array $headers
+     * @param array $params
+     */
+    protected function assertAuthorizedRequest($target, $method = 'GET', $headers = [], $params = [])
+    {
+        $target = $target . (strstr($target, '?') ? '&': '?') .'access_token=' . Constants::AUTH_TOKEN;
+        $this->assertRequest($target, $method, $headers, $params);
+    }
+
+    /**
      * @param string $name
      * @return string
      */
