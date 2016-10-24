@@ -5,6 +5,7 @@ namespace naspersclassifieds\realestate\openapi\tests\utils;
 class Constants
 {
     const API_URL = "http://dummy.address/api/";
+    const ACCEPT_HEADER = 'application/json';
     const AUTH_KEY = "123";
     const AUTH_SECRET = "secretkey";
     const AUTH_HEADER = "Basic MTIzOnNlY3JldGtleQ==";

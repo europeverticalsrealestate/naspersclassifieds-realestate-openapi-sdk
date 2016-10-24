@@ -48,6 +48,7 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
         $lastRequest = $this->client->getLastRequest();
         $this->assertEquals(Constants::API_URL . $target, (string)$lastRequest->getUri());
         $this->assertEquals($method, (string)$lastRequest->getMethod());
+        $this->assertEquals(Constants::ACCEPT_HEADER, current($lastRequest->getHeader('Accept')));
         foreach ($headers as $name => $value) {
             $this->assertEquals($value, current($lastRequest->getHeader($name)));
         }

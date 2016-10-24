@@ -108,7 +108,7 @@ class Client
         ];
 
         try {
-            $response = $this->client->post($uri, $options);
+            $response = $this->client->post($uri, array_merge($this->options, $options));
 
             $body = json_decode($response->getBody()->getContents());
             $this->accessToken = $body->access_token;
