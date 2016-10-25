@@ -51,7 +51,7 @@ class Client
     public function getFrom($resource)
     {
         if ($this->isLoggedIn()){
-            $resource .= '?access_token=' . $this->accessToken;
+            $resource .= (strstr($resource, '?') ? '&' : '?') . 'access_token=' . $this->accessToken;
         }
 
         try {
@@ -69,22 +69,19 @@ class Client
      */
     public function getFromAsObjects($resource, $class)
     {
-        $factory = new ObjectFactory($class);
         $results = $this->getFrom($resource)['results'];
-        return $factory->buildMany($results);
+        return (new ObjectFactory($class))->buildMany($results);
     }
 
     /**
      * @param string $resource
-     * @param integer $id
      * @param string $class
-     * @return array
+     * @return mixed
      */
-    public function getFromAsObject($resource, $id, $class)
+    public function getFromAsObject($resource, $class)
     {
-        $factory = new ObjectFactory($class);
-        $results = $this->getFrom($resource . '/' . $id);
-        return $factory->build($results);
+        $results = $this->getFrom($resource);
+        return (new ObjectFactory($class))->build($results);
     }
 
     /**

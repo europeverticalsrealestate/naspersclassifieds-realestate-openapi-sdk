@@ -41,7 +41,7 @@ class Dictionaries
      */
     public function getCategory($id)
     {
-        return $this->client->getFromAsObject('categories', $id , Category::class);
+        return $this->client->getFromAsObject('categories/' . (int)$id , Category::class);
     }
 
     /**
@@ -60,7 +60,7 @@ class Dictionaries
      */
     public function getCity($id)
     {
-        return $this->client->getFromAsObject('cities', $id , City::class);
+        return $this->client->getFromAsObject('cities/' . (int)$id , City::class);
     }
 
     /**
@@ -79,7 +79,7 @@ class Dictionaries
      */
     public function getRegion($id)
     {
-        return $this->client->getFromAsObject('regions', $id , Region::class);
+        return $this->client->getFromAsObject('regions/' . (int)$id , Region::class);
     }
 
     /**
@@ -98,6 +98,6 @@ class Dictionaries
      */
     public function getSubRegion($id)
     {
-        return $this->client->getFromAsObject('subregions', $id , SubRegion::class);
+        return $this->client->getFromAsObject('subregions/' . (int)$id , SubRegion::class);
     }
 }

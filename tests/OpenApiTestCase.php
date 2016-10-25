@@ -3,6 +3,7 @@ namespace naspersclassifieds\realestate\openapi\tests;
 
 
 use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Uri;
 use naspersclassifieds\realestate\openapi\OpenApi;
 use naspersclassifieds\realestate\openapi\tests\utils\Constants;
 use naspersclassifieds\realestate\openapi\tests\utils\HttpClientMocker;
@@ -46,7 +47,12 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
     protected function assertRequest($target, $method = 'GET', $headers = [], $params = [])
     {
         $lastRequest = $this->client->getLastRequest();
-        $this->assertEquals(Constants::API_URL . $target, (string)$lastRequest->getUri());
+        $lastUri = $lastRequest->getUri();
+
+        $targetUri = new Uri(Constants::API_URL . $target);
+        $this->assertEquals($targetUri->getHost(), $lastUri->getHost());
+        $this->assertEquals($targetUri->getPath(), $lastUri->getPath());
+        $this->assertEquals($targetUri->getQuery(), $lastUri->getQuery());
         $this->assertEquals($method, (string)$lastRequest->getMethod());
         $this->assertEquals(Constants::ACCEPT_HEADER, current($lastRequest->getHeader('Accept')));
         foreach ($headers as $name => $value) {
