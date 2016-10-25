@@ -34,6 +34,35 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
         $this->assertEquals(23, $adverts->results[0]->id);
     }
 
+    public function testShouldRetrieveAllRemovedOffers()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.adverts.inactive.response.json');
+        $query = (new AccountAdvertsQuery())->setStatus(AccountAdvertsQuery::STATUS_REMOVED);
+        $adverts = $this->openApi->getAccount()->getAdverts($query);
+
+        $this->assertAuthorizedRequest('account/adverts?status=archive');
+        $this->assertEquals(1, count($adverts->results));
+        $this->assertEquals('Offer title', $adverts->results[0]->title);
+        $this->assertEquals('removed_by_user', $adverts->results[0]->status);
+    }
+
+    public function testShouldRetrieveAllUserAdsSortingByCreatedAtDesc()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.adverts.response.json');
+        $query = (new AccountAdvertsQuery())
+            ->setSortBy(AccountAdvertsQuery::SORT_BY_CREATED_AT)
+            ->setSortDirection(AccountAdvertsQuery::SORT_DESC)
+        ;
+        $adverts = $this->openApi->getAccount()->getAdverts($query);
+
+        $this->assertAuthorizedRequest('account/adverts?sortby=created_at&sortdirection=desc');
+        $this->assertEquals(43, count($adverts->results));
+    }
+
     public function testShouldRetrieveOneUserAd()
     {
         $this->logInIntoApi();

@@ -1,0 +1,72 @@
+{
+    "results": [
+        {
+            "id": 44,
+            "user_id": 1,
+            "status": "removed_by_user",
+            "title": "Offer title",
+            "url": "http://otodom.address/oferta/offer-title-IDI.html",
+            "created_at": "2016-10-18 07:30:52",
+            "valid_to": "2016-10-28 07:30:51",
+            "description": "<p>Offer description</p>",
+            "category_id": 101,
+            "region_id": 4,
+            "city_id": 30819,
+            "city": {
+                "pl": "Wirówek"
+            },
+            "coordinates": {
+                "latitude": 51.97604,
+                "longitude": 15.80518,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 185352,
+                    "currency": "PLN"
+                },
+                "m": 38,
+                "price_per_m": 4877.68,
+                "rooms_num": "5",
+                "market": "secondary",
+                "building_type": "tenement",
+                "floor_no": "floor_4",
+                "building_floors_num": 43,
+                "building_material": "other",
+                "windows_type": "aluminium",
+                "heating": "boiler_room",
+                "build_year": 48,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "4500",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership_with_a_land_and_mortgage_registe"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.addressimages_otodompl/44_1_655x491.jpg",
+                    "184x138": "http://otodom.addressimages_otodompl/44_1_184x138.jpg",
+                    "314x236": "http://otodom.addressimages_otodompl/44_1_314x236.jpg",
+                    "1280x1024": "http://otodom.addressimages_otodompl/44_1_1280x1024.jpg"
+                }
+            },
+            "reason_id": "13",
+            "image_collection_id": 44,
+            "agent": {}
+        }
+    ],
+    "is_last_page": true,
+    "is_first_page": true,
+    "current_page": 1,
+    "total_pages": 1,
+    "current_elements": 1,
+    "total_elements": 1
+}
