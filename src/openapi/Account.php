@@ -4,6 +4,7 @@ namespace naspersclassifieds\realestate\openapi;
 
 use naspersclassifieds\realestate\openapi\model\Advert;
 use naspersclassifieds\realestate\openapi\model\AdvertsResult;
+use naspersclassifieds\realestate\openapi\model\Agent;
 use naspersclassifieds\realestate\openapi\query\AccountAdverts;
 
 class Account
@@ -44,5 +45,31 @@ class Account
     public function getAdvert($id)
     {
         return $this->client->getFromAsObject('account/adverts/' . (int)$id, Advert::class);
+    }
+
+    /**
+     * @return array
+     */
+    public function getAgents()
+    {
+        return $this->client->getFromAsObjects('account/agents', Agent::class);
+    }
+
+    /**
+     * @param integer $id
+     * @return Agent
+     */
+    public function getAgent($id)
+    {
+        return $this->client->getFromAsObject("account/agents/" . (int)$id, Agent::class);
+    }
+
+    /**
+     * @param \naspersclassifieds\realestate\openapi\model\Agent $agent
+     * @return \naspersclassifieds\realestate\openapi\model\Agent
+     */
+    public function setAgent(Agent $agent)
+    {
+       return $this->client->putFrom("account/agents/" . $agent->id, (array)$agent, Agent::class);
     }
 }

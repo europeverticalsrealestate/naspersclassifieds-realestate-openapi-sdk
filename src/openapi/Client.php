@@ -50,7 +50,7 @@ class Client
      */
     public function getFrom($resource)
     {
-        if ($this->isLoggedIn()){
+        if ($this->isLoggedIn()) {
             $resource .= (strstr($resource, '?') ? '&' : '?') . 'access_token=' . $this->accessToken;
         }
 
@@ -59,6 +59,33 @@ class Client
             return json_decode($response->getBody()->getContents(), true);
         } catch (RequestException $e) {
             $this->throwOpenApiException($e);
+        }
+    }
+
+    /**
+     * @param $resource
+     * @param $formParams
+     * @param null|string $class
+     * @return array
+     */
+    public function putFrom($resource, $formParams, $class = null)
+    {
+        if ($this->isLoggedIn()) {
+            $resource .= (strstr($resource, '?') ? '&' : '?') . 'access_token=' . $this->accessToken;
+        }
+
+        try {
+            $options = array_merge($this->options, $formParams);
+            $response = $this->client->put(Uri::resolve($this->baseUri, $resource), $options);
+            $results = json_decode($response->getBody()->getContents(), true);
+        } catch (RequestException $e) {
+            $this->throwOpenApiException($e);
+        }
+
+        if ($class) {
+            return (new ObjectFactory($class))->build($results);
+        } else {
+            return $results;
         }
     }
 
