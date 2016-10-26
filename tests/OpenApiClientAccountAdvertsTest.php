@@ -5,7 +5,7 @@ namespace naspersclassifieds\realestate\openapi\tests;
 use naspersclassifieds\realestate\openapi\query\AccountAdvertsQuery;
 use naspersclassifieds\realestate\openapi\tests\utils\Constants;
 
-class OpenApiClientAdvertsTest extends OpenApiTestCase
+class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
 {
     public function testShouldRetrieveAllUserAds()
     {
