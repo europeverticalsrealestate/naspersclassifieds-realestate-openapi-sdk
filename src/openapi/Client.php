@@ -60,33 +60,34 @@ class Client
         } catch (RequestException $e) {
             $this->throwOpenApiException($e);
         }
+        return null;
     }
 
     /**
      * @param $resource
-     * @param $formParams
+     * @param mixed $object
      * @param null|string $class
-     * @return array
+     * @return mixed
      */
-    public function putFrom($resource, $formParams, $class = null)
+    public function putInto($resource, $object, $class = null)
     {
         if ($this->isLoggedIn()) {
             $resource .= (strstr($resource, '?') ? '&' : '?') . 'access_token=' . $this->accessToken;
         }
 
         try {
-            $options = array_merge($this->options, $formParams);
+            $options = array_merge($this->options, ['json' => $object]);
             $response = $this->client->put(Uri::resolve($this->baseUri, $resource), $options);
             $results = json_decode($response->getBody()->getContents(), true);
+            if ($class) {
+                return (new ObjectFactory($class))->build($results);
+            } else {
+                return $results;
+            }
         } catch (RequestException $e) {
             $this->throwOpenApiException($e);
         }
-
-        if ($class) {
-            return (new ObjectFactory($class))->build($results);
-        } else {
-            return $results;
-        }
+        return null;
     }
 
     /**

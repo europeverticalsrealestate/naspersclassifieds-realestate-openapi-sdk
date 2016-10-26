@@ -77,18 +77,16 @@ class OpenApiClientAccountTest extends OpenApiTestCase
     {
         $this->logInIntoApi();
 
-        //$this->addResponse(404, 'not.found.response.json');
         $this->addResponse(404);
 
+        $agentId = Constants::AGENT_ID + 1;
         try {
-            $agentId = Constants::AGENT_ID + 1;
             $this->openApi->getAccount()->getAgent($agentId);
             $this->fail();
         } catch (OpenApiException $e) {
+            $this->assertAuthorizedRequest('account/agents/' . $agentId);
             $this->assertEquals(404, $e->getCode());
         }
-
-        $this->assertAuthorizedRequest('account/agents/' . $agentId);
     }
 
     public function testShouldChangeAgentDetails()
@@ -107,7 +105,8 @@ class OpenApiClientAccountTest extends OpenApiTestCase
 
         $agentResponse = $this->openApi->getAccount()->setAgent($agent);
 
-        $this->assertAuthorizedRequest('account/agents/' . Constants::AGENT_ID, 'PUT');
+        $expectedBody = json_encode($agent);
+        $this->assertAuthorizedRequest('account/agents/' . Constants::AGENT_ID, 'PUT', [], [], $expectedBody);
 
         $this->assertEquals(Constants::AGENT_NAME, $agentResponse->name);
         $this->assertEquals(Constants::AGENT_PHONE, $agentResponse->phone);

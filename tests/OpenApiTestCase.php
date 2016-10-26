@@ -43,8 +43,9 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
      * @param string $method optional, GET by default
      * @param array $headers
      * @param array $params
+     * @param string|null $body
      */
-    protected function assertRequest($target, $method = 'GET', $headers = [], $params = [])
+    protected function assertRequest($target, $method = 'GET', $headers = [], $params = [], $body = null)
     {
         $lastRequest = $this->client->getLastRequest();
         $lastUri = $lastRequest->getUri();
@@ -61,6 +62,9 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
         if (!empty($params)) {
             $this->assertEquals(http_build_query($params), $lastRequest->getBody()->getContents());
         }
+        if (is_string($body)) {
+            $this->assertEquals($body, $lastRequest->getBody()->getContents());
+        }
     }
 
     /**
@@ -69,10 +73,10 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
      * @param array $headers
      * @param array $params
      */
-    protected function assertAuthorizedRequest($target, $method = 'GET', $headers = [], $params = [])
+    protected function assertAuthorizedRequest($target, $method = 'GET', $headers = [], $params = [], $body = null)
     {
         $target = $target . (strstr($target, '?') ? '&': '?') .'access_token=' . Constants::AUTH_TOKEN;
-        $this->assertRequest($target, $method, $headers, $params);
+        $this->assertRequest($target, $method, $headers, $params, $body);
     }
 
     /**

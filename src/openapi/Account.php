@@ -65,11 +65,11 @@ class Account
     }
 
     /**
-     * @param \naspersclassifieds\realestate\openapi\model\Agent $agent
-     * @return \naspersclassifieds\realestate\openapi\model\Agent
+     * @param Agent $agent
+     * @return Agent
      */
     public function setAgent(Agent $agent)
     {
-       return $this->client->putFrom("account/agents/" . $agent->id, (array)$agent, Agent::class);
+       return $this->client->putInto("account/agents/" . $agent->id, $agent, Agent::class);
     }
 }
