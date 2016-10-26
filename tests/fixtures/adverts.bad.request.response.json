@@ -1,0 +1,6 @@
+{
+    "error": {
+        "type": "BadRequestException",
+        "message": "Can't search using parameter media_types"
+    }
+}

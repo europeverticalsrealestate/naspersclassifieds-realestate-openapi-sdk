@@ -159,11 +159,13 @@ class Client
     {
         $message = $e->getMessage();
         if ($e->hasResponse()) {
-            $body = @json_decode($e->getResponse()->getBody()->getContents());
-            if (isset($body->error_description)) {
-                $message = $body->error_description;
-            } elseif (isset($body->error)) {
-                $message = $body->error;
+            $body = @json_decode($e->getResponse()->getBody()->getContents(), true);
+            if (isset($body['error_description'])) {
+                $message = $body['error_description'];
+            } elseif (isset($body['error']) && is_scalar($body['error'])) {
+                $message = $body['error'];
+            } elseif (isset($body['error']['message'])) {
+                $message = $body['error']['message'];
             }
         }
         throw new OpenApiException($message, $e->getCode(), $e);

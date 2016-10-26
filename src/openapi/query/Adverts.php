@@ -83,6 +83,19 @@ class Adverts extends Query
 
     /**
      * @param string $name
+     * @param string|integer|float $value
+     * @return static
+     */
+    public function setParam($name, $value)
+    {
+        if (is_scalar($value)) {
+            $this->params[$name] = $value;
+        }
+        return $this;
+    }
+
+    /**
+     * @param string $name
      * @param float $value
      * @return static
      */
@@ -120,20 +133,24 @@ class Adverts extends Query
      * @param array $values
      * @return static
      */
-    public function setAnyOfParam($name, $values)
+    public function setMultiOptionParam($name, $values)
     {
-        $this->params[$name] = ['any', $this->filterValues($values)];
-        return $this;
-    }
+        if (!is_array($values)){
+            return $this;
+        }
 
-    /**
-     * @param string $name
-     * @param array $values
-     * @return static
-     */
-    public function setAllOfParam($name, $values)
-    {
-        $this->params[$name] = ['all', $this->filterValues($values)];
+        $filteredValues = [];
+        foreach ($values as $value) {
+            if (is_scalar($value)) {
+                $filteredValues[] = $value;
+            }
+        }
+
+        if (empty($filteredValues)) {
+            return $this;
+        }
+
+        $this->params[$name] = array_merge(['all'], $filteredValues);
         return $this;
     }
 
@@ -148,8 +165,8 @@ class Adverts extends Query
         }
         $result = [];
         foreach ($values as $value) {
-            if (is_scalar($values)) {
-                $result[] = $values;
+            if (is_scalar($value)) {
+                $result[] = $value;
             }
         }
         return $result;

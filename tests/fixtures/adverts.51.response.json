@@ -1,0 +1,68 @@
+{
+    "id": 51,
+    "user_id": 1,
+    "status": "active",
+    "title": "Offer 2016-10-24 11:17:08",
+    "url": "http://otodom.address/oferta/offer-2016-10-24-111708-IDP.html",
+    "created_at": "2016-10-24 11:17:08",
+    "valid_to": "2016-11-23 11:55:34",
+    "description": "<p>Offer created at 2016-10-24 11:17:08</p>",
+    "category_id": 302,
+    "region_id": 15,
+    "city_id": 1,
+    "district_id": 78,
+    "city": {
+        "pl": "Poznań"
+    },
+    "district": {
+        "pl": "Górczyn"
+    },
+    "coordinates": {
+        "latitude": 52.38675402779,
+        "longitude": 16.859921619574,
+        "radius": 0,
+        "zoom_level": 16
+    },
+    "advertiser_type": "business",
+    "contact": {
+        "person": ""
+    },
+    "params": {
+        "price": {
+            "0": "price",
+            "1": 500,
+            "currency": "PLN"
+        },
+        "non_smokers_only": "0",
+        "equipment_types": [
+            "fridge",
+            "washing_machine"
+        ],
+        "media_types": [
+            "cable-television",
+            "internet"
+        ]
+    },
+    "photos": {
+        "1": {
+            "655x491": "http://otodom.addressimages_otodompl/53_1_655x491.jpg",
+            "184x138": "http://otodom.addressimages_otodompl/53_1_184x138.jpg",
+            "314x236": "http://otodom.addressimages_otodompl/53_1_314x236.jpg",
+            "1280x1024": "http://otodom.addressimages_otodompl/53_1_1280x1024.jpg"
+        },
+        "2": {
+            "655x491": "http://otodom.addressimages_otodompl/53_2_655x491.jpg",
+            "184x138": "http://otodom.addressimages_otodompl/53_2_184x138.jpg",
+            "314x236": "http://otodom.addressimages_otodompl/53_2_314x236.jpg",
+            "1280x1024": "http://otodom.addressimages_otodompl/53_2_1280x1024.jpg"
+        }
+    },
+    "image_collection_id": 53,
+    "street_name": "ul. Jawornicka",
+    "agent": {
+        "id": "1",
+        "name": "Jan Kowalski",
+        "email": "jan.kowalski@dummy.address",
+        "phone": "333444555"
+    }
+}

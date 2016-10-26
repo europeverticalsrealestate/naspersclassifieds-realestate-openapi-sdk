@@ -2,7 +2,7 @@
 namespace naspersclassifieds\realestate\openapi\tests;
 
 
-use naspersclassifieds\realestate\openapi\query\AccountAdverts;
+use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
 use naspersclassifieds\realestate\openapi\query\Adverts;
 use naspersclassifieds\realestate\openapi\tests\utils\Constants;
 
@@ -17,8 +17,7 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
             ->setLimit(10)
             ->setSortBy(Adverts::SORT_BY_LIST_POSITION)
             ->setSortDirection(Adverts::SORT_ASC)
-            ->setCategory(101)
-        ;
+            ->setCategory(101);
 
         $adverts = $this->openApi->getSearch()->getAdverts($query);
 
@@ -37,8 +36,7 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
         $query = (new Adverts())
             ->setCategory(101)
             ->setCity(30266)
-            ->setRegion(5)
-        ;
+            ->setRegion(5);
         $adverts = $this->openApi->getSearch()->getAdverts($query);
 
         $this->assertAuthorizedRequest('adverts?fq={"category_id":101,"city_id":30266,"region_id":5}');
@@ -53,8 +51,7 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
         $this->addResponse(200, 'adverts.filtered.3.response.json');
         $query = (new Adverts())
             ->setCity(1)
-            ->setDistance(5)
-        ;
+            ->setDistance(5);
 
         $adverts = $this->openApi->getSearch()->getAdverts($query);
 
@@ -70,8 +67,7 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
         $this->addResponse(200, 'adverts.filtered.3.response.json');
         $query = (new Adverts())
             ->setLatLng(52.387, 16.86)
-            ->setDistance(1)
-        ;
+            ->setDistance(1);
 
         $adverts = $this->openApi->getSearch()->getAdverts($query);
 
@@ -100,14 +96,114 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
         $this->addResponse(200, 'adverts.filtered.4.response.json');
         $query = (new Adverts())
             ->setCategory(101)
-            ->setFromParam('price',200000)
-        ;
+            ->setFromParam('price', 200000);
 
         $adverts = $this->openApi->getSearch()->getAdverts($query);
 
         $this->assertAuthorizedRequest('adverts?fq={"category_id":101,"params":{"price":["from",200000]}}');
         $this->assertEquals(32, count($adverts->results));
         $this->assertEquals(46, $adverts->results[1]->id);
+    }
+
+    public function testShouldRetrieveAdsWithSpecifiedPriceTo()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'adverts.filtered.4.response.json');
+        $query = (new Adverts())
+            ->setCategory(101)
+            ->setToParam('price', 20000000);
+
+        $this->openApi->getSearch()->getAdverts($query);
+
+        $this->assertAuthorizedRequest('adverts?fq={"category_id":101,"params":{"price":["to",20000000]}}');
+    }
+
+    public function testShouldRetrieveAdsWithSpecifiedPriceRange()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'adverts.filtered.4.response.json');
+        $query = (new Adverts())
+            ->setCategory(101)
+            ->setRangeParam('price', 200000, 20000000);
+
+        $this->openApi->getSearch()->getAdverts($query);
+
+        $this->assertAuthorizedRequest('adverts?fq={"category_id":101,"params":{"price":["range",200000,20000000]}}');
+    }
+
+    public function testShouldRetrieveAdsWithSpecifiedType()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'adverts.filtered.5.response.json');
+        $query = (new Adverts())
+            ->setCategory(101)
+            ->setParam('building_material', "reinforced_concrete");
+
+        $adverts = $this->openApi->getSearch()->getAdverts($query);
+
+        $this->assertAuthorizedRequest(
+            'adverts?fq={"category_id":101,"params":{"building_material":"reinforced_concrete"}}'
+        );
+        $this->assertEquals(5, count($adverts->results));
+        $this->assertEquals(5, $adverts->total_elements);
+    }
+
+    public function testShouldRetrieveAdsWithInternetAndTv()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'adverts.filtered.3.response.json');
+        $query = (new Adverts())
+            ->setCategory(302)
+            ->setMultiOptionParam('media_types', ["internet", "cable-television"]);
+
+        $adverts = $this->openApi->getSearch()->getAdverts($query);
+
+        $this->assertAuthorizedRequest(
+            'adverts?fq={"category_id":302,"params":{"media_types":["all","internet","cable-television"]}}'
+        );
+        $this->assertEquals(1, count($adverts->results));
+        $this->assertEquals(1, $adverts->total_elements);
+    }
+
+    public function testShouldRetrieveOneAd()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'adverts.51.response.json');
+        $advert = $this->openApi->getSearch()->getAdvert(51);
+
+        $this->assertAuthorizedRequest('adverts/51');
+        $this->assertEquals(500, $advert->params['price'][1]);
+        $this->assertEquals(302, $advert->category_id);
+        $this->assertEquals(51, $advert->id);
+    }
+
+    public function testShouldNotRetrieveAdsWithParametersFromOtherCategory()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(400, 'adverts.bad.request.response.json');
+
+        $query = (new Adverts())
+            ->setCategory(102)
+            ->setMultiOptionParam('media_types', ["internet", "cable-television"])
+        ;
+
+        try {
+            $this->openApi->getSearch()->getAdverts($query);
+            $this->fail();
+        } catch (OpenApiException $e) {
+            $this->assertEquals('Can\'t search using parameter media_types', $e->getMessage());
+            $this->assertEquals(400, $e->getCode());
+        }
+
+        $this->assertAuthorizedRequest(
+            'adverts?fq={"category_id":102,"params":{"media_types":["all","internet","cable-television"]}}'
+        );
     }
 
     private function logInIntoApi()
@@ -121,4 +217,3 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
         );
     }
 }
-
