@@ -15,7 +15,7 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
         $this->addResponse(200, 'adverts.filtered.response.json');
         $query = (new Adverts())
             ->setLimit(10)
-            ->setSortBy(Adverts::SORT_BY_CREATED_AT)
+            ->setSortBy(Adverts::SORT_BY_LIST_POSITION)
             ->setSortDirection(Adverts::SORT_ASC)
             ->setCategory(101)
         ;
@@ -73,10 +73,6 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
             ->setDistance(1)
         ;
 
-        /**
-         *                 case "user_id":
-         */
-
         $adverts = $this->openApi->getSearch()->getAdverts($query);
 
         $this->assertAuthorizedRequest('adverts?fq={"latitude":52.387,"longitude":16.86,"distance":1}');
@@ -95,6 +91,23 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
 
         $this->assertAuthorizedRequest('adverts?fq={"user_id":1}');
         $this->assertEquals(43, count($adverts->results));
+    }
+
+    public function testShouldRetrieveAdsWithSpecifiedPriceFrom()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'adverts.filtered.4.response.json');
+        $query = (new Adverts())
+            ->setCategory(101)
+            ->setFromParam('price',200000)
+        ;
+
+        $adverts = $this->openApi->getSearch()->getAdverts($query);
+
+        $this->assertAuthorizedRequest('adverts?fq={"category_id":101,"params":{"price":["from",200000]}}');
+        $this->assertEquals(32, count($adverts->results));
+        $this->assertEquals(46, $adverts->results[1]->id);
     }
 
     private function logInIntoApi()

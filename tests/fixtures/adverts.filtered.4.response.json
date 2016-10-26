@@ -1,0 +1,1962 @@
+{
+    "results": [
+        {
+            "id": 47,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-18 07:35:24",
+            "url": "http://otodom.address/oferta/offer-2016-10-18-073524-IDL.html",
+            "created_at": "2016-10-18 07:35:24",
+            "valid_to": "2016-10-28 07:35:24",
+            "description": "<p>Offer created at 2016-10-18 07:35:24</p>",
+            "category_id": 101,
+            "region_id": 7,
+            "city_id": 47673,
+            "city": {
+                "pl": "Windyki"
+            },
+            "coordinates": {
+                "latitude": 53.14864,
+                "longitude": 20.47329,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 977269,
+                    "currency": "PLN"
+                },
+                "m": 220,
+                "price_per_m": 4442.13,
+                "rooms_num": "2",
+                "market": "primary",
+                "building_type": "apartment",
+                "floor_no": "floor_10",
+                "building_floors_num": 56,
+                "building_material": "reinforced_concrete",
+                "windows_type": "aluminium",
+                "heating": "other",
+                "build_year": 74,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "6864",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/48_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/48_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/48_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/48_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 48,
+            "agent": {}
+        },
+        {
+            "id": 46,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-18 07:34:29",
+            "url": "http://otodom.address/oferta/offer-2016-10-18-073429-IDK.html",
+            "created_at": "2016-10-18 07:34:29",
+            "valid_to": "2016-10-28 07:34:29",
+            "description": "<p>Offer created at 2016-10-18 07:34:29</p>",
+            "category_id": 101,
+            "region_id": 1,
+            "city_id": 58243,
+            "city": {
+                "pl": "Blizanowice"
+            },
+            "coordinates": {
+                "latitude": 51.0679,
+                "longitude": 17.15573,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 700886,
+                    "currency": "PLN"
+                },
+                "m": 72,
+                "price_per_m": 9734.53,
+                "rooms_num": "4",
+                "market": "secondary",
+                "building_type": "tenement",
+                "floor_no": "floor_5",
+                "building_floors_num": 61,
+                "building_material": "hydroton",
+                "windows_type": "aluminium",
+                "heating": "boiler_room",
+                "build_year": 29,
+                "construction_status": "ready_to_use",
+                "rent": {
+                    "0": "price",
+                    "1": "4829",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership_with_a_land_and_mortgage_registe"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/47_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/47_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/47_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/47_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 47,
+            "agent": {}
+        },
+        {
+            "id": 43,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-18 07:30:24",
+            "url": "http://otodom.address/oferta/offer-2016-10-18-073024-IDH.html",
+            "created_at": "2016-10-18 07:30:24",
+            "valid_to": "2016-10-28 07:30:24",
+            "description": "<p>Offer created at 2016-10-18 07:30:24</p>",
+            "category_id": 101,
+            "region_id": 7,
+            "city_id": 49945,
+            "city": {
+                "pl": "Tąsewy"
+            },
+            "coordinates": {
+                "latitude": 52.69125,
+                "longitude": 20.9109,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 221896,
+                    "currency": "PLN"
+                },
+                "m": 251,
+                "price_per_m": 884.05,
+                "rooms_num": "5",
+                "market": "primary",
+                "building_type": "infill",
+                "floor_no": "garret",
+                "building_floors_num": 51,
+                "building_material": "brick",
+                "windows_type": "plastic",
+                "heating": "urban",
+                "build_year": 18,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "9890",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/43_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/43_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/43_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/43_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 43,
+            "agent": {}
+        },
+        {
+            "id": 38,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-18 07:13:24",
+            "url": "http://otodom.address/oferta/offer-2016-10-18-071324-IDC.html",
+            "created_at": "2016-10-18 07:13:24",
+            "valid_to": "2016-10-28 07:13:24",
+            "description": "<p>Offer created at 2016-10-18 07:13:24</p>",
+            "category_id": 101,
+            "region_id": 6,
+            "city_id": 3869,
+            "city": {
+                "pl": "Bolechowice"
+            },
+            "coordinates": {
+                "latitude": 50.14654,
+                "longitude": 19.79348,
+                "radius": 1,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 467675,
+                    "currency": "PLN"
+                },
+                "m": 12,
+                "price_per_m": 38972.92,
+                "rooms_num": "4",
+                "market": "secondary",
+                "building_type": "ribbon",
+                "floor_no": "floor_higher_10",
+                "building_floors_num": 29,
+                "building_material": "hydroton",
+                "windows_type": "plastic",
+                "heating": "electrical",
+                "build_year": 89,
+                "construction_status": "ready_to_use",
+                "rent": {
+                    "0": "price",
+                    "1": "9628",
+                    "currency": "PLN"
+                },
+                "building_ownership": "full_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/38_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/38_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/38_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/38_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 38,
+            "agent": {}
+        },
+        {
+            "id": 37,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-18 07:12:43",
+            "url": "http://otodom.address/oferta/offer-2016-10-18-071243-IDB.html",
+            "created_at": "2016-10-18 07:12:43",
+            "valid_to": "2016-10-28 07:12:43",
+            "description": "<p>Offer created at 2016-10-18 07:12:43</p>",
+            "category_id": 101,
+            "region_id": 2,
+            "city_id": 31866,
+            "city": {
+                "pl": "Olszyniec"
+            },
+            "coordinates": {
+                "latitude": 53.23585,
+                "longitude": 17.9435,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 755127,
+                    "currency": "PLN"
+                },
+                "m": 289,
+                "price_per_m": 2612.9,
+                "rooms_num": "7",
+                "market": "secondary",
+                "building_type": "ribbon",
+                "floor_no": "floor_higher_10",
+                "building_floors_num": 30,
+                "building_material": "concrete",
+                "windows_type": "aluminium",
+                "heating": "tiled_stove",
+                "build_year": 81,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "709",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/37_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/37_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/37_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/37_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 37,
+            "agent": {}
+        },
+        {
+            "id": 34,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-18 07:10:12",
+            "url": "http://otodom.address/oferta/offer-2016-10-18-071012-IDy.html",
+            "created_at": "2016-10-18 07:10:12",
+            "valid_to": "2016-10-28 07:10:12",
+            "description": "<p>Offer created at 2016-10-18 07:10:12</p>",
+            "category_id": 101,
+            "region_id": 8,
+            "city_id": 43088,
+            "city": {
+                "pl": "Nowy Las"
+            },
+            "coordinates": {
+                "latitude": 50.35815,
+                "longitude": 17.42464,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 964427,
+                    "currency": "PLN"
+                },
+                "m": 105,
+                "price_per_m": 9185.02,
+                "rooms_num": "7",
+                "market": "primary",
+                "building_type": "house",
+                "floor_no": "floor_9",
+                "building_floors_num": 35,
+                "building_material": "concrete_plate",
+                "windows_type": "plastic",
+                "heating": "urban",
+                "build_year": 76,
+                "construction_status": "to_renovation",
+                "rent": {
+                    "0": "price",
+                    "1": "2390",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership_with_a_land_and_mortgage_registe"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/34_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/34_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/34_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/34_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 34,
+            "agent": {}
+        },
+        {
+            "id": 33,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-18 07:10:05",
+            "url": "http://otodom.address/oferta/offer-2016-10-18-071005-IDx.html",
+            "created_at": "2016-10-18 07:10:05",
+            "valid_to": "2016-10-28 07:10:04",
+            "description": "<p>Offer created at 2016-10-18 07:10:05</p>",
+            "category_id": 101,
+            "region_id": 12,
+            "city_id": 28980,
+            "city": {
+                "pl": "Biała Wielka"
+            },
+            "coordinates": {
+                "latitude": 50.687,
+                "longitude": 19.65963,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 324353,
+                    "currency": "PLN"
+                },
+                "m": 115,
+                "price_per_m": 2820.46,
+                "rooms_num": "3",
+                "market": "secondary",
+                "building_type": "ribbon",
+                "floor_no": "floor_3",
+                "building_floors_num": 63,
+                "building_material": "other",
+                "windows_type": "plastic",
+                "heating": "boiler_room",
+                "build_year": 57,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "9856",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/33_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/33_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/33_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/33_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 33,
+            "agent": {}
+        },
+        {
+            "id": 31,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-18 07:09:54",
+            "url": "http://otodom.address/oferta/offer-2016-10-18-070954-IDw.html",
+            "created_at": "2016-10-18 07:09:54",
+            "valid_to": "2016-10-28 07:09:54",
+            "description": "<p>Offer created at 2016-10-18 07:09:54</p>",
+            "category_id": 101,
+            "region_id": 13,
+            "city_id": 60154,
+            "city": {
+                "pl": "Nikisiałka Mała"
+            },
+            "coordinates": {
+                "latitude": 50.77358,
+                "longitude": 21.49192,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 705033,
+                    "currency": "PLN"
+                },
+                "m": 124,
+                "price_per_m": 5685.75,
+                "rooms_num": "4",
+                "market": "primary",
+                "building_type": "infill",
+                "floor_no": "floor_9",
+                "building_floors_num": 34,
+                "building_material": "reinforced_concrete",
+                "windows_type": "plastic",
+                "heating": "other",
+                "build_year": 70,
+                "construction_status": "ready_to_use",
+                "rent": {
+                    "0": "price",
+                    "1": "5461",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership_with_a_land_and_mortgage_registe"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/31_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/31_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/31_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/31_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 31,
+            "agent": {}
+        },
+        {
+            "id": 30,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-18 07:09:51",
+            "url": "http://otodom.address/oferta/offer-2016-10-18-070951-IDu.html",
+            "created_at": "2016-10-18 07:09:51",
+            "valid_to": "2016-10-28 07:09:50",
+            "description": "<p>Offer created at 2016-10-18 07:09:51</p>",
+            "category_id": 101,
+            "region_id": 3,
+            "city_id": 53615,
+            "city": {
+                "pl": "Jadwisin"
+            },
+            "coordinates": {
+                "latitude": 51.86558,
+                "longitude": 22.40327,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 235965,
+                    "currency": "PLN"
+                },
+                "m": 176,
+                "price_per_m": 1340.71,
+                "rooms_num": "5",
+                "market": "secondary",
+                "building_type": "loft",
+                "floor_no": "floor_8",
+                "building_floors_num": 31,
+                "building_material": "cellular_concrete",
+                "windows_type": "wooden",
+                "heating": "electrical",
+                "build_year": 72,
+                "construction_status": "to_renovation",
+                "rent": {
+                    "0": "price",
+                    "1": "9333",
+                    "currency": "PLN"
+                },
+                "building_ownership": "full_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/30_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/30_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/30_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/30_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 30,
+            "agent": {}
+        },
+        {
+            "id": 29,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-17 09:41:26",
+            "url": "http://otodom.address/oferta/offer-2016-10-17-094126-IDt.html",
+            "created_at": "2016-10-17 09:41:26",
+            "valid_to": "2016-10-27 09:41:26",
+            "description": "<p>Offer created at 2016-10-17 09:41:26</p>",
+            "category_id": 101,
+            "region_id": 6,
+            "city_id": 11310,
+            "city": {
+                "pl": "Czorsztyn"
+            },
+            "coordinates": {
+                "latitude": 49.43623,
+                "longitude": 20.32878,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 905802,
+                    "currency": "PLN"
+                },
+                "m": 209,
+                "price_per_m": 4333.98,
+                "rooms_num": "9",
+                "market": "primary",
+                "building_type": "block",
+                "floor_no": "floor_3",
+                "building_floors_num": 43,
+                "building_material": "breezeblock",
+                "windows_type": "wooden",
+                "heating": "electrical",
+                "build_year": 65,
+                "construction_status": "to_renovation",
+                "rent": {
+                    "0": "price",
+                    "1": "1305",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/29_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/29_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/29_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/29_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 29,
+            "agent": {}
+        },
+        {
+            "id": 28,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-17 09:13:52",
+            "url": "http://otodom.address/oferta/offer-2016-10-17-091352-IDs.html",
+            "created_at": "2016-10-17 09:13:52",
+            "valid_to": "2016-10-27 09:13:52",
+            "description": "<p>Offer created at 2016-10-17 09:13:52</p>",
+            "category_id": 101,
+            "region_id": 10,
+            "city_id": 41965,
+            "city": {
+                "pl": "Chmielówka"
+            },
+            "coordinates": {
+                "latitude": 53.65258,
+                "longitude": 23.16803,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 494788,
+                    "currency": "PLN"
+                },
+                "m": 127,
+                "price_per_m": 3895.97,
+                "rooms_num": "6",
+                "market": "primary",
+                "building_type": "apartment",
+                "floor_no": "cellar",
+                "building_floors_num": 24,
+                "building_material": "reinforced_concrete",
+                "windows_type": "plastic",
+                "heating": "other",
+                "build_year": 89,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "382",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/28_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/28_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/28_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/28_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 28,
+            "agent": {}
+        },
+        {
+            "id": 27,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-14 14:44:38",
+            "url": "http://otodom.address/oferta/offer-2016-10-14-144438-IDr.html",
+            "created_at": "2016-10-14 14:44:38",
+            "valid_to": "2016-10-24 14:44:38",
+            "description": "<p>Offer created at 2016-10-14 14:44:38</p>",
+            "category_id": 101,
+            "region_id": 12,
+            "city_id": 28252,
+            "city": {
+                "pl": "Aleksandrówka"
+            },
+            "coordinates": {
+                "latitude": 50.813,
+                "longitude": 19.52805,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 883040,
+                    "currency": "PLN"
+                },
+                "m": 267,
+                "price_per_m": 3307.27,
+                "rooms_num": "10",
+                "market": "secondary",
+                "building_type": "block",
+                "floor_no": "garret",
+                "building_floors_num": 34,
+                "building_material": "reinforced_concrete",
+                "windows_type": "plastic",
+                "heating": "other",
+                "build_year": 67,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "9189",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/27_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/27_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/27_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/27_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 27,
+            "agent": {}
+        },
+        {
+            "id": 25,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-14 14:18:02",
+            "url": "http://otodom.address/oferta/offer-2016-10-14-141802-IDp.html",
+            "created_at": "2016-10-14 14:18:02",
+            "valid_to": "2016-10-24 14:18:01",
+            "description": "<p>Offer created at 2016-10-14 14:18:02</p>",
+            "category_id": 101,
+            "region_id": 11,
+            "city_id": 20023,
+            "city": {
+                "pl": "Wierciny"
+            },
+            "coordinates": {
+                "latitude": 54.14896,
+                "longitude": 19.25498,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 360766,
+                    "currency": "PLN"
+                },
+                "m": 216,
+                "price_per_m": 1670.21,
+                "rooms_num": "6",
+                "market": "primary",
+                "building_type": "ribbon",
+                "floor_no": "floor_1",
+                "building_floors_num": 28,
+                "building_material": "reinforced_concrete",
+                "windows_type": "aluminium",
+                "heating": "tiled_stove",
+                "build_year": 71,
+                "construction_status": "ready_to_use",
+                "rent": {
+                    "0": "price",
+                    "1": "3242",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/25_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/25_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/25_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/25_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 25,
+            "agent": {}
+        },
+        {
+            "id": 24,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-14 14:17:25",
+            "url": "http://otodom.address/oferta/offer-2016-10-14-141725-IDo.html",
+            "created_at": "2016-10-14 14:17:25",
+            "valid_to": "2016-10-24 14:17:25",
+            "description": "<p>Offer created at 2016-10-14 14:17:25</p>",
+            "category_id": 101,
+            "region_id": 16,
+            "city_id": 50011,
+            "city": {
+                "pl": "Żółtew"
+            },
+            "coordinates": {
+                "latitude": 53.51294,
+                "longitude": 14.45403,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 597683,
+                    "currency": "PLN"
+                },
+                "m": 90,
+                "price_per_m": 6640.92,
+                "rooms_num": "1",
+                "market": "primary",
+                "building_type": "infill",
+                "floor_no": "floor_3",
+                "building_floors_num": 6,
+                "building_material": "other",
+                "windows_type": "aluminium",
+                "heating": "boiler_room",
+                "build_year": 25,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "1400",
+                    "currency": "PLN"
+                },
+                "building_ownership": "full_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/24_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/24_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/24_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/24_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 24,
+            "agent": {}
+        },
+        {
+            "id": 23,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-14 14:15:05",
+            "url": "http://otodom.address/oferta/offer-2016-10-14-141505-IDn.html",
+            "created_at": "2016-10-14 14:15:05",
+            "valid_to": "2016-10-24 14:15:05",
+            "description": "<p>Offer created at 2016-10-14 14:15:05</p>",
+            "category_id": 101,
+            "region_id": 15,
+            "city_id": 65894,
+            "city": {
+                "pl": "Olesin"
+            },
+            "coordinates": {
+                "latitude": 52.65711,
+                "longitude": 16.27567,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 850038,
+                    "currency": "PLN"
+                },
+                "m": 25,
+                "price_per_m": 34001.52,
+                "rooms_num": "5",
+                "market": "secondary",
+                "building_type": "house",
+                "floor_no": "floor_2",
+                "building_floors_num": 100,
+                "building_material": "cellular_concrete",
+                "windows_type": "wooden",
+                "heating": "boiler_room",
+                "build_year": 53,
+                "construction_status": "ready_to_use",
+                "rent": {
+                    "0": "price",
+                    "1": "4472",
+                    "currency": "PLN"
+                },
+                "building_ownership": "full_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/23_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/23_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/23_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/23_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 23,
+            "agent": {}
+        },
+        {
+            "id": 21,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-14 14:08:14",
+            "url": "http://otodom.address/oferta/offer-2016-10-14-140814-IDl.html",
+            "created_at": "2016-10-14 14:08:14",
+            "valid_to": "2016-10-24 14:08:14",
+            "description": "<p>Offer created at 2016-10-14 14:08:14</p>",
+            "category_id": 101,
+            "region_id": 15,
+            "city_id": 53552,
+            "city": {
+                "pl": "Łomnica"
+            },
+            "coordinates": {
+                "latitude": 52.30757,
+                "longitude": 15.96626,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 666359,
+                    "currency": "PLN"
+                },
+                "m": 85,
+                "price_per_m": 7839.52,
+                "rooms_num": "3",
+                "market": "primary",
+                "building_type": "tenement",
+                "floor_no": "cellar",
+                "building_floors_num": 15,
+                "building_material": "wood",
+                "windows_type": "wooden",
+                "heating": "electrical",
+                "build_year": 39,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "551",
+                    "currency": "PLN"
+                },
+                "building_ownership": "share"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/21_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/21_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/21_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/21_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 21,
+            "agent": {}
+        },
+        {
+            "id": 20,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-13 15:33:14",
+            "url": "http://otodom.address/oferta/offer-2016-10-13-153314-IDk.html",
+            "created_at": "2016-10-13 15:33:14",
+            "valid_to": "2016-10-23 15:33:14",
+            "description": "<p>Offer created at 2016-10-13 15:33:14</p>",
+            "category_id": 101,
+            "region_id": 16,
+            "city_id": 59147,
+            "city": {
+                "pl": "Stare Ślepce"
+            },
+            "coordinates": {
+                "latitude": 53.91893,
+                "longitude": 15.68232,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 260253,
+                    "currency": "PLN"
+                },
+                "m": 284,
+                "price_per_m": 916.38,
+                "rooms_num": "3",
+                "market": "primary",
+                "building_type": "ribbon",
+                "floor_no": "floor_6",
+                "building_floors_num": 81,
+                "building_material": "silikat",
+                "windows_type": "wooden",
+                "heating": "boiler_room",
+                "build_year": 84,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "6",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/20_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/20_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/20_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/20_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 20,
+            "agent": {}
+        },
+        {
+            "id": 19,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-13 15:28:11",
+            "url": "http://otodom.address/oferta/offer-2016-10-13-152811-IDj.html",
+            "created_at": "2016-10-13 15:28:11",
+            "valid_to": "2016-10-23 15:28:10",
+            "description": "<p>Offer created at 2016-10-13 15:28:11</p>",
+            "category_id": 101,
+            "region_id": 14,
+            "city_id": 40190,
+            "city": {
+                "pl": "Rynie"
+            },
+            "coordinates": {
+                "latitude": 54.03151,
+                "longitude": 22.65796,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 648380,
+                    "currency": "PLN"
+                },
+                "m": 47,
+                "price_per_m": 13795.32,
+                "rooms_num": "3",
+                "market": "primary",
+                "building_type": "house",
+                "floor_no": "floor_8",
+                "building_floors_num": 54,
+                "building_material": "concrete",
+                "windows_type": "aluminium",
+                "heating": "tiled_stove",
+                "build_year": 98,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "518",
+                    "currency": "PLN"
+                },
+                "building_ownership": "share"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/19_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/19_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/19_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/19_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 19,
+            "agent": {}
+        },
+        {
+            "id": 18,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-13 15:27:14",
+            "url": "http://otodom.address/oferta/offer-2016-10-13-152714-IDi.html",
+            "created_at": "2016-10-13 15:27:14",
+            "valid_to": "2016-10-23 15:27:14",
+            "description": "<p>Offer created at 2016-10-13 15:27:14</p>",
+            "category_id": 101,
+            "region_id": 1,
+            "city_id": 30212,
+            "city": {
+                "pl": "Gola Świdnicka"
+            },
+            "coordinates": {
+                "latitude": 50.91733,
+                "longitude": 16.61191,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 775760,
+                    "currency": "PLN"
+                },
+                "m": 255,
+                "price_per_m": 3042.2,
+                "rooms_num": "3",
+                "market": "primary",
+                "building_type": "tenement",
+                "floor_no": "floor_1",
+                "building_floors_num": 50,
+                "building_material": "other",
+                "windows_type": "wooden",
+                "heating": "gas",
+                "build_year": 91,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "8241",
+                    "currency": "PLN"
+                },
+                "building_ownership": "share"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/18_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/18_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/18_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/18_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 18,
+            "agent": {}
+        },
+        {
+            "id": 16,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-13 15:25:13",
+            "url": "http://otodom.address/oferta/offer-2016-10-13-152513-IDg.html",
+            "created_at": "2016-10-13 15:25:13",
+            "valid_to": "2016-10-23 15:25:12",
+            "description": "<p>Offer created at 2016-10-13 15:25:13</p>",
+            "category_id": 101,
+            "region_id": 15,
+            "city_id": 33310,
+            "city": {
+                "pl": "Lulinek"
+            },
+            "coordinates": {
+                "latitude": 52.56665,
+                "longitude": 16.69704,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 930882,
+                    "currency": "PLN"
+                },
+                "m": 58,
+                "price_per_m": 16049.69,
+                "rooms_num": "10",
+                "market": "secondary",
+                "building_type": "house",
+                "floor_no": "ground_floor",
+                "building_floors_num": 13,
+                "building_material": "concrete_plate",
+                "windows_type": "aluminium",
+                "heating": "tiled_stove",
+                "build_year": 51,
+                "construction_status": "ready_to_use",
+                "rent": {
+                    "0": "price",
+                    "1": "8494",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership_with_a_land_and_mortgage_registe"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/16_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/16_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/16_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/16_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 16,
+            "agent": {}
+        },
+        {
+            "id": 15,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-13 15:24:43",
+            "url": "http://otodom.address/oferta/offer-2016-10-13-152443-IDf.html",
+            "created_at": "2016-10-13 15:24:43",
+            "valid_to": "2016-10-23 15:24:42",
+            "description": "<p>Offer created at 2016-10-13 15:24:43</p>",
+            "category_id": 101,
+            "region_id": 7,
+            "city_id": 57503,
+            "city": {
+                "pl": "Mierzeniec"
+            },
+            "coordinates": {
+                "latitude": 52.78209,
+                "longitude": 20.93184,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 597683,
+                    "currency": "PLN"
+                },
+                "m": 90,
+                "price_per_m": 6640.92,
+                "rooms_num": "1",
+                "market": "primary",
+                "building_type": "infill",
+                "floor_no": "floor_3",
+                "building_floors_num": 6,
+                "building_material": "other",
+                "windows_type": "aluminium",
+                "heating": "boiler_room",
+                "build_year": 25,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "1400",
+                    "currency": "PLN"
+                },
+                "building_ownership": "full_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/15_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/15_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/15_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/15_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 15,
+            "agent": {}
+        },
+        {
+            "id": 14,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-13 15:17:41",
+            "url": "http://otodom.address/oferta/offer-2016-10-13-151741-IDe.html",
+            "created_at": "2016-10-13 15:17:41",
+            "valid_to": "2016-10-23 15:17:40",
+            "description": "<p>Offer created at 2016-10-13 15:17:41</p>",
+            "category_id": 101,
+            "region_id": 6,
+            "city_id": 544,
+            "city": {
+                "pl": "Wietrzychowice"
+            },
+            "coordinates": {
+                "latitude": 50.18872,
+                "longitude": 20.76849,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 679116,
+                    "currency": "PLN"
+                },
+                "m": 205,
+                "price_per_m": 3312.76,
+                "rooms_num": "10",
+                "market": "primary",
+                "building_type": "apartment",
+                "floor_no": "garret",
+                "building_floors_num": 69,
+                "building_material": "hydroton",
+                "windows_type": "aluminium",
+                "heating": "gas",
+                "build_year": 75,
+                "construction_status": "to_renovation",
+                "rent": {
+                    "0": "price",
+                    "1": "7898",
+                    "currency": "PLN"
+                },
+                "building_ownership": "full_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/14_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/14_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/14_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/14_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 14,
+            "agent": {}
+        },
+        {
+            "id": 13,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-13 15:15:38",
+            "url": "http://otodom.address/oferta/offer-2016-10-13-151538-IDd.html",
+            "created_at": "2016-10-13 15:15:38",
+            "valid_to": "2016-10-23 15:15:38",
+            "description": "<p>Offer created at 2016-10-13 15:15:38</p>",
+            "category_id": 101,
+            "region_id": 5,
+            "city_id": 68321,
+            "city": {
+                "pl": "Święte Laski-Kolonia"
+            },
+            "coordinates": {
+                "latitude": 51.93378,
+                "longitude": 19.98389,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 597683,
+                    "currency": "PLN"
+                },
+                "m": 90,
+                "price_per_m": 6640.92,
+                "rooms_num": "1",
+                "market": "primary",
+                "building_type": "infill",
+                "floor_no": "floor_3",
+                "building_floors_num": 6,
+                "building_material": "other",
+                "windows_type": "aluminium",
+                "heating": "boiler_room",
+                "build_year": 25,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "1400",
+                    "currency": "PLN"
+                },
+                "building_ownership": "full_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/13_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/13_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/13_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/13_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 13,
+            "agent": {}
+        },
+        {
+            "id": 12,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-13 15:14:54",
+            "url": "http://otodom.address/oferta/offer-2016-10-13-151454-IDc.html",
+            "created_at": "2016-10-13 15:14:54",
+            "valid_to": "2016-10-23 15:14:54",
+            "description": "<p>Offer created at 2016-10-13 15:14:54</p>",
+            "category_id": 101,
+            "region_id": 5,
+            "city_id": 59879,
+            "city": {
+                "pl": "Mostki"
+            },
+            "coordinates": {
+                "latitude": 51.64797,
+                "longitude": 18.99045,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 480132,
+                    "currency": "PLN"
+                },
+                "m": 300,
+                "price_per_m": 1600.44,
+                "rooms_num": "7",
+                "market": "secondary",
+                "building_type": "ribbon",
+                "floor_no": "floor_4",
+                "building_floors_num": 6,
+                "building_material": "breezeblock",
+                "windows_type": "wooden",
+                "heating": "tiled_stove",
+                "build_year": 42,
+                "construction_status": "to_renovation",
+                "rent": {
+                    "0": "price",
+                    "1": "8024",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/12_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/12_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/12_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/12_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 12,
+            "agent": {}
+        },
+        {
+            "id": 11,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-13 15:14:21",
+            "url": "http://otodom.address/oferta/offer-2016-10-13-151421-IDb.html",
+            "created_at": "2016-10-13 15:14:21",
+            "valid_to": "2016-10-23 15:14:21",
+            "description": "<p>Offer created at 2016-10-13 15:14:21</p>",
+            "category_id": 101,
+            "region_id": 6,
+            "city_id": 40411,
+            "city": {
+                "pl": "Glichów"
+            },
+            "coordinates": {
+                "latitude": 49.81455,
+                "longitude": 20.09314,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 426683,
+                    "currency": "PLN"
+                },
+                "m": 34,
+                "price_per_m": 12549.5,
+                "rooms_num": "1",
+                "market": "secondary",
+                "building_type": "infill",
+                "floor_no": "floor_3",
+                "building_floors_num": 1,
+                "building_material": "concrete_plate",
+                "windows_type": "aluminium",
+                "heating": "electrical",
+                "build_year": 63,
+                "construction_status": "ready_to_use",
+                "rent": {
+                    "0": "price",
+                    "1": "7035",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/11_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/11_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/11_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/11_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 11,
+            "agent": {}
+        },
+        {
+            "id": 9,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-13 14:51:43",
+            "url": "http://otodom.address/oferta/offer-2016-10-13-145143-ID9.html",
+            "created_at": "2016-10-13 14:51:43",
+            "valid_to": "2016-10-23 14:51:43",
+            "description": "<p>Offer created at 2016-10-13 14:51:43</p>",
+            "category_id": 101,
+            "region_id": 15,
+            "city_id": 33995,
+            "city": {
+                "pl": "Kraśnica"
+            },
+            "coordinates": {
+                "latitude": 52.22933,
+                "longitude": 18.18565,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 304042,
+                    "currency": "PLN"
+                },
+                "m": 164,
+                "price_per_m": 1853.91,
+                "rooms_num": "8",
+                "market": "secondary",
+                "building_type": "loft",
+                "floor_no": "floor_10",
+                "building_floors_num": 73,
+                "building_material": "concrete_plate",
+                "windows_type": "aluminium",
+                "heating": "tiled_stove",
+                "build_year": 45,
+                "construction_status": "ready_to_use",
+                "rent": {
+                    "0": "price",
+                    "1": "5380",
+                    "currency": "PLN"
+                },
+                "building_ownership": "full_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/9_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/9_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/9_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/9_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 9,
+            "agent": {}
+        },
+        {
+            "id": 8,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-12 13:33:15",
+            "url": "http://otodom.address/oferta/offer-2016-10-12-133315-ID8.html",
+            "created_at": "2016-10-12 13:33:15",
+            "valid_to": "2016-10-22 13:33:15",
+            "description": "<p>Offer created at 2016-10-12 13:33:15</p>",
+            "category_id": 101,
+            "region_id": 5,
+            "city_id": 43703,
+            "city": {
+                "pl": "Leżajna"
+            },
+            "coordinates": {
+                "latitude": 52.04401,
+                "longitude": 19.53888,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 691324,
+                    "currency": "PLN"
+                },
+                "m": 33,
+                "price_per_m": 20949.21,
+                "rooms_num": "2",
+                "market": "secondary",
+                "building_type": "block",
+                "floor_no": "floor_8",
+                "building_floors_num": 34,
+                "building_material": "cellular_concrete",
+                "windows_type": "wooden",
+                "heating": "boiler_room",
+                "build_year": 83,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "6579",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership_with_a_land_and_mortgage_registe"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/8_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/8_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/8_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/8_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 8,
+            "agent": {}
+        },
+        {
+            "id": 7,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-12 13:31:25",
+            "url": "http://otodom.address/oferta/offer-2016-10-12-133125-ID7.html",
+            "created_at": "2016-10-12 13:31:25",
+            "valid_to": "2016-10-22 13:31:24",
+            "description": "<p>Offer created at 2016-10-12 13:31:25</p>",
+            "category_id": 101,
+            "region_id": 2,
+            "city_id": 37881,
+            "city": {
+                "pl": "Modzerowo"
+            },
+            "coordinates": {
+                "latitude": 52.34204,
+                "longitude": 18.76922,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 442759,
+                    "currency": "PLN"
+                },
+                "m": 88,
+                "price_per_m": 5031.35,
+                "rooms_num": "1",
+                "market": "primary",
+                "building_type": "loft",
+                "floor_no": "cellar",
+                "building_floors_num": 17,
+                "building_material": "concrete_plate",
+                "windows_type": "plastic",
+                "heating": "gas",
+                "build_year": 79,
+                "construction_status": "to_completion",
+                "rent": {
+                    "0": "price",
+                    "1": "8190",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership_with_a_land_and_mortgage_registe"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/7_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/7_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/7_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/7_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 7,
+            "agent": {}
+        },
+        {
+            "id": 6,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-12 13:30:59",
+            "url": "http://otodom.address/oferta/offer-2016-10-12-133059-ID6.html",
+            "created_at": "2016-10-12 13:30:59",
+            "valid_to": "2016-10-22 13:30:59",
+            "description": "<p>Offer created at 2016-10-12 13:30:59</p>",
+            "category_id": 101,
+            "region_id": 10,
+            "city_id": 24748,
+            "city": {
+                "pl": "Pawły"
+            },
+            "coordinates": {
+                "latitude": 52.93236,
+                "longitude": 23.31814,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 267751,
+                    "currency": "PLN"
+                },
+                "m": 288,
+                "price_per_m": 929.69,
+                "rooms_num": "7",
+                "market": "secondary",
+                "building_type": "tenement",
+                "floor_no": "floor_7",
+                "building_floors_num": 87,
+                "building_material": "silikat",
+                "windows_type": "aluminium",
+                "heating": "tiled_stove",
+                "build_year": 8,
+                "construction_status": "ready_to_use",
+                "rent": {
+                    "0": "price",
+                    "1": "5345",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/6_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/6_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/6_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/6_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 6,
+            "agent": {}
+        },
+        {
+            "id": 5,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-12 13:30:08",
+            "url": "http://otodom.address/oferta/offer-2016-10-12-133008-ID5.html",
+            "created_at": "2016-10-12 13:30:08",
+            "valid_to": "2016-10-22 13:30:08",
+            "description": "<p>Offer created at 2016-10-12 13:30:08</p>",
+            "category_id": 101,
+            "region_id": 7,
+            "city_id": 34086,
+            "city": {
+                "pl": "Budy Uśniackie"
+            },
+            "coordinates": {
+                "latitude": 51.90543,
+                "longitude": 21.46198,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 879894,
+                    "currency": "PLN"
+                },
+                "m": 25,
+                "price_per_m": 35195.76,
+                "rooms_num": "9",
+                "market": "primary",
+                "building_type": "ribbon",
+                "floor_no": "garret",
+                "building_floors_num": 90,
+                "building_material": "brick",
+                "windows_type": "wooden",
+                "heating": "tiled_stove",
+                "build_year": 80,
+                "construction_status": "to_renovation",
+                "rent": {
+                    "0": "price",
+                    "1": "8771",
+                    "currency": "PLN"
+                },
+                "building_ownership": "full_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/5_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/5_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/5_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/5_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 5,
+            "agent": {}
+        },
+        {
+            "id": 4,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-12 13:22:14",
+            "url": "http://otodom.address/oferta/offer-2016-10-12-132214-ID4.html",
+            "created_at": "2016-10-12 13:22:14",
+            "valid_to": "2016-10-22 13:22:14",
+            "description": "<p>Offer created at 2016-10-12 13:22:14</p>",
+            "category_id": 101,
+            "region_id": 7,
+            "city_id": 48885,
+            "city": {
+                "pl": "Tworki"
+            },
+            "coordinates": {
+                "latitude": 52.04374,
+                "longitude": 22.29179,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 800531,
+                    "currency": "PLN"
+                },
+                "m": 172,
+                "price_per_m": 4654.25,
+                "rooms_num": "4",
+                "market": "primary",
+                "building_type": "loft",
+                "floor_no": "floor_2",
+                "building_floors_num": 65,
+                "building_material": "wood",
+                "windows_type": "plastic",
+                "heating": "other",
+                "build_year": 35,
+                "construction_status": "to_renovation",
+                "rent": {
+                    "0": "price",
+                    "1": "5441",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/4_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/4_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/4_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/4_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 4,
+            "agent": {}
+        },
+        {
+            "id": 3,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-12 13:19:46",
+            "url": "http://otodom.address/oferta/offer-2016-10-12-131946-ID3.html",
+            "created_at": "2016-10-12 13:19:46",
+            "valid_to": "2016-10-22 13:19:46",
+            "description": "<p>Offer created at 2016-10-12 13:19:46</p>",
+            "category_id": 101,
+            "region_id": 3,
+            "city_id": 30406,
+            "city": {
+                "pl": "Metelin"
+            },
+            "coordinates": {
+                "latitude": 50.74831,
+                "longitude": 23.86188,
+                "radius": 0,
+                "zoom_level": 11
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 753597,
+                    "currency": "PLN"
+                },
+                "m": 22,
+                "price_per_m": 34254.41,
+                "rooms_num": "5",
+                "market": "secondary",
+                "building_type": "apartment",
+                "floor_no": "floor_3",
+                "building_floors_num": 5,
+                "building_material": "breezeblock",
+                "windows_type": "wooden",
+                "heating": "tiled_stove",
+                "build_year": 52,
+                "construction_status": "to_renovation",
+                "rent": {
+                    "0": "price",
+                    "1": "2977",
+                    "currency": "PLN"
+                },
+                "building_ownership": "co_operative_ownership"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.address/images_otodompl/3_1_655x491.jpg",
+                    "184x138": "http://otodom.address/images_otodompl/3_1_184x138.jpg",
+                    "314x236": "http://otodom.address/images_otodompl/3_1_314x236.jpg",
+                    "1280x1024": "http://otodom.address/images_otodompl/3_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 3,
+            "agent": {}
+        }
+    ],
+    "is_last_page": true,
+    "is_first_page": true,
+    "current_page": 1,
+    "total_pages": 1,
+    "current_elements": 32,
+    "total_elements": 32
+}

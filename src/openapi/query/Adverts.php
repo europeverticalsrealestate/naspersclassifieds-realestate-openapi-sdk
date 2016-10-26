@@ -4,7 +4,11 @@ namespace naspersclassifieds\realestate\openapi\query;
 
 class Adverts extends Query
 {
-    const SORT_BY_CREATED_AT = 'created_at';
+    const SORT_BY_CREATION_DATE = 'created_at_first';
+    const SORT_BY_LIST_POSITION = 'created_at';
+    const SORT_BY_AREA = 'filter_float_m';
+    const SORT_BY_PRICE = 'filter_float_price';
+    const SORT_BY_PRICE_PER_METER = 'filter_float_price_per_m';
 
     private $userId;
     private $categoryId;
@@ -13,9 +17,10 @@ class Adverts extends Query
     private $latitude;
     private $longitude;
     private $distance;
+    private $params;
 
     /**
-     * @param $userId
+     * @param integer $userId
      * @return static
      */
     public function setUser($userId)
@@ -25,7 +30,7 @@ class Adverts extends Query
     }
 
     /**
-     * @param $categoryId
+     * @param integer $categoryId
      * @return static
      */
     public function setCategory($categoryId)
@@ -35,7 +40,7 @@ class Adverts extends Query
     }
 
     /**
-     * @param $cityId
+     * @param integer $cityId
      * @return static
      */
     public function setCity($cityId)
@@ -45,7 +50,7 @@ class Adverts extends Query
     }
 
     /**
-     * @param $regionId
+     * @param integer $regionId
      * @return static
      */
     public function setRegion($regionId)
@@ -55,7 +60,7 @@ class Adverts extends Query
     }
 
     /**
-     * @param $distance
+     * @param integer $distance
      * @return static
      */
     public function setDistance($distance)
@@ -64,11 +69,90 @@ class Adverts extends Query
         return $this;
     }
 
+    /**
+     * @param float $latitude
+     * @param float $longitude
+     * @return static
+     */
     public function setLatLng($latitude, $longitude)
     {
         $this->latitude = (float)$latitude;
         $this->longitude = (float)$longitude;
         return $this;
+    }
+
+    /**
+     * @param string $name
+     * @param float $value
+     * @return static
+     */
+    public function setFromParam($name, $value)
+    {
+        $this->params[$name] = ['from', (float)$value];
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     * @param float $value
+     * @return static
+     */
+    public function setToParam($name, $value)
+    {
+        $this->params[$name] = ['to', (float)$value];
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     * @param float $from
+     * @param float $to
+     * @return static
+     */
+    public function setRangeParam($name, $from, $to)
+    {
+        $this->params[$name] = ['range', (float)$from, (float)$to];
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     * @param array $values
+     * @return static
+     */
+    public function setAnyOfParam($name, $values)
+    {
+        $this->params[$name] = ['any', $this->filterValues($values)];
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     * @param array $values
+     * @return static
+     */
+    public function setAllOfParam($name, $values)
+    {
+        $this->params[$name] = ['all', $this->filterValues($values)];
+        return $this;
+    }
+
+    /**
+     * @param $values
+     * @return mixed
+     */
+    private function filterValues($values)
+    {
+        if (!is_array($values)){
+            return [];
+        }
+        $result = [];
+        foreach ($values as $value) {
+            if (is_scalar($values)) {
+                $result[] = $values;
+            }
+        }
+        return $result;
     }
 
     public function __toString()
@@ -100,6 +184,10 @@ class Adverts extends Query
 
         if ($this->distance) {
             $filters['distance'] = $this->distance;
+        }
+
+        if (!empty($this->params)) {
+            $filters['params'] = $this->params;
         }
 
         if (!empty($filters)) {
