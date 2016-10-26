@@ -13,10 +13,10 @@ echo "Logged in.\n";
 
 echo "Reading first 20 ads ordered by creation time...\n";
 
-$query = (new naspersclassifieds\realestate\openapi\query\AccountAdvertsQuery)
+$query = (new naspersclassifieds\realestate\openapi\query\AccountAdverts)
     ->setLimit(20)
-    ->setSortBy(naspersclassifieds\realestate\openapi\query\AccountAdvertsQuery::SORT_BY_CREATED_AT)
-    ->setSortDirection(naspersclassifieds\realestate\openapi\query\AccountAdvertsQuery::SORT_ASC)
+    ->setSortBy(naspersclassifieds\realestate\openapi\query\AccountAdverts::SORT_BY_CREATED_AT)
+    ->setSortDirection(naspersclassifieds\realestate\openapi\query\AccountAdverts::SORT_ASC)
 ;
 
 $results = $api->getAccount()->getAdverts($query);

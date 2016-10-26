@@ -2,37 +2,18 @@
 namespace naspersclassifieds\realestate\openapi\query;
 
 
-class AccountAdvertsQuery
+class Query
 {
-    const STATUS_ACTIVE = 'active';
-    const STATUS_WAITING = 'waiting';
-    const STATUS_REMOVED = 'archive';
-
-    const SORT_BY_CREATED_AT = 'created_at';
-    const SORT_BY_TITLE = 'title';
-
     const SORT_ASC = 'asc';
     const SORT_DESC = 'desc';
-
-    private $status;
-    private $limit;
-    private $page;
-    private $sortBy;
-    private $sortDirection;
-
-    /**
-     * @param string $status
-     * @return AccountAdvertsQuery
-     */
-    public function setStatus($status)
-    {
-        $this->status = $status;
-        return $this;
-    }
+    protected $sortDirection;
+    protected $limit;
+    protected $sortBy;
+    protected $page;
 
     /**
      * @param integer $limit
-     * @return AccountAdvertsQuery
+     * @return static
      */
     public function setLimit($limit)
     {
@@ -42,7 +23,7 @@ class AccountAdvertsQuery
 
     /**
      * @param integer $page
-     * @return AccountAdvertsQuery
+     * @return static
      */
     public function setPage($page)
     {
@@ -52,7 +33,7 @@ class AccountAdvertsQuery
 
     /**
      * @param string $sortBy
-     * @return AccountAdvertsQuery
+     * @return static
      */
     public function setSortBy($sortBy)
     {
@@ -62,7 +43,7 @@ class AccountAdvertsQuery
 
     /**
      * @param string $sortDirection
-     * @return AccountAdvertsQuery
+     * @return static
      */
     public function setSortDirection($sortDirection)
     {
@@ -73,9 +54,6 @@ class AccountAdvertsQuery
     public function __toString()
     {
         $query = '';
-        if ($this->status) {
-            $query .= ($query ? '&' : '?') . 'status=' . $this->status;
-        }
         if ($this->limit) {
             $query .= ($query ? '&' : '?') . 'limit=' . $this->limit;
         }

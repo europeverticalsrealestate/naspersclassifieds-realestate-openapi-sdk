@@ -1,0 +1,71 @@
+{
+    "results": [
+        {
+            "id": 2,
+            "user_id": 1,
+            "status": "active",
+            "title": "Offer 2016-10-12 13:19:20",
+            "url": "http://otodom.address/oferta/offer-2016-10-12-131920-ID2.html",
+            "created_at": "2016-10-12 13:19:20",
+            "valid_to": "2016-10-22 13:19:19",
+            "description": "<p>Offer created at 2016-10-12 13:19:20</p>",
+            "category_id": 101,
+            "region_id": 5,
+            "city_id": 30266,
+            "city": {
+                "pl": "Sadowa"
+            },
+            "coordinates": {
+                "latitude": 51.79651,
+                "longitude": 19.80378,
+                "radius": 0,
+                "zoom_level": 13
+            },
+            "advertiser_type": "business",
+            "contact": {
+                "person": ""
+            },
+            "params": {
+                "price": {
+                    "0": "price",
+                    "1": 199253,
+                    "currency": "PLN"
+                },
+                "m": 174,
+                "price_per_m": 1145.13,
+                "rooms_num": "7",
+                "market": "primary",
+                "building_type": "ribbon",
+                "floor_no": "floor_3",
+                "building_floors_num": 66,
+                "building_material": "concrete",
+                "windows_type": "plastic",
+                "heating": "electrical",
+                "build_year": 25,
+                "construction_status": "ready_to_use",
+                "rent": {
+                    "0": "price",
+                    "1": "6150",
+                    "currency": "PLN"
+                },
+                "building_ownership": "share"
+            },
+            "photos": {
+                "1": {
+                    "655x491": "http://otodom.addressimages_otodompl/2_1_655x491.jpg",
+                    "184x138": "http://otodom.addressimages_otodompl/2_1_184x138.jpg",
+                    "314x236": "http://otodom.addressimages_otodompl/2_1_314x236.jpg",
+                    "1280x1024": "http://otodom.addressimages_otodompl/2_1_1280x1024.jpg"
+                }
+            },
+            "image_collection_id": 2,
+            "agent": {}
+        }
+    ],
+    "is_last_page": true,
+    "is_first_page": true,
+    "current_page": 1,
+    "total_pages": 1,
+    "current_elements": 1,
+    "total_elements": 1
+}

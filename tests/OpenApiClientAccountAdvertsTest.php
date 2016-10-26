@@ -2,7 +2,7 @@
 namespace naspersclassifieds\realestate\openapi\tests;
 
 
-use naspersclassifieds\realestate\openapi\query\AccountAdvertsQuery;
+use naspersclassifieds\realestate\openapi\query\AccountAdverts;
 use naspersclassifieds\realestate\openapi\tests\utils\Constants;
 
 class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
@@ -25,7 +25,7 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
         $this->logInIntoApi();
 
         $this->addResponse(200, 'account.adverts.limit20.page2.response.json');
-        $adverts = $this->openApi->getAccount()->getAdverts((new AccountAdvertsQuery())->setLimit(20)->setPage(2));
+        $adverts = $this->openApi->getAccount()->getAdverts((new AccountAdverts())->setLimit(20)->setPage(2));
 
         $this->assertAuthorizedRequest('account/adverts?limit=20&page=2');
         $this->assertEquals(20, count($adverts->results));
@@ -39,7 +39,7 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
         $this->logInIntoApi();
 
         $this->addResponse(200, 'account.adverts.inactive.response.json');
-        $query = (new AccountAdvertsQuery())->setStatus(AccountAdvertsQuery::STATUS_REMOVED);
+        $query = (new AccountAdverts())->setStatus(AccountAdverts::STATUS_REMOVED);
         $adverts = $this->openApi->getAccount()->getAdverts($query);
 
         $this->assertAuthorizedRequest('account/adverts?status=archive');
@@ -53,9 +53,9 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
         $this->logInIntoApi();
 
         $this->addResponse(200, 'account.adverts.response.json');
-        $query = (new AccountAdvertsQuery())
-            ->setSortBy(AccountAdvertsQuery::SORT_BY_CREATED_AT)
-            ->setSortDirection(AccountAdvertsQuery::SORT_DESC)
+        $query = (new AccountAdverts())
+            ->setSortBy(AccountAdverts::SORT_BY_CREATED_AT)
+            ->setSortDirection(AccountAdverts::SORT_DESC)
         ;
         $adverts = $this->openApi->getAccount()->getAdverts($query);
 

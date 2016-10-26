@@ -22,6 +22,11 @@ class OpenApi
     private $account;
 
     /**
+     * @var Search
+     */
+    private $search;
+
+    /**
      * OpenApiClient constructor.
      * @param string $baseApiUrl base url of open api
      * @param ClientInterface $httpClient optional http client (used for tests)
@@ -31,6 +36,7 @@ class OpenApi
         $this->client = new Client($baseApiUrl, $httpClient);
         $this->dictionaries = new Dictionaries($this->client);
         $this->account = new Account($this->client);
+        $this->search = new Search($this->client);
     }
 
     public function getDictionaries()
@@ -44,6 +50,11 @@ class OpenApi
     public function getAccount()
     {
         return $this->account;
+    }
+
+    public function getSearch()
+    {
+        return $this->search;
     }
 
     /**
