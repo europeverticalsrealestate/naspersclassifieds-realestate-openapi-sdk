@@ -88,5 +88,78 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
             $this->assertEquals('Token is invalid and/or expired', $e->getMessage());
         }
     }
+
+    public function testShouldCreateImageCollection()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.images.post.response.json');
+
+        $images = [
+            'data:image/jpeg;base64,' . base64_encode($this->loadFixture('images/image.jpg')),
+            'http://dummy.address/dummy.photo.jpg'
+        ];
+
+        $imageCollection = $this->openApi->getAccount()->getAdvertsManager()->createImageCollection($images);
+
+        $expectedBody = json_encode(['1' => $images[0], '2' => $images[1]]);
+
+        $this->assertAuthorizedRequest('imageCollections', 'POST', [], [], $expectedBody);
+        $this->assertEquals(58, $imageCollection->id);
+        $this->assertEquals(2, count($imageCollection->images));
+    }
+
+    public function testShouldGetImageCollection()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.images.58.response.json');
+
+        $imageCollection = $this->openApi->getAccount()->getAdvertsManager()->getImageCollection(58);
+
+        $this->assertAuthorizedRequest('imageCollections/58');
+        $this->assertEquals(58, $imageCollection->id);
+        $this->assertEquals(2, count($imageCollection->images));
+    }
+
+    public function testAddImageToImageCollection()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.images.put.response.json');
+
+        $image = 'http://dummy.address/dummy.photo.jpg';
+
+        $this->openApi->getAccount()->getAdvertsManager()->addToImageCollection(58, $image);
+
+        $expectedBody = json_encode(['source' => $image]);
+        $this->assertAuthorizedRequest('imageCollections/58/images', 'PUT', [], [], $expectedBody);
+    }
+
+    public function testUpdateImageInImageCollection()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.images.put.response.json');
+
+        $image = 'http://dummy.address/dummy.photo.jpg';
+
+        $this->openApi->getAccount()->getAdvertsManager()->updateInImageCollection(58, 3, $image);
+
+        $expectedBody = json_encode(['source' => $image]);
+        $this->assertAuthorizedRequest('imageCollections/58/images/3', 'PUT', [], [], $expectedBody);
+    }
+
+    public function testDeleteImageFromImageCollection()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(204);
+
+        $this->openApi->getAccount()->getAdvertsManager()->deleteFromImageCollection(58, 2);
+
+        $this->assertAuthorizedRequest('imageCollections/58/images/2', 'DELETE');
+    }
+
 }
 

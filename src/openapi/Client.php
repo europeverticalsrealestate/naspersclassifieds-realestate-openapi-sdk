@@ -115,7 +115,7 @@ class Client
         $resource = $this->appendAccessToken($resource);
 
         try {
-            $response = $this->client->post(Uri::resolve($this->baseUri, $resource), $this->options);
+            $response = $this->client->delete(Uri::resolve($this->baseUri, $resource), $this->options);
             return $this->decodeResult($response);
         } catch (RequestException $e) {
             $this->throwOpenApiException($e);

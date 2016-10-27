@@ -95,7 +95,7 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
      * @param string $name
      * @return string
      */
-    private static function loadFixture($name)
+    protected static function loadFixture($name)
     {
         return file_get_contents(dirname(__FILE__) . '/fixtures/' . $name);
     }
