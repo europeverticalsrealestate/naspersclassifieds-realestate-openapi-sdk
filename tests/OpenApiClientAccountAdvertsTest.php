@@ -2,6 +2,7 @@
 namespace naspersclassifieds\realestate\openapi\tests;
 
 
+use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
 use naspersclassifieds\realestate\openapi\query\AccountAdverts;
 use naspersclassifieds\realestate\openapi\tests\utils\Constants;
 
@@ -64,6 +65,31 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
     }
 
     public function testShouldRetrieveOneUserAd()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.adverts.51.response.json');
+        $advert = $this->openApi->getAccount()->getAdvert(51);
+
+        $this->assertAuthorizedRequest('account/adverts/51');
+        $this->assertEquals('Offer title', $advert->title);
+        $this->assertEquals(500, $advert->params['price'][1]);
+        $this->assertEquals(302, $advert->category_id);
+        $this->assertEquals(51, $advert->id);
+    }
+
+    public function testShouldNotRetrieveAllUserAdsIfNotLoggedIn()
+    {
+        $this->addResponse(403, 'token.invalid.token.response.json');
+        try {
+            $this->openApi->getAccount()->getAdverts();
+            $this->fail();
+        } catch (OpenApiException $e) {
+            $this->assertEquals('Token is invalid and/or expired', $e->getMessage());
+        }
+    }
+
+    public function testCreateNewAd()
     {
         $this->logInIntoApi();
 

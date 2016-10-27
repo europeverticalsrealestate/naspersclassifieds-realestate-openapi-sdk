@@ -206,6 +206,17 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
         );
     }
 
+    public function testShouldNotRetrieveAdsIfNotLoggedIn()
+    {
+        $this->addResponse(403, 'token.invalid.token.response.json');
+        try {
+            $this->openApi->getSearch()->getAdverts();
+            $this->fail();
+        } catch (OpenApiException $e) {
+            $this->assertEquals('Token is invalid and/or expired', $e->getMessage());
+        }
+    }
+
     private function logInIntoApi()
     {
         $this->addResponse(200, 'token.response.json');

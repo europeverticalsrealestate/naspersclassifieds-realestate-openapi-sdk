@@ -2,9 +2,9 @@
 namespace naspersclassifieds\realestate\openapi;
 
 
-use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
 use naspersclassifieds\realestate\openapi\model\Advert;
 use naspersclassifieds\realestate\openapi\model\AdvertsResult;
+use naspersclassifieds\realestate\openapi\model\Agent;
 
 class ObjectFactory
 {
@@ -13,6 +13,11 @@ class ObjectFactory
             'results' => [
                 'class' => Advert::class,
                 'isArray' => true
+            ]
+        ],
+        Advert::class => [
+            'agent' => [
+                'class' => Agent::class
             ]
         ]
     ];
