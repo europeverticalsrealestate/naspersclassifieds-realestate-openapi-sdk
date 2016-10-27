@@ -45,10 +45,10 @@ class Client
 
     /**
      * @param $resource
-     * @return array
-     * @throws OpenApiException
+     * @param string|array|null $class
+     * @return mixed
      */
-    public function getFrom($resource)
+    public function getFrom($resource, $class = null)
     {
         if ($this->isLoggedIn()) {
             $resource .= (strstr($resource, '?') ? '&' : '?') . 'access_token=' . $this->accessToken;
@@ -56,7 +56,11 @@ class Client
 
         try {
             $response = $this->client->get(Uri::resolve($this->baseUri, $resource), $this->options);
-            return json_decode($response->getBody()->getContents(), true);
+            $results = json_decode($response->getBody()->getContents(), true);
+            if ($class) {
+                return (new ObjectFactory($class))->build($results);
+            }
+            return $results;
         } catch (RequestException $e) {
             $this->throwOpenApiException($e);
         }
@@ -81,35 +85,12 @@ class Client
             $results = json_decode($response->getBody()->getContents(), true);
             if ($class) {
                 return (new ObjectFactory($class))->build($results);
-            } else {
-                return $results;
             }
+            return $results;
         } catch (RequestException $e) {
             $this->throwOpenApiException($e);
         }
         return null;
-    }
-
-    /**
-     * @param string $resource
-     * @param string $class
-     * @return array
-     */
-    public function getFromAsObjects($resource, $class)
-    {
-        $results = $this->getFrom($resource)['results'];
-        return (new ObjectFactory($class))->buildMany($results);
-    }
-
-    /**
-     * @param string $resource
-     * @param string $class
-     * @return mixed
-     */
-    public function getFromAsObject($resource, $class)
-    {
-        $results = $this->getFrom($resource);
-        return (new ObjectFactory($class))->build($results);
     }
 
     /**

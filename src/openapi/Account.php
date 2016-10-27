@@ -35,7 +35,7 @@ class Account
      */
     public function getAdverts(AccountAdverts $query = null)
     {
-        return $this->client->getFromAsObject('account/adverts' . $query, AdvertsResult::class);
+        return $this->client->getFrom('account/adverts' . $query, AdvertsResult::class);
     }
 
     /**
@@ -44,7 +44,7 @@ class Account
      */
     public function getAdvert($id)
     {
-        return $this->client->getFromAsObject('account/adverts/' . (int)$id, Advert::class);
+        return $this->client->getFrom('account/adverts/' . (int)$id, Advert::class);
     }
 
     /**
@@ -52,7 +52,7 @@ class Account
      */
     public function getAgents()
     {
-        return $this->client->getFromAsObjects('account/agents', Agent::class);
+        return $this->client->getFrom('account/agents', [Agent::class]);
     }
 
     /**
@@ -61,7 +61,7 @@ class Account
      */
     public function getAgent($id)
     {
-        return $this->client->getFromAsObject("account/agents/" . (int)$id, Agent::class);
+        return $this->client->getFrom("account/agents/" . (int)$id, Agent::class);
     }
 
     /**

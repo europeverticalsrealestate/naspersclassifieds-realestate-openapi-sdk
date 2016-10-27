@@ -2,6 +2,7 @@
 namespace naspersclassifieds\realestate\openapi;
 
 
+use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
 use naspersclassifieds\realestate\openapi\model\Advert;
 use naspersclassifieds\realestate\openapi\model\AdvertsResult;
 
@@ -21,38 +22,53 @@ class ObjectFactory
      */
     private $className;
 
+    private $isArray = false;
+
     /**
      * DataFactory constructor.
-     * @param $className
+     * @param $class
      */
-    public function __construct($className)
+    public function __construct($class)
     {
-        $this->className = $className;
+        if (is_array($class)){
+            $this->isArray = true;
+            $class = array_shift($class);
+        }
+        $this->className = $class;
     }
 
-    public function build(array $object){
+    public function build(array $data) {
+        if ($this->isArray) {
+            return $this->buildMany($data);
+        }
+        return $this->buildOne($data);
+    }
+
+    private function buildOne(array $data){
         $newObj = new $this->className;
         foreach ($newObj as $fieldName => &$fieldValue) {
-            if (!isset($object[$fieldName])) {
+            if (!isset($data[$fieldName])) {
                 continue;
             }
             if (empty($this->mappings[$this->className][$fieldName])) {
-                $fieldValue = $object[$fieldName];
+                $fieldValue = $data[$fieldName];
                 continue;
             }
             $fieldMapping = $this->mappings[$this->className][$fieldName];
-            $factory = new ObjectFactory($fieldMapping['class']);
-            $fieldValue = (empty($fieldMapping['isArray']))
-                ? $factory->build($object[$fieldName])
-                : $factory->buildMany($object[$fieldName]);
+            $fieldClass = empty($fieldMapping['isArray']) ? $fieldMapping['class'] : [$fieldMapping['class']];
+            $factory = new ObjectFactory($fieldClass);
+            $fieldValue = $factory->build($data[$fieldName]);
         }
         return $newObj;
     }
 
-    public function buildMany(array $data) {
+    private function buildMany(array $data) {
         $result = [];
+        if (isset($data['results']) && is_array($data['results'])) {
+            $data = $data['results'];
+        }
         foreach ($data as $object) {
-            $result[] = $this->build($object);
+            $result[] = $this->buildOne($object);
         }
         return $result;
     }
