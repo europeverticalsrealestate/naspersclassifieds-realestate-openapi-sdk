@@ -28,7 +28,7 @@ class Search
      */
     public function getAdverts(Adverts $query = null)
     {
-        return $this->client->getFrom('adverts' . $query, AdvertsResult::class);
+        return $this->client->get('adverts' . $query, AdvertsResult::class);
     }
 
     /**
@@ -37,6 +37,6 @@ class Search
      */
     public function getAdvert($id)
     {
-        return $this->client->getFrom('adverts/' . (int)$id, Advert::class);
+        return $this->client->get('adverts/' . (int)$id, Advert::class);
     }
 }

@@ -7,6 +7,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Uri;
 use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
+use Psr\Http\Message\ResponseInterface;
 use stdClass;
 
 class Client
@@ -47,24 +48,19 @@ class Client
      * @param $resource
      * @param string|array|null $class
      * @return mixed
+     * @throws OpenApiException
      */
-    public function getFrom($resource, $class = null)
+    public function get($resource, $class = null)
     {
-        if ($this->isLoggedIn()) {
-            $resource .= (strstr($resource, '?') ? '&' : '?') . 'access_token=' . $this->accessToken;
-        }
+        $resource = $this->appendAccessToken($resource);
 
         try {
             $response = $this->client->get(Uri::resolve($this->baseUri, $resource), $this->options);
-            $results = json_decode($response->getBody()->getContents(), true);
-            if ($class) {
-                return (new ObjectFactory($class))->build($results);
-            }
-            return $results;
+            return $this->decodeResult($response, $class);
         } catch (RequestException $e) {
             $this->throwOpenApiException($e);
+            return null;
         }
-        return null;
     }
 
     /**
@@ -72,25 +68,59 @@ class Client
      * @param mixed $object
      * @param null|string $class
      * @return mixed
+     * @throws OpenApiException
      */
-    public function putInto($resource, $object, $class = null)
+    public function put($resource, $object, $class = null)
     {
-        if ($this->isLoggedIn()) {
-            $resource .= (strstr($resource, '?') ? '&' : '?') . 'access_token=' . $this->accessToken;
-        }
+        $resource = $this->appendAccessToken($resource);
 
         try {
             $options = array_merge($this->options, ['json' => $object]);
             $response = $this->client->put(Uri::resolve($this->baseUri, $resource), $options);
-            $results = json_decode($response->getBody()->getContents(), true);
-            if ($class) {
-                return (new ObjectFactory($class))->build($results);
-            }
-            return $results;
+            return $this->decodeResult($response, $class);
         } catch (RequestException $e) {
             $this->throwOpenApiException($e);
+            return null;
         }
-        return null;
+    }
+
+    /**
+     * @param $resource
+     * @param mixed $object
+     * @param null|string $class
+     * @return mixed
+     * @throws OpenApiException
+     */
+    public function post($resource, $object, $class = null)
+    {
+        $resource = $this->appendAccessToken($resource);
+
+        try {
+            $options = array_merge($this->options, ['json' => $object]);
+            $response = $this->client->post(Uri::resolve($this->baseUri, $resource), $options);
+            return $this->decodeResult($response, $class);
+        } catch (RequestException $e) {
+            $this->throwOpenApiException($e);
+            return null;
+        }
+    }
+
+    /**
+     * @param $resource
+     * @return mixed
+     * @throws OpenApiException
+     */
+    public function delete($resource)
+    {
+        $resource = $this->appendAccessToken($resource);
+
+        try {
+            $response = $this->client->post(Uri::resolve($this->baseUri, $resource), $this->options);
+            return $this->decodeResult($response);
+        } catch (RequestException $e) {
+            $this->throwOpenApiException($e);
+            return null;
+        }
     }
 
     /**
@@ -151,5 +181,35 @@ class Client
             }
         }
         throw new OpenApiException($message, $e->getCode(), $e);
+    }
+
+    /**
+     * @param $resource
+     * @return string
+     */
+    private function appendAccessToken($resource)
+    {
+        if ($this->isLoggedIn()) {
+            $resource .= (strstr($resource, '?') ? '&' : '?') . 'access_token=' . $this->accessToken;
+            return $resource;
+        }
+        return $resource;
+    }
+
+    /**
+     * @param ResponseInterface $response
+     * @param string|array|null $class
+     * @return array|mixed
+     */
+    private function decodeResult(ResponseInterface $response, $class = null) {
+        $contents = $response->getBody()->getContents();
+        if (!$contents) {
+            return null;
+        }
+        $results = json_decode($contents, true);
+        if ($class) {
+            return (new ObjectFactory($class))->build($results);
+        }
+        return $results;
     }
 }

@@ -26,7 +26,7 @@ class Account
 
     public function getProfile()
     {
-        return $this->client->getFrom('account/profile');
+        return $this->client->get('account/profile');
     }
 
     /**
@@ -35,7 +35,7 @@ class Account
      */
     public function getAdverts(AccountAdverts $query = null)
     {
-        return $this->client->getFrom('account/adverts' . $query, AdvertsResult::class);
+        return $this->client->get('account/adverts' . $query, AdvertsResult::class);
     }
 
     /**
@@ -44,7 +44,7 @@ class Account
      */
     public function getAdvert($id)
     {
-        return $this->client->getFrom('account/adverts/' . (int)$id, Advert::class);
+        return $this->client->get('account/adverts/' . (int)$id, Advert::class);
     }
 
     /**
@@ -52,7 +52,7 @@ class Account
      */
     public function getAgents()
     {
-        return $this->client->getFrom('account/agents', [Agent::class]);
+        return $this->client->get('account/agents', [Agent::class]);
     }
 
     /**
@@ -61,7 +61,7 @@ class Account
      */
     public function getAgent($id)
     {
-        return $this->client->getFrom("account/agents/" . (int)$id, Agent::class);
+        return $this->client->get("account/agents/" . (int)$id, Agent::class);
     }
 
     /**
@@ -70,6 +70,6 @@ class Account
      */
     public function setAgent(Agent $agent)
     {
-       return $this->client->putInto("account/agents/" . $agent->id, $agent, Agent::class);
+       return $this->client->put("account/agents/" . $agent->id, $agent, Agent::class);
     }
 }

@@ -31,7 +31,7 @@ class Dictionaries
      */
     public function getCategories()
     {
-        return $this->client->getFrom('categories', [Category::class]);
+        return $this->client->get('categories', [Category::class]);
     }
 
     /**
@@ -41,7 +41,7 @@ class Dictionaries
      */
     public function getCategory($id)
     {
-        return $this->client->getFrom('categories/' . (int)$id , Category::class);
+        return $this->client->get('categories/' . (int)$id , Category::class);
     }
 
     /**
@@ -50,7 +50,7 @@ class Dictionaries
      */
     public function getCities()
     {
-        return $this->client->getFrom('cities', [City::class]);
+        return $this->client->get('cities', [City::class]);
     }
 
     /**
@@ -60,7 +60,7 @@ class Dictionaries
      */
     public function getCity($id)
     {
-        return $this->client->getFrom('cities/' . (int)$id , City::class);
+        return $this->client->get('cities/' . (int)$id , City::class);
     }
 
     /**
@@ -69,7 +69,7 @@ class Dictionaries
      */
     public function getRegions()
     {
-        return $this->client->getFrom('regions', [Region::class]);
+        return $this->client->get('regions', [Region::class]);
     }
 
     /**
@@ -79,7 +79,7 @@ class Dictionaries
      */
     public function getRegion($id)
     {
-        return $this->client->getFrom('regions/' . (int)$id , Region::class);
+        return $this->client->get('regions/' . (int)$id , Region::class);
     }
 
     /**
@@ -88,7 +88,7 @@ class Dictionaries
      */
     public function getSubRegions()
     {
-        return $this->client->getFrom('subregions', [SubRegion::class]);
+        return $this->client->get('subregions', [SubRegion::class]);
     }
 
     /**
@@ -98,6 +98,6 @@ class Dictionaries
      */
     public function getSubRegion($id)
     {
-        return $this->client->getFrom('subregions/' . (int)$id , SubRegion::class);
+        return $this->client->get('subregions/' . (int)$id , SubRegion::class);
     }
 }
