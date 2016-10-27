@@ -2,10 +2,7 @@
 namespace naspersclassifieds\realestate\openapi;
 
 
-use naspersclassifieds\realestate\openapi\model\Advert;
-use naspersclassifieds\realestate\openapi\model\AdvertsResult;
 use naspersclassifieds\realestate\openapi\model\Agent;
-use naspersclassifieds\realestate\openapi\query\AccountAdverts;
 
 class Account
 {
@@ -16,12 +13,18 @@ class Account
     private $client;
 
     /**
+     * @var AdvertsManager
+     */
+    private $advertsManager;
+
+    /**
      * Account constructor.
      * @param Client $client
      */
     public function __construct(Client $client)
     {
         $this->client = $client;
+        $this->advertsManager = new AdvertsManager($client);
     }
 
     public function getProfile()
@@ -30,21 +33,11 @@ class Account
     }
 
     /**
-     * @param AccountAdverts $query
-     * @return AdvertsResult
+     * @return AdvertsManager
      */
-    public function getAdverts(AccountAdverts $query = null)
+    public function getAdvertsManager()
     {
-        return $this->client->get('account/adverts' . $query, AdvertsResult::class);
-    }
-
-    /**
-     * @param integer $id
-     * @return Advert
-     */
-    public function getAdvert($id)
-    {
-        return $this->client->get('account/adverts/' . (int)$id, Advert::class);
+        return $this->advertsManager;
     }
 
     /**

@@ -19,7 +19,7 @@ $query = (new naspersclassifieds\realestate\openapi\query\AccountAdverts)
     ->setSortDirection(naspersclassifieds\realestate\openapi\query\AccountAdverts::SORT_ASC)
 ;
 
-$results = $api->getAccount()->getAdverts($query);
+$results = $api->getAccount()->getAdvertsManager()->getAdverts($query);
 
 if (empty($results->results)) {
     echo "No ads. Please add some ads using the create-ad script or via the webpage.\n";

@@ -13,7 +13,7 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
         $this->logInIntoApi();
 
         $this->addResponse(200, 'account.adverts.response.json');
-        $adverts = $this->openApi->getAccount()->getAdverts();
+        $adverts = $this->openApi->getAccount()->getAdvertsManager()->getAdverts();
 
         $this->assertAuthorizedRequest('account/adverts');
         $this->assertEquals(43, count($adverts->results));
@@ -26,7 +26,7 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
         $this->logInIntoApi();
 
         $this->addResponse(200, 'account.adverts.limit20.page2.response.json');
-        $adverts = $this->openApi->getAccount()->getAdverts((new AccountAdverts())->setLimit(20)->setPage(2));
+        $adverts = $this->openApi->getAccount()->getAdvertsManager()->getAdverts((new AccountAdverts())->setLimit(20)->setPage(2));
 
         $this->assertAuthorizedRequest('account/adverts?limit=20&page=2');
         $this->assertEquals(20, count($adverts->results));
@@ -41,7 +41,7 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
 
         $this->addResponse(200, 'account.adverts.inactive.response.json');
         $query = (new AccountAdverts())->setStatus(AccountAdverts::STATUS_REMOVED);
-        $adverts = $this->openApi->getAccount()->getAdverts($query);
+        $adverts = $this->openApi->getAccount()->getAdvertsManager()->getAdverts($query);
 
         $this->assertAuthorizedRequest('account/adverts?status=archive');
         $this->assertEquals(1, count($adverts->results));
@@ -58,7 +58,7 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
             ->setSortBy(AccountAdverts::SORT_BY_CREATED_AT)
             ->setSortDirection(AccountAdverts::SORT_DESC)
         ;
-        $adverts = $this->openApi->getAccount()->getAdverts($query);
+        $adverts = $this->openApi->getAccount()->getAdvertsManager()->getAdverts($query);
 
         $this->assertAuthorizedRequest('account/adverts?sortby=created_at&sortdirection=desc');
         $this->assertEquals(43, count($adverts->results));
@@ -69,7 +69,7 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
         $this->logInIntoApi();
 
         $this->addResponse(200, 'account.adverts.51.response.json');
-        $advert = $this->openApi->getAccount()->getAdvert(51);
+        $advert = $this->openApi->getAccount()->getAdvertsManager()->getAdvert(51);
 
         $this->assertAuthorizedRequest('account/adverts/51');
         $this->assertEquals('Offer title', $advert->title);
@@ -82,25 +82,11 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
     {
         $this->addResponse(403, 'token.invalid.token.response.json');
         try {
-            $this->openApi->getAccount()->getAdverts();
+            $this->openApi->getAccount()->getAdvertsManager()->getAdverts();
             $this->fail();
         } catch (OpenApiException $e) {
             $this->assertEquals('Token is invalid and/or expired', $e->getMessage());
         }
-    }
-
-    public function testCreateNewAd()
-    {
-        $this->logInIntoApi();
-
-        $this->addResponse(200, 'account.adverts.51.response.json');
-        $advert = $this->openApi->getAccount()->getAdvert(51);
-
-        $this->assertAuthorizedRequest('account/adverts/51');
-        $this->assertEquals('Offer title', $advert->title);
-        $this->assertEquals(500, $advert->params['price'][1]);
-        $this->assertEquals(302, $advert->category_id);
-        $this->assertEquals(51, $advert->id);
     }
 }
 
