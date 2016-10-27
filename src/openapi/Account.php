@@ -70,6 +70,15 @@ class Account
      */
     public function setAgent(Agent $agent)
     {
-       return $this->client->put("account/agents/" . $agent->id, $agent, Agent::class);
+        return $this->client->put("account/agents/" . $agent->id, $agent, Agent::class);
+    }
+
+    /**
+     * @param Agent $agent
+     * @return Agent
+     */
+    public function addAgent($agent)
+    {
+        return $this->client->post("account/agents", $agent, Agent::class);
     }
 }

@@ -8,6 +8,23 @@ use naspersclassifieds\realestate\openapi\tests\utils\Constants;
 
 class OpenApiClientAccountTest extends OpenApiTestCase
 {
+    /**
+     * @var Agent
+     */
+    private $exampleAgent;
+
+    public function setUp()
+    {
+        parent::setUp();
+        $exampleAgent = new Agent();
+        $exampleAgent->id = 2199610;
+        $exampleAgent->phone = "555 666 777";
+        $exampleAgent->name = "Imi Nazwonko";
+        $exampleAgent->email = "kulamula@hula.ho";
+        $exampleAgent->photo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAnUlEQVR42mL4//8/AwgDgT0QbwTiJ1AMYtvD5aGKKoD4Pw5cAVUDNukPEG8HYksgZoZiS6gYSM6GEUgcBuKPQF0+DFgAIyPjaiAlCmJ/AGJdIN4Lwkhu3gvFILkPLFCNN4H4F5phv5DkQE4BW60LMwkdQ008APPMOiSJh0B8CYm/AuQZ5OBZB/IpkgJLqFgFPBzRAvw5FKMEOECAAQA6DXcHpH9ICAAAAABJRU5ErkJggg==';
+        $this->exampleAgent = $exampleAgent;
+    }
+    
     public function testShouldRetrieveAccountProfile()
     {
         $this->logInIntoApi();
@@ -42,8 +59,8 @@ class OpenApiClientAccountTest extends OpenApiTestCase
 
         $this->assertEquals(1, count($agents));
         $this->assertAuthorizedRequest('account/agents');
-        $this->assertEquals(Constants::AGENT_NAME, $agents[0]->name);
-        $this->assertEquals(Constants::AGENT_PHONE, $agents[0]->phone);
+        $this->assertEquals($this->exampleAgent->name, $agents[0]->name);
+        $this->assertEquals($this->exampleAgent->phone, $agents[0]->phone);
     }
 
     public function testShouldNotRetrieveAgentsDataIfNotLoggedIn()
@@ -65,12 +82,12 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->logInIntoApi();
 
         $this->addResponse(200, 'account.agents.1.response.json');
-        $agent = $this->openApi->getAccount()->getAgent(Constants::AGENT_ID);
+        $agent = $this->openApi->getAccount()->getAgent($this->exampleAgent->id);
 
-        $this->assertAuthorizedRequest('account/agents/' . Constants::AGENT_ID);
-        $this->assertEquals(Constants::AGENT_NAME, $agent->name);
-        $this->assertEquals(Constants::AGENT_PHONE, $agent->phone);
-        $this->assertEquals(Constants::AGENT_ID, $agent->id);
+        $this->assertAuthorizedRequest('account/agents/' . $this->exampleAgent->id);
+        $this->assertEquals($this->exampleAgent->name, $agent->name);
+        $this->assertEquals($this->exampleAgent->phone, $agent->phone);
+        $this->assertEquals($this->exampleAgent->id, $agent->id);
     }
 
     public function testShouldNotRetrieveAgentIfIdNotExists()
@@ -79,7 +96,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
 
         $this->addResponse(404);
 
-        $agentId = Constants::AGENT_ID + 1;
+        $agentId = $this->exampleAgent->id + 1;
         try {
             $this->openApi->getAccount()->getAgent($agentId);
             $this->fail();
@@ -93,25 +110,47 @@ class OpenApiClientAccountTest extends OpenApiTestCase
     {
         $this->logInIntoApi();
 
+        $this->addResponse(200, 'account.agents.2.response.json');
+        $this->exampleAgent->name = "Kolo Rollo";
+
+        $agentResponse = $this->openApi->getAccount()->setAgent($this->exampleAgent);
+
+        $expectedBody = json_encode($this->exampleAgent);
+        $this->assertAuthorizedRequest('account/agents/' . $this->exampleAgent->id, 'PUT', [], [], $expectedBody);
+
+        $this->assertEquals($this->exampleAgent->name, $agentResponse->name);
+        $this->assertEquals($this->exampleAgent->phone, $agentResponse->phone);
+        $this->assertEquals($this->exampleAgent->id, $agentResponse->id);
+    }
+
+    public function testShouldDeleteAgentPhoto()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.agents.3.response.json');
+        $this->exampleAgent->photo = false;
+
+        $agentResponse = $this->openApi->getAccount()->setAgent($this->exampleAgent);
+
+        $expectedBody = json_encode($this->exampleAgent);
+        $this->assertAuthorizedRequest('account/agents/' . $this->exampleAgent->id, 'PUT', [], [], $expectedBody);
+
+        $this->assertNull($agentResponse->photo);
+        $this->assertEquals($this->exampleAgent->id, $agentResponse->id);
+    }
+
+    public function testShouldAddNewAgent()
+    {
+        $this->logInIntoApi();
+
         $this->addResponse(200, 'account.agents.1.response.json');
+        unset($this->exampleAgent->id);
+        $agentResponse = $this->openApi->getAccount()->addAgent($this->exampleAgent);
+        $expectedBody = json_encode($this->exampleAgent);
+        $this->assertAuthorizedRequest('account/agents', 'POST', [], [], $expectedBody);
 
-        $agent = new Agent();
-        $agent->id = Constants::AGENT_ID;
-        $agent->phone  = Constants::AGENT_PHONE;
-        $newAgentName = "Kolo Rollo";
-        $agent->name = $newAgentName;
-        $agent->photo = Constants::AGENT_PHOTO;
-        $agent->email = Constants::AGENT_EMAIL;
-
-        $agentResponse = $this->openApi->getAccount()->setAgent($agent);
-
-        $expectedBody = json_encode($agent);
-        $this->assertAuthorizedRequest('account/agents/' . Constants::AGENT_ID, 'PUT', [], [], $expectedBody);
-
-        $this->assertEquals(Constants::AGENT_NAME, $agentResponse->name);
-        $this->assertEquals(Constants::AGENT_PHONE, $agentResponse->phone);
-        $this->assertEquals(Constants::AGENT_ID, $agentResponse->id);
-
+        $this->assertEquals($this->exampleAgent->name, $agentResponse->name);
+        $this->assertGreaterThan(0, $agentResponse->id);
     }
 
     private function logInIntoApi()
@@ -125,4 +164,3 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         );
     }
 }
-
