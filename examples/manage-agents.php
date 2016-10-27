@@ -7,57 +7,47 @@
  * on the ad page.
  */
 
+use naspersclassifieds\realestate\openapi\model\Agent;
+
 require 'init.php';
 
+$api = new naspersclassifieds\realestate\openapi\OpenApi(OPENAPI_URL);
+
 echo "Logging in...\n";
-$client = createClient();
-$accessToken = logIn($client);
+$api->logIn(OPENAPI_KEY, OPENAPI_SECRET, OTODOM_USER, OTODOM_PASSWORD);
 echo "Logged in.\n";
 
 echo "Creating a new agent with random data...\n";
 
 $fakeName = "John " . generateRandomName();
 $fakeEmail = str_replace(' ', '.', strtolower($fakeName)) . '@example.domain';
-$agent = [
-    'name' => $fakeName,
-    'email' => $fakeEmail,
-    'phone' => mt_rand(100000000, 999999999),
-    //you can provide a normal (eg. http) URL or use a "data" protocol
-    'photo' => 'data:image/jpeg;base64,' . base64_encode(file_get_contents(PATH_TO_PHOTOS . '/smiley.jpg')),
-];
 
-$response = $client->request(
-    'POST',
-    'account/agents',
-    [
-        'query' => ['access_token' => $accessToken],
-        'form_params' => $agent
-    ]
-);
+$agent = new Agent();
+$agent->name = $fakeName;
+$agent->email = $fakeEmail;
+$agent->phone = mt_rand(100000000, 999999999);
+$agent->photo = 'data:image/jpeg;base64,' . base64_encode(file_get_contents(PATH_TO_PHOTOS . '/smiley.jpg'));
 
-$agent = json_decode($response->getBody()->getContents(), true);
-echo "Created a new agent with name: '{$agent['name']}' and ID: {$agent['id']}.\n";
+$result = $api->getAccount()->addAgent($agent);
+
+
+echo "Created a new agent with name: '{$result->name}' and ID: {$result->id}.\n";
 
 
 echo "Reading all agents of currently logged-in user...\n";
-$response = $client->request('GET', "account/agents?access_token=$accessToken");
-$body = json_decode($response->getBody()->getContents(), true);
-displayAgentsList($body['results']);
+$agents = $api->getAccount()->getAgents();
 
+displayAgentsList($agents);
 
-echo "Changing name of the agent {$agent['id']}...\n";
+$agent = $result;
+echo "Changing name of the agent {$agent->id}...\n";
 $newName = "Bob " . generateRandomName();
-$agent['name'] = $newName;
-$response = $client->request(
-    'PUT',
-    "account/agents/{$agent['id']}",
-    [
-        'query' => ['access_token' => $accessToken, 'XDEBUG_SESSION_START'=>'PHPSTORM'],
-        'form_params' => ['name' => $newName]
-    ]
-);
-$agent = json_decode($response->getBody()->getContents(), true);
-echo "Server confirmed that new name of the agent {$agent['id']} is now: '{$agent['name']}'.\n";
+$agent->name = $newName;
+$agent->photo = null;
+
+$result = $api->getAccount()->setAgent($agent);
+
+echo "Server confirmed that new name of the agent {$agent->id} is now: '{$agent->name}'.\n";
 
 
 //------------------ utility functions below  --------------------------
@@ -81,10 +71,13 @@ function displayAgentsList($agentsList) {
 
     echo sprintf('%-10s | %-15s | %s', 'ID', 'Phone', 'Name') . "\n";
     echo str_repeat('-', 75) . "\n";
+    /**
+     * @var Agent $agent
+     */
     foreach ($agentsList as $agent) {
-        $phone = isset($agent['phone']) ? $agent['phone'] : '';
-        $name = isset($agent['name']) ? $agent['name'] : '';
-        echo sprintf('%10d | %-15s | %s', $agent['id'], $phone, $name) . "\n";
+        $phone = isset($agent->phone) ? $agent->phone : '';
+        $name = isset($agent->name) ? $agent->name : '';
+        echo sprintf('%10d | %-15s | %s', $agent->id, $phone, $name) . "\n";
     }
 }
 
