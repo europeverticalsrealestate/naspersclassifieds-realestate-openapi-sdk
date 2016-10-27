@@ -67,6 +67,17 @@ abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
         }
     }
 
+    protected function logInIntoApi()
+    {
+        $this->addResponse(200, 'token.response.json');
+        $this->openApi->logIn(
+            Constants::AUTH_KEY,
+            Constants::AUTH_SECRET,
+            Constants::USER_LOGIN,
+            Constants::USER_PASSWORD
+        );
+    }
+
     /**
      * @param string $target
      * @param string $method optional, GET by default

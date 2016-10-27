@@ -102,16 +102,5 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
         $this->assertEquals(302, $advert->category_id);
         $this->assertEquals(51, $advert->id);
     }
-
-    private function logInIntoApi()
-    {
-        $this->addResponse(200, 'token.response.json');
-        $this->openApi->logIn(
-            Constants::AUTH_KEY,
-            Constants::AUTH_SECRET,
-            Constants::USER_LOGIN,
-            Constants::USER_PASSWORD
-        );
-    }
 }
 

@@ -155,15 +155,4 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->assertEquals($this->exampleAgent->name, $agentResponse->name);
         $this->assertGreaterThan(0, $agentResponse->id);
     }
-
-    private function logInIntoApi()
-    {
-        $this->addResponse(200, 'token.response.json');
-        $this->openApi->logIn(
-            Constants::AUTH_KEY,
-            Constants::AUTH_SECRET,
-            Constants::USER_LOGIN,
-            Constants::USER_PASSWORD
-        );
-    }
 }

@@ -216,15 +216,4 @@ class OpenApiClientAdvertsTest extends OpenApiTestCase
             $this->assertEquals('Token is invalid and/or expired', $e->getMessage());
         }
     }
-
-    private function logInIntoApi()
-    {
-        $this->addResponse(200, 'token.response.json');
-        $this->openApi->logIn(
-            Constants::AUTH_KEY,
-            Constants::AUTH_SECRET,
-            Constants::USER_LOGIN,
-            Constants::USER_PASSWORD
-        );
-    }
 }
