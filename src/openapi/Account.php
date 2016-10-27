@@ -2,8 +2,6 @@
 namespace naspersclassifieds\realestate\openapi;
 
 
-use naspersclassifieds\realestate\openapi\model\Agent;
-
 class Account
 {
 
@@ -18,6 +16,11 @@ class Account
     private $advertsManager;
 
     /**
+     * @var AgentsManger
+     */
+    private $agentsManager;
+
+    /**
      * Account constructor.
      * @param Client $client
      */
@@ -25,6 +28,7 @@ class Account
     {
         $this->client = $client;
         $this->advertsManager = new AdvertsManager($client);
+        $this->agentsManager = new AgentsManger($client);
     }
 
     public function getProfile()
@@ -41,37 +45,10 @@ class Account
     }
 
     /**
-     * @return array
+     * @return AgentsManger
      */
-    public function getAgents()
+    public function getAgentsManager()
     {
-        return $this->client->get('account/agents', [Agent::class]);
-    }
-
-    /**
-     * @param integer $id
-     * @return Agent
-     */
-    public function getAgent($id)
-    {
-        return $this->client->get("account/agents/" . (int)$id, Agent::class);
-    }
-
-    /**
-     * @param Agent $agent
-     * @return Agent
-     */
-    public function setAgent(Agent $agent)
-    {
-        return $this->client->put("account/agents/" . $agent->id, $agent, Agent::class);
-    }
-
-    /**
-     * @param Agent $agent
-     * @return Agent
-     */
-    public function addAgent($agent)
-    {
-        return $this->client->post("account/agents", $agent, Agent::class);
+        return $this->agentsManager;
     }
 }

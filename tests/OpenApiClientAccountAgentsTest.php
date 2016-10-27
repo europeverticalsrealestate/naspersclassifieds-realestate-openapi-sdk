@@ -31,7 +31,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->logInIntoApi();
 
         $this->addResponse(200, 'account.agents.response.json');
-        $agents = $this->openApi->getAccount()->getAgents();
+        $agents = $this->openApi->getAccount()->getAgentsManager()->getAgents();
 
         $this->assertEquals(1, count($agents));
         $this->assertAuthorizedRequest('account/agents');
@@ -44,7 +44,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->addResponse(403, 'token.invalid.token.response.json');
 
         try {
-            $this->openApi->getAccount()->getAgents();
+            $this->openApi->getAccount()->getAgentsManager()->getAgents();
             $this->fail();
         } catch (OpenApiException $e) {
             $this->assertEquals('Token is invalid and/or expired', $e->getMessage());
@@ -58,7 +58,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->logInIntoApi();
 
         $this->addResponse(200, 'account.agents.1.response.json');
-        $agent = $this->openApi->getAccount()->getAgent($this->exampleAgent->id);
+        $agent = $this->openApi->getAccount()->getAgentsManager()->getAgent($this->exampleAgent->id);
 
         $this->assertAuthorizedRequest('account/agents/' . $this->exampleAgent->id);
         $this->assertEquals($this->exampleAgent->name, $agent->name);
@@ -74,7 +74,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
 
         $agentId = $this->exampleAgent->id + 1;
         try {
-            $this->openApi->getAccount()->getAgent($agentId);
+            $this->openApi->getAccount()->getAgentsManager()->getAgent($agentId);
             $this->fail();
         } catch (OpenApiException $e) {
             $this->assertAuthorizedRequest('account/agents/' . $agentId);
@@ -89,7 +89,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->addResponse(200, 'account.agents.2.response.json');
         $this->exampleAgent->name = "Kolo Rollo";
 
-        $agentResponse = $this->openApi->getAccount()->setAgent($this->exampleAgent);
+        $agentResponse = $this->openApi->getAccount()->getAgentsManager()->setAgent($this->exampleAgent);
 
         $expectedBody = json_encode($this->exampleAgent);
         $this->assertAuthorizedRequest('account/agents/' . $this->exampleAgent->id, 'PUT', [], [], $expectedBody);
@@ -106,7 +106,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->addResponse(200, 'account.agents.3.response.json');
         $this->exampleAgent->photo = false;
 
-        $agentResponse = $this->openApi->getAccount()->setAgent($this->exampleAgent);
+        $agentResponse = $this->openApi->getAccount()->getAgentsManager()->setAgent($this->exampleAgent);
 
         $expectedBody = json_encode($this->exampleAgent);
         $this->assertAuthorizedRequest('account/agents/' . $this->exampleAgent->id, 'PUT', [], [], $expectedBody);
@@ -121,7 +121,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
 
         $this->addResponse(200, 'account.agents.1.response.json');
         unset($this->exampleAgent->id);
-        $agentResponse = $this->openApi->getAccount()->addAgent($this->exampleAgent);
+        $agentResponse = $this->openApi->getAccount()->getAgentsManager()->addAgent($this->exampleAgent);
         $expectedBody = json_encode($this->exampleAgent);
         $this->assertAuthorizedRequest('account/agents', 'POST', [], [], $expectedBody);
 
