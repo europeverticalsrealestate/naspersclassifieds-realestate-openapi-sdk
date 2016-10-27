@@ -21,7 +21,10 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $exampleAgent->phone = "555 666 777";
         $exampleAgent->name = "Imi Nazwonko";
         $exampleAgent->email = "kulamula@hula.ho";
-        $exampleAgent->photo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAnUlEQVR42mL4//8/AwgDgT0QbwTiJ1AMYtvD5aGKKoD4Pw5cAVUDNukPEG8HYksgZoZiS6gYSM6GEUgcBuKPQF0+DFgAIyPjaiAlCmJ/AGJdIN4Lwkhu3gvFILkPLFCNN4H4F5phv5DkQE4BW60LMwkdQ008APPMOiSJh0B8CYm/AuQZ5OBZB/IpkgJLqFgFPBzRAvw5FKMEOECAAQA6DXcHpH9ICAAAAABJRU5ErkJggg==';
+        $exampleAgent->photo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAnUlEQVR42mL' .
+            '4//8/AwgDgT0QbwTiJ1AMYtvD5aGKKoD4Pw5cAVUDNukPEG8HYksgZoZiS6gYSM6GEUgcBuKPQF0+DFgAIyPjaiAlCmJ/AGJdIN4' .
+            'Lwkhu3gvFILkPLFCNN4H4F5phv5DkQE4BW60LMwkdQ008APPMOiSJh0B8CYm/AuQZ5OBZB/IpkgJLqFgFPBzRAvw5FKMEOECAAQA' .
+            '6DXcHpH9ICAAAAABJRU5ErkJggg==';
         $this->exampleAgent = $exampleAgent;
     }
     
