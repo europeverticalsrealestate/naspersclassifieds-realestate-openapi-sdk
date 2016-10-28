@@ -1,7 +1,6 @@
 <?php
 namespace naspersclassifieds\realestate\openapi;
 
-
 use naspersclassifieds\realestate\openapi\model\Category;
 use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
 use naspersclassifieds\realestate\openapi\model\City;

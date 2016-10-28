@@ -1,10 +1,8 @@
 <?php
 namespace naspersclassifieds\realestate\openapi;
 
-
 class Account
 {
-
     /**
      * @var Client
      */

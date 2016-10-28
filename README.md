@@ -3,6 +3,8 @@ PHP Library that makes it easier to use Real Estate Verticals Open API and examp
 
 ## How to install
 
+To use the library, you need to have [composer](http://getcomposer.org) installed.
+
 Please add the following repository to your `composer.json` file:
 
     "repositories": [
@@ -17,6 +19,8 @@ and one line to the `require` section:
     "require": {
         "europeverticalsrealestate/openapi-sdk": "*"
     },
+
+then run `composer install`.
 
 ## How to use the library
 Please refer to the examples (in the `examples` directory).

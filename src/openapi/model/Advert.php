@@ -1,7 +1,6 @@
 <?php
 namespace naspersclassifieds\realestate\openapi\model;
 
-
 class Advert
 {
     /**

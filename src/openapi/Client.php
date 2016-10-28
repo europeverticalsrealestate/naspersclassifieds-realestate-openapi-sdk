@@ -1,18 +1,15 @@
 <?php
 namespace naspersclassifieds\realestate\openapi;
 
-
 use GuzzleHttp\Client as GuzzleHttpClient;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Uri;
 use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
 use Psr\Http\Message\ResponseInterface;
-use stdClass;
 
 class Client
 {
-
     /**
      * @var array
      */

@@ -1,7 +1,6 @@
 <?php
 namespace naspersclassifieds\realestate\openapi\model;
 
-
 class DeactivationReason
 {
     /**
@@ -18,5 +17,4 @@ class DeactivationReason
      * @var boolean
      */
     public $with_description;
-
 }

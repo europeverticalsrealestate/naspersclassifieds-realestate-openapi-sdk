@@ -1,10 +1,8 @@
 <?php
 namespace naspersclassifieds\realestate\openapi\model;
 
-
 class ImageCollection
 {
-
     /**
      * @var integer
      */

@@ -1,7 +1,6 @@
 <?php
 namespace naspersclassifieds\realestate\openapi\query;
 
-
 class Adverts extends Query
 {
     const SORT_BY_CREATION_DATE = 'created_at_first';
@@ -152,24 +151,6 @@ class Adverts extends Query
 
         $this->params[$name] = array_merge(['all'], $filteredValues);
         return $this;
-    }
-
-    /**
-     * @param $values
-     * @return mixed
-     */
-    private function filterValues($values)
-    {
-        if (!is_array($values)){
-            return [];
-        }
-        $result = [];
-        foreach ($values as $value) {
-            if (is_scalar($value)) {
-                $result[] = $value;
-            }
-        }
-        return $result;
     }
 
     public function __toString()

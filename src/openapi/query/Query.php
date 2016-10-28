@@ -1,7 +1,6 @@
 <?php
 namespace naspersclassifieds\realestate\openapi\query;
 
-
 class Query
 {
     const SORT_ASC = 'asc';

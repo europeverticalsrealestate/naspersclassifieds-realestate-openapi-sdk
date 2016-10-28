@@ -1,7 +1,6 @@
 <?php
 namespace naspersclassifieds\realestate\openapi;
 
-
 use naspersclassifieds\realestate\openapi\model\Advert;
 use naspersclassifieds\realestate\openapi\model\AdvertsResult;
 use naspersclassifieds\realestate\openapi\query\Adverts;

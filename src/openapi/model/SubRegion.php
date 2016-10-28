@@ -1,7 +1,6 @@
 <?php
 namespace naspersclassifieds\realestate\openapi\model;
 
-
 class SubRegion
 {
     /**
@@ -18,5 +17,4 @@ class SubRegion
      * @var array
      */
     public $name;
-
 }

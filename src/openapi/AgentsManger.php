@@ -1,7 +1,6 @@
 <?php
 namespace naspersclassifieds\realestate\openapi;
 
-
 use naspersclassifieds\realestate\openapi\model\Agent;
 
 class AgentsManger

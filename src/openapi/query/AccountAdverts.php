@@ -1,7 +1,6 @@
 <?php
 namespace naspersclassifieds\realestate\openapi\query;
 
-
 class AccountAdverts extends Query
 {
     const STATUS_ACTIVE = 'active';
@@ -10,7 +9,6 @@ class AccountAdverts extends Query
 
     const SORT_BY_CREATED_AT = 'created_at';
     const SORT_BY_TITLE = 'title';
-
 
     private $status;
 
