@@ -1,0 +1,58 @@
+{
+    "id": 1234,
+    "user_id": 1,
+    "status": "unpaid",
+    "title": "New title",
+    "url": "http://myotodom.pl/oferta/new-title-IDT.html",
+    "created_at": "2016-10-28 08:16:03",
+    "valid_to": "2016-11-11 07:46:43",
+    "description": "Lorem <strong>ipsum dolor sit amet</strong>, consectetur adipiscing elit. Donec urna at vulputate. Nullam porta odio quam, ac <em>rutrum nulla</em> commodo id. Maecenas dapibus quis neque vel volutpat. Aliquam <u>erat volutpat</u>. Vivamus nec dui vulputate, facilisis augue sit amet, aliquam nulla.\nSed feugiat sollicitudin varius.",
+    "category_id": 101,
+    "region_id": 15,
+    "city_id": 1,
+    "district_id": 80,
+    "city": {
+        "pl": "Poznań"
+    },
+    "district": {
+        "pl": "Jeżyce"
+    },
+    "coordinates": {
+        "latitude": 44.79343,
+        "longitude": 23.16014,
+        "radius": 0,
+        "zoom_level": 12
+    },
+    "advertiser_type": "business",
+    "contact": {
+        "person": ""
+    },
+    "params": {
+        "price": {
+            "0": "price",
+            "1": 100000,
+            "currency": "PLN"
+        },
+        "m": 87,
+        "price_per_m": 1149.43,
+        "rooms_num": "3",
+        "market": "secondary"
+    },
+    "photos": {
+        "1": {
+            "655x491": "http://otodom.address/images_otodompl/58_1_655x491.jpg",
+            "184x138": "http://otodom.address/images_otodompl/58_1_184x138.jpg",
+            "314x236": "http://otodom.address/images_otodompl/58_1_314x236.jpg",
+            "1280x1024": "http://otodom.address/images_otodompl/58_1_1280x1024.jpg"
+        },
+        "2": {
+            "655x491": "http://otodom.address/images_otodompl/58_2_655x491.jpg",
+            "184x138": "http://otodom.address/images_otodompl/58_2_184x138.jpg",
+            "314x236": "http://otodom.address/images_otodompl/58_2_314x236.jpg",
+            "1280x1024": "http://otodom.address/images_otodompl/58_2_1280x1024.jpg"
+        }
+    },
+    "external_id": "MYID-123",
+    "image_collection_id": 58,
+    "agent": {}
+}

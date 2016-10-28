@@ -3,6 +3,8 @@ namespace naspersclassifieds\realestate\openapi\tests;
 
 
 use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
+use naspersclassifieds\realestate\openapi\model\Advert;
+use naspersclassifieds\realestate\openapi\model\Agent;
 use naspersclassifieds\realestate\openapi\query\AccountAdverts;
 use naspersclassifieds\realestate\openapi\tests\utils\Constants;
 
@@ -159,6 +161,114 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
         $this->openApi->getAccount()->getAdvertsManager()->deleteFromImageCollection(58, 2);
 
         $this->assertAuthorizedRequest('imageCollections/58/images/2', 'DELETE');
+    }
+
+    public function testShouldCreateAdvert()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.adverts.post.response.json');
+
+        $advert = $this->getAdvert();
+        $createdAdvert = $this->openApi->getAccount()->getAdvertsManager()->createAdvert($advert);
+
+        $expectedBody = json_encode($advert);
+        $this->assertAuthorizedRequest('account/adverts', 'POST', [], [], $expectedBody);
+        $this->assertEquals(1234, $createdAdvert->id);
+        $this->assertEquals($advert->description, $createdAdvert->description);
+        $this->assertEquals($advert->agent->id, $createdAdvert->agent->id);
+    }
+
+    public function testShouldUpdateAdvert()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.adverts.put.response.json');
+
+        $advert = $this->getAdvert();
+        $advert->agent = new Agent();
+        $advert->agent->id = false;
+        $createdAdvert = $this->openApi->getAccount()->getAdvertsManager()->updateAdvert(1234, $advert);
+
+        $expectedBody = json_encode($advert);
+        $this->assertAuthorizedRequest('account/adverts/1234', 'PUT', [], [], $expectedBody);
+        $this->assertEquals(1234, $createdAdvert->id);
+        $this->assertEquals($advert->description, $createdAdvert->description);
+        $this->assertEquals(null, $createdAdvert->agent->id);
+    }
+
+    public function testShouldActivateAdvert()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'account.adverts.activate.response.json');
+
+        $this->openApi->getAccount()->getAdvertsManager()->activateAdvert(1234);
+
+        $this->assertAuthorizedRequest('account/adverts/1234/activate', 'POST');
+    }
+
+    public function testShouldDeactivateAdvert()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(204);
+
+        $reasonId = 13;
+        $reasonDescription = "reason description";
+        $this->openApi->getAccount()->getAdvertsManager()->deactivateAdvert(1234, $reasonId, $reasonDescription);
+
+        $expectedBody = json_encode(['reason' => ['id' => $reasonId, 'description' => $reasonDescription]]);
+        $this->assertAuthorizedRequest('account/adverts/1234/inactivate', 'POST', [], [], $expectedBody);
+    }
+
+    public function testShouldDeleteAdvert()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(204);
+
+        $this->openApi->getAccount()->getAdvertsManager()->deleteAdvert(1234);
+
+        $this->assertAuthorizedRequest('account/adverts/1234', 'DELETE');
+    }
+
+    /**
+     * @return Advert
+     */
+    private function getAdvert()
+    {
+        $advert = new Advert();
+        $advert->title = "Example ad added via OpenAPI";
+        $advert->description = "Lorem <strong>ipsum dolor sit amet</strong>, consectetur adipiscing elit. Donec "
+            . "urna at vulputate. Nullam porta odio quam, ac <em>rutrum nulla</em> commodo id. Maecenas dapibus "
+            . "quis neque vel volutpat. Aliquam <u>erat volutpat</u>. Vivamus nec dui vulputate, facilisis augue "
+            . "sit amet, aliquam nulla.\nSed feugiat sollicitudin varius.";
+        $advert->external_id = "MYID-123";
+        $advert->category_id = 101;       //flats for sale
+        $advert->region_id = 1;           //wielkopolskie, Poland
+        $advert->city_id = 1;             //Poznań, Poland
+        $advert->district_id = 80;        //Jeżyce - a district in Poznań, Poland
+        $advert->coordinates = [
+            "latitude" => 44.79343,
+            "longitude" => 23.16014,
+            "radius" => 0,
+            "zoom_level" => 12
+        ];
+        $advert->params = [
+            "price" => [
+                "0" => "price",     //always "price"
+                "1" => 100000,
+                "currency" => "PLN"
+            ],
+            "m" => 87,
+            "rooms_num" => 3,
+            "market" => "secondary"
+        ];
+        $advert->image_collection_id = 58;
+        $advert->agent = new Agent();
+        $advert->agent->id = 1;
+        return $advert;
     }
 
 }

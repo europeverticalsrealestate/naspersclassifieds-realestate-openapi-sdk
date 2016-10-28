@@ -5,6 +5,7 @@ namespace naspersclassifieds\realestate\openapi;
 use naspersclassifieds\realestate\openapi\model\Category;
 use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
 use naspersclassifieds\realestate\openapi\model\City;
+use naspersclassifieds\realestate\openapi\model\DeactivationReason;
 use naspersclassifieds\realestate\openapi\model\Region;
 use naspersclassifieds\realestate\openapi\model\SubRegion;
 use stdClass;
@@ -99,5 +100,10 @@ class Dictionaries
     public function getSubRegion($id)
     {
         return $this->client->get('subregions/' . (int)$id , SubRegion::class);
+    }
+
+    public function getDeactivationReasons()
+    {
+        return $this->client->get('not-renewing-reasons', [DeactivationReason::class]);
     }
 }

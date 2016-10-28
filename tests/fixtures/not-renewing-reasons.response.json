@@ -1,0 +1,32 @@
+{
+    "results": [
+        {
+            "id": 13,
+            "name": {
+                "pl": "Sprzedałem/wynająłem dzięki Otodom"
+            },
+            "with_description": false
+        },
+        {
+            "id": 15,
+            "name": {
+                "pl": "Sprzedałem/wynająłem w inny sposób"
+            },
+            "with_description": false
+        },
+        {
+            "id": 17,
+            "name": {
+                "pl": "Brak zainteresowania ogłoszeniem"
+            },
+            "with_description": false
+        },
+        {
+            "id": 12,
+            "name": {
+                "pl": "Inny powód"
+            },
+            "with_description": true
+        }
+    ]
+}

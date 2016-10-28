@@ -48,7 +48,7 @@ class AdvertsManager
      */
     public function createImageCollection($images)
     {
-        $images = (object) array_combine(range(1, count($images)), $images);
+        $images = (object)array_combine(range(1, count($images)), $images);
         return $this->client->post('imageCollections', $images, ImageCollection::class);
     }
 
@@ -79,7 +79,7 @@ class AdvertsManager
      */
     public function updateInImageCollection($id, $no, $image)
     {
-        $this->client->put('imageCollections/' . ((int)$id) . '/images/'  . ((int)$no), (object)['source' => $image]);
+        $this->client->put('imageCollections/' . ((int)$id) . '/images/' . ((int)$no), (object)['source' => $image]);
     }
 
     /**
@@ -89,5 +89,56 @@ class AdvertsManager
     public function deleteFromImageCollection($id, $no)
     {
         $this->client->delete('imageCollections/' . ((int)$id) . '/images/' . ((int)$no));
+    }
+
+    /**
+     * @param Advert $advert
+     * @return mixed
+     */
+    public function createAdvert(Advert $advert)
+    {
+        return $this->client->post('account/adverts', $advert, Advert::class);
+    }
+
+    /**
+     * @param integer $id
+     * @param Advert $advert
+     * @return mixed
+     */
+    public function updateAdvert($id, Advert $advert)
+    {
+        return $this->client->put('account/adverts/' . (int)$id, $advert, Advert::class);
+    }
+
+    /**
+     * @param integer $id
+     */
+    public function activateAdvert($id)
+    {
+        $this->client->post('account/adverts/' . (int)$id . '/activate');
+    }
+
+    /**
+     * @param integer $id
+     * @param integer $reasonId
+     * @param string $reasonDescription
+     */
+    public function deactivateAdvert($id, $reasonId, $reasonDescription = '')
+    {
+        $requestData = [
+            'reason' => [
+                'id' => $reasonId,
+                'description' => $reasonDescription
+            ]
+        ];
+        $this->client->post('account/adverts/' . (int)$id . '/inactivate', $requestData);
+    }
+
+    /**
+     * @param integer $id
+     */
+    public function deleteAdvert($id)
+    {
+        $this->client->delete('account/adverts/' . (int)$id);
     }
 }

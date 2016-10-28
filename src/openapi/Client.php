@@ -91,12 +91,15 @@ class Client
      * @return mixed
      * @throws OpenApiException
      */
-    public function post($resource, $object, $class = null)
+    public function post($resource, $object = null, $class = null)
     {
         $resource = $this->appendAccessToken($resource);
 
         try {
-            $options = array_merge($this->options, ['json' => $object]);
+            $options = $this->options;
+            if ($object) {
+                $options = array_merge($options, ['json' => $object]);
+            }
             $response = $this->client->post(Uri::resolve($this->baseUri, $resource), $options);
             return $this->decodeResult($response, $class);
         } catch (RequestException $e) {

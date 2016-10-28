@@ -115,4 +115,16 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $this->assertRequest('subregions/1');
         $this->assertEquals("chodzieski", $subregion->name['pl']);
     }
+
+    public function testShouldRetrieveNotRenewingReasons()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(200, 'not-renewing-reasons.response.json');
+        $reasons = $this->openApi->getDictionaries()->getDeactivationReasons();
+        $this->assertAuthorizedRequest('not-renewing-reasons');
+        $this->assertEquals("Inny powód", $reasons[3]->name['pl']);
+
+
+    }
 }
