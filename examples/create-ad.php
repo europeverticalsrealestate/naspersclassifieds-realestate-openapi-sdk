@@ -17,8 +17,7 @@ echo "Logged in.\n";
 echo "Reading all agents of currently logged-in user...\n";
 $agents = $api->getAccount()->getAgentsManager()->getAgents();
 if (empty($agents)) {
-    echo "Warning! You do not have any agents. Please create one using manage-agents script or via the website.\n";
-    $agentId = null;
+    echo "Error! You do not have any agents. Please create one using manage-agents script or via the website.\n";
     exit;
 }
 

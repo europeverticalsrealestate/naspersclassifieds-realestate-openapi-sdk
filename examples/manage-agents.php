@@ -80,4 +80,3 @@ function displayAgentsList($agentsList) {
         echo sprintf('%10d | %-15s | %s', $agent->id, $phone, $name) . "\n";
     }
 }
-

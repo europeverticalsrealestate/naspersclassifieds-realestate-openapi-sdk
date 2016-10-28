@@ -1,7 +1,6 @@
 <?php
 namespace naspersclassifieds\realestate\openapi\tests;
 
-
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Uri;
 use naspersclassifieds\realestate\openapi\OpenApi;
@@ -11,7 +10,6 @@ use PHPUnit_Framework_TestCase;
 
 abstract class OpenApiTestCase extends PHPUnit_Framework_TestCase
 {
-
     /**
      * @var HttpClientMocker
      */

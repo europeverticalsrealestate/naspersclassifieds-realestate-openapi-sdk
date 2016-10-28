@@ -1,6 +1,6 @@
 {
     "name": "europeverticalsrealestate/openapi-sdk",
-    "type": "project",
+    "type": "library",
     "require": {
         "guzzlehttp/guzzle": "^6.2"
     },

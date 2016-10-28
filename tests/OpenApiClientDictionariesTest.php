@@ -1,15 +1,12 @@
 <?php
 namespace naspersclassifieds\realestate\openapi\tests;
 
-
 use naspersclassifieds\realestate\openapi\exceptions\OpenApiException;
 
 class OpenApiClientDictionariesTest extends OpenApiTestCase
 {
-
     public function testShouldRetrieveRootCategories()
     {
-
         $this->addResponse(200, 'categories.response.json');
 
         $categories = $this->openApi->getDictionaries()->getCategories();
@@ -21,7 +18,6 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
 
     public function testShouldRetrieveOneCategory()
     {
-
         $this->addResponse(200, 'categories.101.response.json');
 
         $category = $this->openApi->getDictionaries()->getCategory(101);
@@ -33,7 +29,6 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
 
     public function testShouldNotRetrieveNonExistingCategory()
     {
-
         $this->addResponse(404);
 
         try {
@@ -47,7 +42,6 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
 
     public function testShouldRetrieveCities()
     {
-
         $this->addResponse(200, 'cities.response.json');
 
         $cities = $this->openApi->getDictionaries()->getCities();
@@ -59,7 +53,6 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
 
     public function testShouldRetrieveOneCity()
     {
-
         $this->addResponse(200, 'cities.1.response.json');
 
         $city = $this->openApi->getDictionaries()->getCity(1);
@@ -70,7 +63,6 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
 
     public function testShouldRetrieveRegions()
     {
-
         $this->addResponse(200, 'regions.response.json');
 
         $regions = $this->openApi->getDictionaries()->getRegions();
@@ -83,7 +75,6 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
 
     public function testShouldRetrieveOneRegion()
     {
-
         $this->addResponse(200, 'regions.1.response.json');
 
         $region = $this->openApi->getDictionaries()->getRegion(1);
@@ -94,7 +85,6 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
 
     public function testShouldRetrieveSubregions()
     {
-
         $this->addResponse(200, 'subregions.response.json');
 
         $subregions = $this->openApi->getDictionaries()->getSubRegions();
@@ -107,7 +97,6 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
 
     public function testShouldRetrieveOneSubrregion()
     {
-
         $this->addResponse(200, 'subregions.1.response.json');
 
         $subregion = $this->openApi->getDictionaries()->getSubRegion(1);
@@ -124,7 +113,5 @@ class OpenApiClientDictionariesTest extends OpenApiTestCase
         $reasons = $this->openApi->getDictionaries()->getDeactivationReasons();
         $this->assertAuthorizedRequest('not-renewing-reasons');
         $this->assertEquals("Inny powód", $reasons[3]->name['pl']);
-
-
     }
 }
