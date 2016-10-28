@@ -70,7 +70,7 @@ class Client
      * @return mixed
      * @throws OpenApiException
      */
-    public function put($resource, $object, $class = null)
+    public function update($resource, $object, $class = null)
     {
         $resource = $this->appendAccessToken($resource);
 

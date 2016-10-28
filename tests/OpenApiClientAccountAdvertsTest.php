@@ -186,9 +186,10 @@ class OpenApiClientAccountAdvertsTest extends OpenApiTestCase
         $this->addResponse(200, 'account.adverts.put.response.json');
 
         $advert = $this->getAdvert();
+        $advert->id = 1234;
         $advert->agent = new Agent();
         $advert->agent->id = false;
-        $createdAdvert = $this->openApi->getAccount()->getAdvertsManager()->updateAdvert(1234, $advert);
+        $createdAdvert = $this->openApi->getAccount()->getAdvertsManager()->updateAdvert($advert);
 
         $expectedBody = json_encode($advert);
         $this->assertAuthorizedRequest('account/adverts/1234', 'PUT', [], [], $expectedBody);

@@ -89,7 +89,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->addResponse(200, 'account.agents.2.response.json');
         $this->exampleAgent->name = "Kolo Rollo";
 
-        $agentResponse = $this->openApi->getAccount()->getAgentsManager()->setAgent($this->exampleAgent);
+        $agentResponse = $this->openApi->getAccount()->getAgentsManager()->updateAgent($this->exampleAgent);
 
         $expectedBody = json_encode($this->exampleAgent);
         $this->assertAuthorizedRequest('account/agents/' . $this->exampleAgent->id, 'PUT', [], [], $expectedBody);
@@ -106,7 +106,7 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->addResponse(200, 'account.agents.3.response.json');
         $this->exampleAgent->photo = false;
 
-        $agentResponse = $this->openApi->getAccount()->getAgentsManager()->setAgent($this->exampleAgent);
+        $agentResponse = $this->openApi->getAccount()->getAgentsManager()->updateAgent($this->exampleAgent);
 
         $expectedBody = json_encode($this->exampleAgent);
         $this->assertAuthorizedRequest('account/agents/' . $this->exampleAgent->id, 'PUT', [], [], $expectedBody);
@@ -115,13 +115,24 @@ class OpenApiClientAccountTest extends OpenApiTestCase
         $this->assertEquals($this->exampleAgent->id, $agentResponse->id);
     }
 
+    public function testShouldDeleteAgent()
+    {
+        $this->logInIntoApi();
+
+        $this->addResponse(204);
+
+        $this->openApi->getAccount()->getAgentsManager()->deleteAgent($this->exampleAgent->id);
+
+        $this->assertAuthorizedRequest('account/agents/' . $this->exampleAgent->id, 'DELETE');
+    }
+
     public function testShouldAddNewAgent()
     {
         $this->logInIntoApi();
 
         $this->addResponse(200, 'account.agents.1.response.json');
         unset($this->exampleAgent->id);
-        $agentResponse = $this->openApi->getAccount()->getAgentsManager()->addAgent($this->exampleAgent);
+        $agentResponse = $this->openApi->getAccount()->getAgentsManager()->createAgent($this->exampleAgent);
         $expectedBody = json_encode($this->exampleAgent);
         $this->assertAuthorizedRequest('account/agents', 'POST', [], [], $expectedBody);
 

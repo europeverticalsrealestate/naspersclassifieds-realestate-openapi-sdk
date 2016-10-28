@@ -69,7 +69,7 @@ class AdvertsManager
      */
     public function addToImageCollection($id, $image)
     {
-        $this->client->put('imageCollections/' . ((int)$id) . '/images', (object)['source' => $image]);
+        $this->client->update('imageCollections/' . ((int)$id) . '/images', (object)['source' => $image]);
     }
 
     /**
@@ -79,7 +79,7 @@ class AdvertsManager
      */
     public function updateInImageCollection($id, $no, $image)
     {
-        $this->client->put('imageCollections/' . ((int)$id) . '/images/' . ((int)$no), (object)['source' => $image]);
+        $this->client->update('imageCollections/' . ((int)$id) . '/images/' . ((int)$no), (object)['source' => $image]);
     }
 
     /**
@@ -93,7 +93,7 @@ class AdvertsManager
 
     /**
      * @param Advert $advert
-     * @return mixed
+     * @return Advert
      */
     public function createAdvert(Advert $advert)
     {
@@ -101,13 +101,12 @@ class AdvertsManager
     }
 
     /**
-     * @param integer $id
      * @param Advert $advert
-     * @return mixed
+     * @return Advert
      */
-    public function updateAdvert($id, Advert $advert)
+    public function updateAdvert(Advert $advert)
     {
-        return $this->client->put('account/adverts/' . (int)$id, $advert, Advert::class);
+        return $this->client->update('account/adverts/' . (int)$advert->id, $advert, Advert::class);
     }
 
     /**

@@ -41,17 +41,25 @@ class AgentsManger
      * @param Agent $agent
      * @return Agent
      */
-    public function setAgent(Agent $agent)
+    public function updateAgent(Agent $agent)
     {
-        return $this->client->put("account/agents/" . $agent->id, $agent, Agent::class);
+        return $this->client->update("account/agents/" . (int)$agent->id, $agent, Agent::class);
     }
 
     /**
      * @param Agent $agent
      * @return Agent
      */
-    public function addAgent($agent)
+    public function createAgent($agent)
     {
         return $this->client->post("account/agents", $agent, Agent::class);
+    }
+
+    /**
+     * @param integer $id
+     */
+    public function deleteAgent($id)
+    {
+        $this->client->delete("account/agents/" . (int)$id);
     }
 }

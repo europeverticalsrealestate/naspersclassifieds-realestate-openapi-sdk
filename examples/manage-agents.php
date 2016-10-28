@@ -28,14 +28,14 @@ $agent->email = $fakeEmail;
 $agent->phone = mt_rand(100000000, 999999999);
 $agent->photo = 'data:image/jpeg;base64,' . base64_encode(file_get_contents(PATH_TO_PHOTOS . '/smiley.jpg'));
 
-$result = $api->getAccount()->addAgent($agent);
+$result = $api->getAccount()->getAgentsManager()->createAgent($agent);
 
 
 echo "Created a new agent with name: '{$result->name}' and ID: {$result->id}.\n";
 
 
 echo "Reading all agents of currently logged-in user...\n";
-$agents = $api->getAccount()->getAgents();
+$agents = $api->getAccount()->getAgentsManager()->getAgents();
 
 displayAgentsList($agents);
 
@@ -45,7 +45,7 @@ $newName = "Bob " . generateRandomName();
 $agent->name = $newName;
 $agent->photo = null;
 
-$result = $api->getAccount()->setAgent($agent);
+$result = $api->getAccount()->getAgentsManager()->updateAgent($agent);
 
 echo "Server confirmed that new name of the agent {$agent->id} is now: '{$agent->name}'.\n";
 
