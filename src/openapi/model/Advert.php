@@ -10,6 +10,11 @@ class Advert
     public $id;
 
     /**
+     * @var string
+     */
+    public $external_id;
+
+    /**
      * @var integer
      */
     public $user_id;

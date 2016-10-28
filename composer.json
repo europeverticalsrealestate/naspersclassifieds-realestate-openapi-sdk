@@ -1,5 +1,5 @@
 {
-    "name": "naspersclassifieds/realestate-openapi-sdk",
+    "name": "europeverticalsrealestate/openapi-sdk",
     "type": "project",
     "require": {
         "guzzlehttp/guzzle": "^6.2"
